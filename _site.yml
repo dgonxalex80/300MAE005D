@@ -1,9 +1,81 @@
-name: ""
+name: " "
 output_dir: "docs"
 navbar:
   title: " "
   left:
-    - text: "Home"
+    - text: "PyE"
+      icon: fa-home
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Módulo 0"
+      menu:
+        - text: "Módulo 0"
+          href: Modulo0.html
+        - text: "Sumatoria"
+          href: sumatoria.html  
+        - text: "Productoria"
+          href: productoria.html  
+        - text: "Teoría de conjuntos"
+          href: conjuntos.html  
+        - text: "Técnicas de conteo"
+          href: conteo.html  
+        - text: "Función exponencial"
+          href: exponencial.html  
+        - text: "Función logaritmica"
+          href: logaritmica.html            
+        - text: "Derivación"
+          href: derivacion.html
+        - text: "Integración"
+          href: integracion.html          
+
+         
+    - text: "Módulo 1"
+      menu:
+        - text: "Módulo 1"
+          href: Modulo1.html
+        - text: "---------"          
+        - text: "Guía 1.1"
+          href: Guia101.html            
+        - text: "---------"            
+        - text: "Monitoria 1"
+          href: recurso000.html 
+        - text: "---------"          
+        - text: "Introducción a R"
+          href: introduccionR.html
+        - text: "Código 1.1"
+          href: codigo101.html
+    - text: "Módulo 2"
+      menu:
+        - text: "Módulo 2"
+          href: recurso000.html 
+        - text: "---------"  
+
+    - text: "Módulo 3"
+      menu:
+        - text: "Módulo 3"
+          href: recurso000.html 
+        - text: "---------"
+
+    - text: "Módulo 4"
+      menu:
+        - text: "Módulo 4"
+          href: recurso000.html 
+        - text: "---------"
+
+    - text: "Módulo 5"
+      menu:
+        - text: "Módulo 5"
+          href: recurso000.html 
+        - text: "---------"          
+
+    - text: "Proyecto"
+      menu:
+        - text: "Guía proyecto"
+          href: recurso000.html 
+    - text: "grupo D "
+      menu:
+        - text: "Grupo D"
+          href: about.html           
+output:
+  html_document:
+    theme: flatly
+    css: style.css
