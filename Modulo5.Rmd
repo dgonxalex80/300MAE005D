@@ -1,5 +1,5 @@
 ---
-title: <span style='color:#2C5697'>**Aplica lo aprendido**</span>
+title: <span style='color:#2C5697'>  </span>
 subtitle: <span style='color:#2C5697'>**Probabilidad y Estadística**</span> 
 author: "dgonzalez"
 output:
@@ -25,7 +25,7 @@ c4= "#646420"
 c5= "#db524f"
 ```
 
-<!-- ![](img/banner5.png) -->
+![](img/banner005.png)
 
 <br/><br/><br/>
 

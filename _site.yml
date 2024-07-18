@@ -46,25 +46,25 @@ navbar:
     - text: "Módulo 2"
       menu:
         - text: "Módulo 2"
-          href: recurso000.html 
+          href: Modulo2.html 
         - text: "---------"  
 
     - text: "Módulo 3"
       menu:
         - text: "Módulo 3"
-          href: recurso000.html 
+          href: Modulo3.html 
         - text: "---------"
 
     - text: "Módulo 4"
       menu:
         - text: "Módulo 4"
-          href: recurso000.html 
+          href: Modulo4.html 
         - text: "---------"
 
     - text: "Módulo 5"
       menu:
         - text: "Módulo 5"
-          href: recurso000.html 
+          href: Modulo5.html 
         - text: "---------"          
 
     - text: "Proyecto"

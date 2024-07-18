@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#2C5697">**Cuantifica la incertidumbre**</span>
+title: <span style="color:#2C5697"> </span>
 subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
 author: "dgonzalez "
 output:
@@ -26,7 +26,7 @@ c5= "#db524f"
 
 <br/>
 
-<!-- ![](img/banner2.png) -->
+![](img/banner002.png) 
 
 
 <br/><br/>

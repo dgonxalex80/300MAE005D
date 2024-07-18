@@ -1,5 +1,5 @@
 ---
-title: <span style="color:#2C5697">**Analiza tus datos**</span>
+title: <span style="color:#2C5697"> </span>
 subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
 author: "dgonzalez "
 output:
@@ -24,7 +24,7 @@ c4= "#646420"
 c5= "#db524f"
 ```
 
-<!-- ![](img/banner1.png) -->
+![](img/banner001.png) 
 
 <br/><br/>
 
