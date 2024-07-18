@@ -28,18 +28,28 @@ c5= "#db524f"
 
 <br/><br/>
 
+ <div class="highlight-box">
+ 
 # **Introducción**
 
 El concepto de variable  aleatoria  y sus principales características como el  valor esperado, la varianza, funciones de  distribución de  probabilidad y distribución  acumulada, distribuciones conjuntas, covarianza y correlación, permiten la identificación de diferentes modelos para su  uso a través de la simulación de situaciones reales. 
 
-<br/><br/><br/>
+</div>
+
+<br/><br/>
+
+<div class="highlight-box">
 
 # **Objetivo**
 
 Al finalizar el módulo el estudiante estará en capacidad de APLICAR los conceptos y las principales características  de las VARIABLE ALEATORIA UNIVARIADAS y CONJUNTAS para RESOLVER problemas mediante la simulación a través de software estadístico.
 
+
+</div>
+
 <br/><br/><br/>
 
-# **Mapa**
 
-![](img/mapU3.png)
+<!-- # **Mapa** -->
+
+<!-- ![](img/mapU3.png) -->

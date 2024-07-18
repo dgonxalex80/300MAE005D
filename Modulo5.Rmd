@@ -29,17 +29,21 @@ c5= "#db524f"
 
 <br/><br/><br/>
 
+<div class="highlight-box">
 # **Introducción**
 
 Una de las aplicaciones más utilizadas de la Estadística la conforman los modelos de regresión, los cuales permiten explicar una variable a partir de la combinación  lineal de otro  grupo de variables, pero también  la estimación de  coeficientes que miden la relación  entre dos variables.  Ambas situaciones con un gran número de aplicaciones.
 
-<br/><br/><br/>
+</div>
 
+<br/><br/>
+
+<div class="highlight-box">
 # **Objetivo**
 
 Al finalizar el módulo el estudiante estará en capacidad de PROPONER soluciones a problemas reales mediante la utilización de los MODELOS DE REGRESIÓN a situaciones que permitan la toma de decisiones informadas y la generación de políticas
 
-
+</div>
 
 
 

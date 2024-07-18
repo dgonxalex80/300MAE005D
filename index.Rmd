@@ -20,7 +20,7 @@ cg="#6c4675"
 
 ```
 
-# **300MAE005 - D**
+## **300MAE005 - D**
 
 <br/><br/>
 
@@ -39,28 +39,37 @@ cg="#6c4675"
 ```
 <br/><br/>
 
-# **Metodología**
+<div class="highlight-box">
+
+## **Metodología**
  
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 # knitr::include_graphics("img/aulainvertida.png")
 ```
-<br/><br/><br/>
 
+</div>
 
-# **Calendario 2024-2**
+<br/><br/>
+
+<div class="highlight-box">
+
+## **Calendario 2024-2**
 
 <br/><br/>
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/CALENDARIO20242.png")
+# knitr::include_graphics("img/CALENDARIO20242.png")
 ```
+
+</div>
 
 <br/><br/>
 
 
+<div class="highlight-box">
 
-# **Salones**
+## **Salones de clase**
 
 
 |Curso     | **Grupo** | Horario       | **LUNES**  |                | **MARTES**    |                | **JUEVES**  |
@@ -75,8 +84,11 @@ knitr::include_graphics("img/CALENDARIO20242.png")
  # knitr::include_graphics("img/salones.png")
 ```
 
+</div>
+
 <br/><br/>
 
+<div class="highlight-box">
 
 **Profesor** : Daniel Enrique González Gómez 
 
@@ -86,25 +98,36 @@ knitr::include_graphics("img/CALENDARIO20242.png")
 
 **Monitor** : 
 
+</div>
 
 <br/><br/>
 
-# **Atención a Estudiantes**
+<div class="highlight-box">
+
+## **Atención a Estudiantes**
 
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 #  knitr::include_graphics("img/atencion.png")
 ```
 
+</div>
+
 <br/><br/>
 
-# **Información supletorios**
+
+
+<div class="highlight-box">
+
+## **Información supletorios**
 
 
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
  # knitr::include_graphics("img/supletorio1.png")
 ```
+
+</div>
 
 <br/><br/>
 

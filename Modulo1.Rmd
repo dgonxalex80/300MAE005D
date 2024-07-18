@@ -28,18 +28,26 @@ c5= "#db524f"
 
 <br/><br/>
 
+<div class="highlight-box">
+
 # **Introducción**
 
 Este primer módulo te permitirá recorrer los  pasos de la metodología estadística  y realizar un análisis descriptivos de tus datos, empleando para ellos software estadístico y diversas bases de datos disponibles en internet.  Para lograrlo se plantean tres unidades : Bases de datos, Tablas de frecuencia e indicadores descriptivos y por último la representación  gráfica o visualización de  datos.  Requiere revisar los conceptos de sumatoria  y productoria contenidos en  el Modulo 0
 
-<br/><br/><br/>
+</div>
+
+<br/><br/>
+
+<div class="highlight-box">
 
 # **Objetivo**
 
 Al finalizar este módulo el estudiante estará en capacidad de RESUMIR e INTERPRETAR información mediante la construcción de TABLAS DE FRECUENCIA, INDICADORES DESCRIPTIVOS Y GRAFICOS para la interpretación  y construcción de informes estadísticos descriptivos 
 
-<br/><br/><br/>
+</div>
 
-# **Mapa**
+<br/><br/>
 
-![](img/mapU1.png)
+<!-- # **Mapa** -->
+
+<!-- ![](img/mapU1.png) -->
