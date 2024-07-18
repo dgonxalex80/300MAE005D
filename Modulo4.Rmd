@@ -1,7 +1,7 @@
 ---
-title: <span style="color:#646420"> **Probabilidad y Estadística** </span>
+title: <span style='color:#2C5697'>**Generaliza los resultados y prueba tus hipótesis **</span>
+subtitle: <span style='color:#2C5697'>**Probabilidad y Estadística**</span> 
 author: "dgonzalez "
-subtitle: "2023" 
 output:
   html_document:
     toc: no
@@ -23,8 +23,9 @@ c3= "#8acfe6"
 c4= "#646420"
 c5= "#db524f"
 ```
-
-![](img/banner4.png)
+ 
+  <!-- ![](img/banner4.png) -->
+ 
 
 <br/><br/>
 

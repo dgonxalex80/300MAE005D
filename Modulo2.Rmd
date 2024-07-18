@@ -1,7 +1,7 @@
 ---
-title: <span style="color:#a391c4">**Probabilidad y Estadística**</span>
+title: <span style="color:#2C5697">**Cuantifica la incertidumbre**</span>
+subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
 author: "dgonzalez "
-subtitle: "2023" 
 output:
   html_document:
     toc: no
@@ -26,7 +26,7 @@ c5= "#db524f"
 
 <br/>
 
-![](img/banner2.png)
+<!-- ![](img/banner2.png) -->
 
 
 <br/><br/>

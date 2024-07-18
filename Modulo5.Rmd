@@ -1,7 +1,7 @@
 ---
-title: <span style="color:#db524f"> **Probabilidad y Estadística** </span>
-author: "dgonzalez "
-subtitle: "2023" 
+title: <span style='color:#2C5697'>**Aplica lo aprendido**</span>
+subtitle: <span style='color:#2C5697'>**Probabilidad y Estadística**</span> 
+author: "dgonzalez"
 output:
   html_document:
     toc: no
@@ -11,6 +11,7 @@ output:
     theme: flatly
     css: style.css
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -24,7 +25,7 @@ c4= "#646420"
 c5= "#db524f"
 ```
 
-![](img/banner5.png)
+<!-- ![](img/banner5.png) -->
 
 <br/><br/><br/>
 

@@ -1,10 +1,10 @@
 ---
-title: <span style="color:#b0394a">**Probabilidad y Estadística**</span>
+title: <span style="color:#2C5697">**Lo que debes saber al empezar**</span>
+subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
 author: "dgonzalez "
-subtitle: "2023 " 
 output:
   html_document:
-    toc: yes
+    toc: no
     toc_depth: 2
     toc_float: yes
     theme: flatly
@@ -22,7 +22,7 @@ c4= "#646420"
 c5= "#db524f"
 ```
 
-![](img/banner0.png)
+<!-- ![](img/banner0.png) -->
 
 
 <br/><br/>
