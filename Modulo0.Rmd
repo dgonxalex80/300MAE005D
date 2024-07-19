@@ -1,6 +1,6 @@
 ---
 title: <span style="color:#FFCC00">  </span>
-subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
+subtitle: <span style="color:#235784">Estadística para la toma de decisiones </span> 
 author: "dgonzalez "
 output:
   html_document:

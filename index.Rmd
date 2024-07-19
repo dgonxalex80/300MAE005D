@@ -34,7 +34,7 @@ cg="#6c4675"
 <br/><br/><br/>
 
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
  knitr::include_graphics("img/modulos.png")
 ```
 <br/><br/>
@@ -76,9 +76,9 @@ knitr::include_graphics("img/horario-005D.png")
 |Curso     | **Grupo** | Horario       | **LUNES**  |                | **MARTES**    |                | **JUEVES**  |
 |:---------|:----------|:--------------|:-----------|:---------------|:--------------|:---------------|:------------|
 |300MAE005 |  **A**    | 7:00 A 9:00   |            |                |  **EC 2.4**   |                | **EC 2.4**  |
-|          |           |               |            |                |               |                |             |
-|          |           |11:00 a 13:00  | **PL 4.7** |                |               |                |             |
-|          |           |               |            |                |               |                |             |
+|          |           |               |            |                |  Monitoria/   |                | Sesión 3    |
+|          |           |11:00 a 13:00  | **PL 4.7** |                |  Sesión 2     |                |             |
+|          |           |               | Sesión 1   |                |               |                |             |
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
