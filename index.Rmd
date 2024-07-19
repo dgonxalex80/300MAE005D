@@ -39,7 +39,7 @@ cg="#6c4675"
 ```
 <br/><br/>
 
-<div class="highlight-box">
+
 
 ## **Metodología**
 
@@ -60,7 +60,7 @@ knitr::include_graphics("img/aulainvertida1.png")
 
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-knitr::include_graphics("img/CALENDARIO20242.png")
+knitr::include_graphics("img/horario-005D.png")
 ```
 
 </div>
@@ -91,13 +91,13 @@ knitr::include_graphics("img/CALENDARIO20242.png")
 
 <div class="box2">
 
-**Profesor** : Daniel Enrique González Gómez 
+### **Profesor** : Daniel Enrique González Gómez 
 
 * correo : dgonzalez@javerianacali.edu.co
 * oficina : 1.28 Edificio de Ingeniería
 
 
-**Monitor** : 
+### **Monitora** : Sara Isabella Salinas
 
 </div>
 
@@ -106,7 +106,7 @@ knitr::include_graphics("img/CALENDARIO20242.png")
 ## **Atención a Estudiantes**
 <div class="box2">
 
-
+Será publicado en la segunda semana de clases
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 #  knitr::include_graphics("img/atencion.png")
@@ -120,7 +120,7 @@ knitr::include_graphics("img/CALENDARIO20242.png")
 ## **Información supletorios**
 <div class="box2">
 
-
+Pendiente de publicación por parte del Departamento de Ciencias Naturales y Matemáticas
 
 
 

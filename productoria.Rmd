@@ -80,15 +80,17 @@ prod(1:10)
 
 ## **Problemas propuestos**
 
-*  $\displaystyle\prod_{k=1}^{20} 2^{k}$
+1.  $\displaystyle\prod_{k=1}^{20} 2^{k}$
 
 <br/> <br/> 
 
-* $\displaystyle\prod_{i=1}^{20} k 2^{k}$
+2. $\displaystyle\prod_{k=1}^{20} k 2^{k}$
 
 <br/> <br/> 
 
-*  $\displaystyle\prod_{i=1}^n f(x_{i})$ 
+3. $\displaystyle\prod_{i=1}^n f(x_{i})$ 
+
+<br/>
 
 para las siguientes funciones:
 
