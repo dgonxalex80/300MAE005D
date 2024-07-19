@@ -1,7 +1,7 @@
 ---
-title: <span style="color:#235784"> **Productoria**</span>  
+title: <span style="color:#235784"> </span>  
 author: "dgonzalez "
-subtitle: <span style="color:#235784">**Módulo 0**</span> 
+subtitle: <span style="color:#235784"> </span> 
 output:
   html_document:
     toc: no
@@ -16,6 +16,10 @@ knitr::opts_chunk$set(echo = TRUE,comment = NA)
 
 ```
 
+![](img/banner000.png) 
+
+# **PRODUCTORIA**
+
 <br/><br/>
 
 El productorio o productoria, también conocido como multiplicatorio, multiplicatoria o simplemente producto es una notación matemática que representa una multiplicación de una cantidad arbitraria finita o infinita.
@@ -27,7 +31,7 @@ Este operador será utilizado para desarrollar el método de estimación de Máx
 
 <br/><br/><br/> 
 
-<div class="content-box-blue">
+<div class="box2">
 ## **Definición**
 
 Se define como:
@@ -41,6 +45,7 @@ El operador consiste en multiplicar un numero de veces establecido los términos
 Una de las aplicaciones más conocida de la productoria son los números factoriales
 
 $$n! = \displaystyle\prod_{i=1}^n i = 1 \times 2 \times 3 \cdots \times n$$    
+
 Este operador también se utiliza para multiplicar funciones, matrices como por ejemplo:
 
 $$\displaystyle\prod_{i=1}^n f(x_i) = f(x_1) \times f(x_2) \times f(x_3) \cdots \times f(x_n)$$    
@@ -51,13 +56,14 @@ $$\displaystyle\prod_{i=1}^n \exp\{x_i\} = \exp\{x_1\} \times \exp\{x_2\} \times
 
 Al tener la misma base con diferente exponente, el resultado se obtiene al colocar la misma base y sumar los exponentes,
 
-$$\exp\{\displaystyle\sum_{i=1}^{n} x_{i}\}$$ 
+$$\exp\Bigg\{\displaystyle\sum_{i=1}^{n} x_{i}\Bigg\}$$ 
 
 <br/><br/>
 
 <br/><br/>
 
-![](img/ej1.png){width=10%}
+<div class="box1 with-label">
+<div class="label">Problema 1</div>
 
 Encontrar la multiplicación de los 10 primeros números
 
@@ -66,6 +72,9 @@ $$\displaystyle\prod_{x=1}^n x = 1 \times 2 \times 3 \times 4 \times 5 \times 6 
 ```{r}
 prod(1:10)
 ```
+
+</div>
+
 
 <br/><br/>
 

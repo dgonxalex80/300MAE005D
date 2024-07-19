@@ -274,22 +274,22 @@ $(document).ready(function () {
       <a href="productoria.html">Productoria</a>
     </li>
     <li>
-      <a href="conjuntos.html">Teoría de conjuntos</a>
+      <a href="recurso000.html">Teoría de conjuntos</a>
     </li>
     <li>
-      <a href="conteo.html">Técnicas de conteo</a>
+      <a href="recurso000.html">Técnicas de conteo</a>
     </li>
     <li>
-      <a href="exponencial.html">Función exponencial</a>
+      <a href="recurso000.html">Función exponencial</a>
     </li>
     <li>
-      <a href="logaritmica.html">Función logaritmica</a>
+      <a href="recurso000.html">Función logaritmica</a>
     </li>
     <li>
-      <a href="derivacion.html">Derivación</a>
+      <a href="recurso000.html">Derivación</a>
     </li>
     <li>
-      <a href="integracion.html">Integración</a>
+      <a href="recurso000.html">Integración</a>
     </li>
   </ul>
 </li>
@@ -425,6 +425,9 @@ $(document).ready(function () {
 </div>
 
 
+<p><img src="img/banner000.png" /></p>
+<div id="sumatoria" class="section level1">
+<h1><strong>SUMATORIA</strong></h1>
 <p><br/><br/></p>
 <p>El <strong>sumatorio</strong> o <strong>sumatoria</strong> también
 conocida como operador de suma, notación sigma o símbolo de suma, es una
@@ -436,7 +439,7 @@ expresa mediante la letra sigma mayúscula.</p>
 conceptos como media aritmética, varianza, covarianza, correlación,
 estimación de los coeficientes del modelo de regresión entre otros</p>
 <p><br/><br/></p>
-<div id="definición" class="section level2 content-box-blue">
+<div id="definición" class="section level2 box2">
 <h2><strong>Definición</strong></h2>
 <p>Se define como</p>
 <p><span class="math display">\[\sum_{i=1}^{n} a_{i} = a_{1} + a_{2} +
@@ -460,11 +463,16 @@ enteros se escribe:</p>
 <pre class="r"><code>sum(1:100)</code></pre>
 <p><br/><br/></p>
 <p><br/><br/></p>
-<p><img src="img/ej1.png" style="width:10.0%" /></p>
+<!-- ![](img/ej1.png){width=10%} -->
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 1
+</div>
 <p>Si se tienen las notas de un examen de 12 estudiantes como:</p>
 <p>3.4, 4.2, 2.5, 4.1, 3.0, 4.2, 4.7, 3.3, 4.5, 5.0, 2.5, 4.8</p>
 <p>Y se desea calcular la media de las notas, primero se deben sumar
 todas las notas y el resultado dividirlo por el numero de notas.</p>
+</div>
 <p><span class="math display">\[\bar{x} =
 \dfrac{1}{12}\displaystyle\sum_{i=1}^{12} x_{i}\]</span> En este caso
 <span class="math inline">\(3.4\)</span> representa el primer termino de
@@ -479,7 +487,7 @@ class="math inline">\(x_{12}\)</span>. Lo cual equivale a :</p>
 <pre class="r"><code>x=c(3.4, 4.2, 2.5, 4.1 , 3.0, 4.2, 4.7, 3.3, 4.5, 5.0, 2.5, 4.8)
 sum(x)/12</code></pre>
 <p><br/><br/></p>
-<div id="propiedades" class="section level2">
+<div id="propiedades" class="section level2 box2">
 <h2><strong>Propiedades</strong></h2>
 <ul>
 <li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{n} k =
@@ -496,26 +504,35 @@ class="math inline">\(b\)</span> son constantes y <span
 class="math inline">\(x_i\)</span> y <span
 class="math inline">\(y_{i}\)</span> corresponden a lod terminod i-esimo
 de los conjuntos de datos</p>
+</div>
 <p><br/><br/></p>
-<p><br/><br/></p>
-<p><img src="img/ej2.png" style="width:10.0%" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 2
+</div>
 <p><span class="math inline">\(\displaystyle\sum_{i=1}^{5} 3 =
 15\)</span>, ¿ Porqué ?</p>
+</div>
 <p><br/><br/></p>
-<p><br/><br/></p>
-<p><img src="img/ej3.png" style="width:10.0%" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 3
+</div>
 <p><span class="math inline">\(\displaystyle\sum_{i=1}^{10} 10x =
 550\)</span>, ¿ Porqué ?</p>
+</div>
 <p><br/><br/></p>
-<p><br/><br/></p>
-<p><img src="img/ej4.png" style="width:10.0%" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 4
+</div>
 <p><span class="math inline">\(\displaystyle\sum_{i=1}^{10}
 (3x_{i}+2y_{i}) =475\)</span>, ¿ Porqué ?</p>
 <p>donde <span class="math inline">\(\displaystyle\sum_{i=1}^{10} x_{i}
 =55\)</span> y <span class="math inline">\(\displaystyle\sum_{i=1}^{10}
 y_{i}=155\)</span></p>
-<p><br/><br/></p>
 </div>
+<p><br/><br/></p>
 <div id="problemas-propuestos" class="section level2">
 <h2><strong>Problemas propuestos</strong></h2>
 <ol style="list-style-type: decimal">
@@ -554,6 +571,7 @@ class="math inline">\(\dfrac{1}{14}\displaystyle\sum_{i=1}^{15}(x_{i}-3.5)(y_{i}
 \dfrac{(x_{i}-3.5)(y_{i}-4.0)}{(x_{i}-3.5)^{2}}\)</span></p></li>
 </ol>
 <p><br/><br/><br/><br/></p>
+</div>
 </div>
 
 

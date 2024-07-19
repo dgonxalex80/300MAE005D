@@ -42,34 +42,35 @@ cg="#6c4675"
 <div class="highlight-box">
 
 ## **Metodología**
- 
+
+<div class="box2"> 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-# knitr::include_graphics("img/aulainvertida.png")
+knitr::include_graphics("img/aulainvertida1.png")
 ```
 
 </div>
 
 <br/><br/>
-
-<div class="highlight-box">
 
 ## **Calendario 2024-2**
+<div class="box2">
+
 
 <br/><br/>
 
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-# knitr::include_graphics("img/CALENDARIO20242.png")
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/CALENDARIO20242.png")
 ```
 
 </div>
 
 <br/><br/>
 
-
-<div class="highlight-box">
-
 ## **Salones de clase**
+<div class="box2">
+
+
 
 
 |Curso     | **Grupo** | Horario       | **LUNES**  |                | **MARTES**    |                | **JUEVES**  |
@@ -88,7 +89,7 @@ cg="#6c4675"
 
 <br/><br/>
 
-<div class="highlight-box">
+<div class="box2">
 
 **Profesor** : Daniel Enrique González Gómez 
 
@@ -102,9 +103,9 @@ cg="#6c4675"
 
 <br/><br/>
 
-<div class="highlight-box">
-
 ## **Atención a Estudiantes**
+<div class="box2">
+
 
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
@@ -116,10 +117,10 @@ cg="#6c4675"
 <br/><br/>
 
 
-
-<div class="highlight-box">
-
 ## **Información supletorios**
+<div class="box2">
+
+
 
 
 

@@ -1,7 +1,7 @@
 ---
-title: <span style="color:#235784"> **Integración**</span>  
+title: <span style="color:#235784"> </span>  
 author: "dgonzalez "
-subtitle: <span style="color:#235784">**Módulo 0**</span> 
+subtitle: <span style="color:#235784"> </span> 
 output:
   html_document:
     toc: no
@@ -17,12 +17,24 @@ knitr::opts_chunk$set(echo = TRUE,comment = NA)
 
 ```
 
+![](img/banner000.png) 
+
+# **INTEGRACIÓN**
 
 <br/><br/>
 
 
-<div class="content-box-blue">
+<div class="box2">
+
 ## **Definición**
 
 </div>
 
+
+<!-- Caja con etiqueta (box1) -->
+<div class="box1 with-label">
+<div class="label">Problema 1</div>
+Este es el contenido de la caja. Aquí puedes colocar cualquier información relevante.
+</div>
+
+   

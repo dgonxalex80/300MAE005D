@@ -15,17 +15,17 @@ navbar:
         - text: "Productoria"
           href: productoria.html  
         - text: "Teoría de conjuntos"
-          href: conjuntos.html  
+          href: recurso000.html  
         - text: "Técnicas de conteo"
-          href: conteo.html  
+          href: recurso000.html  
         - text: "Función exponencial"
-          href: exponencial.html  
+          href: recurso000.html  
         - text: "Función logaritmica"
-          href: logaritmica.html            
+          href: recurso000.html            
         - text: "Derivación"
-          href: derivacion.html
+          href: recurso000.html
         - text: "Integración"
-          href: integracion.html          
+          href: recurso000.html          
 
          
     - text: "Módulo 1"
