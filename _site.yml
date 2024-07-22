@@ -34,17 +34,17 @@ navbar:
           href: Modulo1.html
         - text: "---------"          
         - text: "Guía 1.1"
-          href: recurso000.html            
+          href: guia11.html            
         - text: "---------"   
         - text: "Recurso 1.1"
-          href: recurso000.html
+          href: recurso11.html
         - text: "Monitoria 1"
-          href: recurso000.html 
+          href: monitoria1.html 
         - text: "---------"          
         - text: "Introducción a R"
           href: introduccionR.html
         - text: "Código 1.1"
-          href: codigo101.html
+          href: codigo11.html
     - text: "Módulo 2"
       menu:
         - text: "Módulo 2"

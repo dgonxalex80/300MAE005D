@@ -20,16 +20,17 @@ library(summarytools)
 #devtools::install_github("dgonxalex80/paquete018")
 #library(paquete018)
 
+
 # colores
-c0= "#F7AA00"
-c1= "#235784"
-c2= "#40A8C4"
-c3= "#EEF6F7"
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
-c4= "#11224D"
-c5= "#5B84C4"
-
-c6= "#2c5697"
 
 
 

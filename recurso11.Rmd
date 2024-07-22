@@ -30,13 +30,17 @@ data(Colombia23)
 library(readxl)
 # pye20222 <- read_excel("data/pye20222.xlsx", sheet = "Sheet4", col_types = c("text", "numeric", "text", "numeric", "text", "numeric", "numeric","numeric", "numeric"))
 
+
 # colores
-c0= "#b0394a"
-c1= "#ad6395"
-c2= "#a391c4"
-c3= "#8acfe6"
-c4= "#646420"
-c5= "#db524f"
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
 ```
 
 ![](img/recursos1.png) 
@@ -732,6 +736,8 @@ Existen repositorio de bases de datos para uso general
 
 * [Portal Bases de datos abiertos Colombia](https://www.datos.gov.co/)
 
+* [Observatorio de violencia - Instituto de Medicina Legal](https://www.medicinalegal.gov.co/observatorio)
+
 * [Datos Banco mundial](https://datos.bancomundial.org/)
 
 * [Portal de Datos Abiertos de Esri España](https://opendata.esri.es/)
@@ -750,6 +756,17 @@ Existen repositorio de bases de datos para uso general
 
 * [Open Data Barometer](https://opendatabarometer.org/4thedition/report/?lang=es)
 
+* [NCBI (National Center for Biotechnology Information)](https://www.ncbi.nlm.nih.gov/)
+
+* [EBI (European Bioinformatics Institute)](https://www.ebi.ac.uk/)    
+
+* [Data.gov](https://data.gov/)
+
+* [NASA Open Data Portal](https://data.nasa.gov/)
+
+* [NIST Data Repository](https://data.nist.gov/sdp/#/)
+
+* [Biodiversidad del Global Biodiversity Information Facility (GBIF)](https://www.gbif.org/dataset/search)
 </div>
 
 <br/><br/>

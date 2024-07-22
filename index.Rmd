@@ -16,7 +16,17 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-cg="#6c4675"
+
+# colores
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
 
 ```
 
@@ -109,7 +119,7 @@ knitr::include_graphics("img/horario-005D.png")
 Será publicado en la segunda semana de clases
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-#  knitr::include_graphics("img/atencion.png")
+knitr::include_graphics("img/atencion1.png")
 ```
 
 </div>

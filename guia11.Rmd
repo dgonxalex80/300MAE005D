@@ -43,11 +43,14 @@ paleta7=c(co1,co2,co3,co4,co5,co6,co7)
 
 <br/><br/>
 
-![](img/guia1.png) 
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/guia1.png")
+```
+
 
 <br/><br/>
-
-
 
 # **Introducción**
 
@@ -57,15 +60,22 @@ En esta unidad se  presenta  la **Metodología Estadística** como  estrategia q
 
 <br/><br/>
 
-1. Definición del problema
-2. Definición de los objetivos
-3. Definición de las variables de interés
-4. Diseño del experimento
-5. Recolección de la información
-6. Procesamiento de información
-7. Análisis descriptivo
-8. Inferencia estadística
-9. Recomendaciones y conclusiones
+<!-- 1. Definición del problema -->
+<!-- 2. Definición de los objetivos -->
+<!-- 3. Definición de las variables de interés -->
+<!-- 4. Diseño del experimento -->
+<!-- 5. Recolección de la información -->
+<!-- 6. Procesamiento de información -->
+<!-- 7. Análisis descriptivo -->
+<!-- 8. Inferencia estadística -->
+<!-- 9. Recomendaciones y conclusiones -->
+
+
+
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+knitr::include_graphics("img/metodologia1.png")
+```
+
 
 <br/><br/>
 
@@ -112,7 +122,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |:--------------|:-----------------------------  |
 |Individual     |  **Base de datos** : Cada estudiante deberá  buscar una  base de  datos  de su interés,  depuarla  y  documentarla  si es  necesario. A partir de la información  recolectada deberá construir la ficha técnica de  la base. El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad102.pdf** |
 | Recurso       | Video: [**Como descargar datos abiertos**](https://youtu.be/lRftK2mL3Sw) 
-|               | Formato ficha : [**Ficha técnica**](https://dgonxalex80.github.io/pye20222/Ficha.html) |
+|               | Formato ficha :**Ficha técnica** |
 |               | Excel |
 |               | RStudio |
 |Fecha          | 30 de julio  2023 |
@@ -160,4 +170,17 @@ Los entregables completos y enviados dentro de los tiempos establecidos  otorgar
 |**Fecha** | 30 de julio  2023 |
 |**Hora límite**| 23:59  hora  local|
 |||
+
+
+
+<br/> <br/> <br/> 
+
+## **Ficha técnica**
+
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/ficha.png")
+```
+
+
 
