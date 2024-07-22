@@ -113,6 +113,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |:--------------|:-----------------------------  |
 |Individual     |  **Metodología estadística:** : Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas de establecer los  objetivos y las  variables de  interés asociadas en dicho problema e identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad101.pdf** en enlace ubicado en la plataforma Bs |
 | Recursos      | [**Metodología**](https://view.genial.ly/5f1ba8da1829700da368b4ab/horizontal-infographic-review-metodologia) |
+|               | [**Recurso 1.1**](https://dgonxalex80.github.io/300MAE005D/recurso11.html)                    |
 | Fecha         | 30 de julio de 2023 |
 | Hora          | 23:59 hora local    |
 
@@ -122,6 +123,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |:--------------|:-----------------------------  |
 |Individual     |  **Base de datos** : Cada estudiante deberá  buscar una  base de  datos  de su interés,  depuarla  y  documentarla  si es  necesario. A partir de la información  recolectada deberá construir la ficha técnica de  la base. El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad102.pdf** |
 | Recurso       | Video: [**Como descargar datos abiertos**](https://youtu.be/lRftK2mL3Sw) 
+|               | [**Recurso 1.1**](https://dgonxalex80.github.io/300MAE005D/recurso11.html)                    |
 |               | Formato ficha :**Ficha técnica** |
 |               | Excel |
 |               | RStudio |
