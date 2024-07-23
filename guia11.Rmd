@@ -109,7 +109,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 <br/>
 
-|Actividad101   | Descripción                    | 
+|Actividad111   | Descripción                    | 
 |:--------------|:-----------------------------  |
 |Individual     |  **Metodología estadística:** : Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas de establecer los  objetivos y las  variables de  interés asociadas en dicho problema e identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad101.pdf** en enlace ubicado en la plataforma Bs |
 | Recursos      | [**Metodología**](https://view.genial.ly/5f1ba8da1829700da368b4ab/horizontal-infographic-review-metodologia) |
@@ -119,7 +119,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 <br/> 
 
-|Actividad102   | Descripción                    | 
+|Actividad112   | Descripción                    | 
 |:--------------|:-----------------------------  |
 |Individual     |  **Base de datos** : Cada estudiante deberá  buscar una  base de  datos  de su interés,  depuarla  y  documentarla  si es  necesario. A partir de la información  recolectada deberá construir la ficha técnica de  la base. El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad102.pdf** |
 | Recurso       | Video: [**Como descargar datos abiertos**](https://youtu.be/lRftK2mL3Sw) 
@@ -132,7 +132,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 <br/> 
 
-|Actividad103   | Descripción                    | 
+|Actividad113   | Descripción                    | 
 |:--------------|:-----------------------------  |
 |Individual     |**Instalación de R y RStudio** : Para el  desarrollo  de las  actividades del curso deberán instalar [R CRAN](https://www.r-project.org/) y   [RStudio](https://rstudio.com/). Para su correcta instalación  existen varios videos en  YouTube que le permitirán realizarlo de una manera correcta   | 
 |Recursos       | [Descargar e instalar R y RStudio 2021 -Video Rafa Gonzalez Gouveia](https://www.youtube.com/watch?v=Nmu4WPdJBRo) |
@@ -164,8 +164,8 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 | Entregable |  Descripción                    |
 |:--------------|:-----------------------------|
-|**actividad101.pdf** | Documento que contenga: Formulación de problema propuesto, definición  de los objetivos y definición de variables de interés. En este último caso detallar para cada variable su  tipo ( cualitativa o cuantitativa ) y su escala de medición ( nominal, ordinal, de intervalo o de razón).|
-|**actividad102.pdf**| Ficha técnica de  la base seleccionada |
+|**actividad111.pdf** | Documento que contenga: Formulación de problema propuesto, definición  de los objetivos y definición de variables de interés. En este último caso detallar para cada variable su  tipo ( cualitativa o cuantitativa ) y su escala de medición ( nominal, ordinal, de intervalo o de razón).|
+|**actividad112.pdf**| Ficha técnica de  la base seleccionada |
 |||
 |**Fecha** | 30 de julio  2024|
 |**Hora límite**| 23:59  hora  local|
