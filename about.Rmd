@@ -33,26 +33,13 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Crear el data.frame
 data <- data.frame(
-  Nombre = c("OSMEL ALONSO SANCHEZ", "JUAN DIEGO AYALA ARCILA", "MOSQUERA CAICEDO", "JUAN CANCHALA JIMENEZ", "SIMON CARVAJAL CAMPO",
-             "PERDOMO CASTAÑEDA", "ISABELLA CELIS RAMIREZ", "ALEJANDRA CORAL DUQUE", "JUAN DIAZ BENAVIDES", "MARIA GOMEZ PARAMO",
-             "CABRERA HERNANDEZ", "ERIC HOLZINGER MEDINA", "DANIELA LASSO GOMEZ", "LONDOÑO MARTINEZ", "JUAN MARULANDA POVEDA",
-             "GUERRERO MONSALVE", "JUAN JOSE MURCIA DAZA", "CARLOS OGONAGA GARCIA", "ALEJANDRA OSPINA GARCIA", "AMY SOFIA PARRA MEJIA",
-             "CATALINA PULIDO RUBIANO", "ANNE RINCON BARRIOS", "LAURA RIVERA TOCORA", "NAOMI RUIZ CEBALLOS", "ISABELA SANABRIA CHACON",
-             "MOHAMAD SHAYEB SHAYEB", "JUAN TORRES MURILLO", "VALENCIA GONZALEZ", "MARIA VERANO RODRIGUEZ", "JUAN VILLARROEL LUENGAS"),
-  Emplid = c(8983424, 8958212, 8956230, 8983809, 8957963, 8970458, 8972408, 8979208, 8983956, 8950126,
-             8982983, 8974713, 8976061, 8968097, 8985198, 8978159, 8952652, 8973603, 8975754, 8975291,
-             8973988, 8971958, 8977553, 8980848, 8983822, 8963003, 8971204, 8979644, 8979991, 8971881),
-  Carrera = c("Ingeniería Civil", "Ingeniería Civil", "Biología", "Ingeniería de Sistemas", "Ingeniería Civil",
-              "Ingeniería Electrónica", "Biología", "Biología", "Ingeniería Mecánica", "Ingeniería Mecánica",
-              "Biología", "Ingeniería Mecánica", "Ingeniería Biomédica", "Ingeniería Biomédica", "Biología",
-              "Ingeniería Biomédica", "Ingeniería Electrónica", "Ingeniería Biomédica", "Ingeniería Biomédica", "Ingeniería Biomédica",
-              "Ingeniería Biomédica", "Ingeniería de Sistemas", "Ingeniería Biomédica", "Biología", "Biología",
-              "Ingeniería de Sistemas", "Ingeniería Electrónica", "Biología", "Biología", "Ingeniería Electrónica"),
+  Nombre = c("OSMEL ALONSO SANCHEZ", "JUAN DIEGO AYALA ARCILA", "MOSQUERA CAICEDO", "JUAN CANCHALA JIMENEZ", "SIMON CARVAJAL CAMPO", "PERDOMO CASTAÑEDA", "ISABELLA CELIS RAMIREZ", "ALEJANDRA CORAL DUQUE", "JUAN DIAZ BENAVIDES", "MARIA GOMEZ PARAMO","CABRERA HERNANDEZ", "ERIC HOLZINGER MEDINA", "DANIELA LASSO GOMEZ", "LONDOÑO MARTINEZ", "JUAN MARULANDA POVEDA", "GUERRERO MONSALVE", "JUAN JOSE MURCIA DAZA", "CARLOS OGONAGA GARCIA", "ALEJANDRA OSPINA GARCIA", "AMY SOFIA PARRA MEJIA", "CATALINA PULIDO RUBIANO", "ANNE RINCON BARRIOS", "LAURA RIVERA TOCORA", "NAOMI RUIZ CEBALLOS", "ISABELA SANABRIA CHACON", "MOHAMAD SHAYEB SHAYEB", "JUAN TORRES MURILLO", "VALENCIA GONZALEZ", "MARIA VERANO RODRIGUEZ", "JUAN VILLARROEL LUENGAS"),
+  Emplid = c(8983424, 8958212, 8956230, 8983809, 8957963, 8970458, 8972408, 8979208, 8983956, 8950126, 8982983, 8974713, 8976061, 8968097, 8985198, 8978159, 8952652, 8973603, 8975754, 8975291, 8973988, 8971958, 8977553, 8980848, 8983822, 8963003, 8971204, 8979644, 8979991, 8971881),
+  Carrera = c("Ingeniería Civil", "Ingeniería Civil", "Biología", "Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería Electrónica", "Biología", "Biología", "Ingeniería Mecánica", "Ingeniería Mecánica", "Biología", "Ingeniería Mecánica", "Ingeniería Biomédica", "Ingeniería Biomédica", "Biología", "Ingeniería Biomédica", "Ingeniería Electrónica", "Ingeniería Biomédica", "Ingeniería Biomédica", "Ingeniería Biomédica", "Ingeniería Biomédica", "Ingeniería de Sistemas", "Ingeniería Biomédica", "Biología", "Biología", "Ingeniería de Sistemas", "Ingeniería Electrónica", "Biología", "Biología", "Ingeniería Electrónica"),
   Matriculada = c(1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
   Cancelada = c(0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
   Perdida = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-  Promedio = c(4.24, 3.52, 4.15, 3.89, 3.51, 3.69, 3.52, 4.78, 4.48, 3.48, 4.11, 4.32, 3.67, 3.61, 4.2,
-               4.54, 3.26, 4.21, 4.01, 4.01, 3.9, 3.94, 4.03, 4.08, 4.6, 4.11, 4.04, 4.31, 4.18, 4.32)
+  Promedio = c(4.24, 3.52, 4.15, 3.89, 3.51, 3.69, 3.52, 4.78, 4.48, 3.48, 4.11, 4.32, 3.67, 3.61, 4.2, 4.54, 3.26, 4.21, 4.01, 4.01, 3.9, 3.94, 4.03, 4.08, 4.6, 4.11, 4.04, 4.31, 4.18, 4.32)
 )
 
 # Mostrar el data.frame

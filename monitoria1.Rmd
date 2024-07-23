@@ -69,6 +69,18 @@ Para el siguiente grupo de variables defina para cada caso el tipo de variable y
 |10. |Grado de satisfacción de los clientes ante el servicio de mantenimiento de un taller mecánico |
 |11. |Nota obtenida en el  examen  de  estadística |
 |12. |Nivel de estrés de un estudiante antes de una  presentar una prueba escrita |
+|13. |Número de llamadas de servicio al cliente atendidas por día en una empresa de telecomunicaciones.|
+|14. |Porcentaje de cumplimiento de las metas de producción mensual en una fábrica de automóviles.|
+|15. |Duración en minutos de las reuniones de equipo en una empresa tecnológica.|
+|16. |Número de quejas recibidas por semana en una cadena de supermercados.|
+|17. |Calidad del aire medida en partículas por millón (ppm) en una zona industrial.|
+|18. |Nivel de satisfacción de los empleados con el ambiente laboral en una encuesta anual.|
+|19. |Cantidad de productos defectuosos detectados por turno en una línea de ensamblaje.|
+|20. |Tiempo en segundos para cargar una página web en diferentes navegadores.|
+|21. |Volumen de ventas mensuales en una tienda en línea.|
+|22. |Temperatura promedio diaria registrada en una ciudad durante el verano.|
+|23. |Número de accidentes laborales reportados por mes en una planta manufacturera.|
+|24. |Grado de conocimiento sobre seguridad informática de los empleados después de un taller de capacitación.|
 
 </div>
 
@@ -110,8 +122,21 @@ Indique el concepto referido en cada uno de los siguientes enunciados:
 |12. |Describe el grado de inclinación de la distribución de datos en torno a la media.|
 |13. |Se obtiene al ordenar los datos y seleccionar el valor que se encuentra en la posición central.|
 |14. |Se obtiene al restar el primer cuartil del tercer cuartil en una distribución de datos.|
-
-
+|15. |Mide el grado de dispersión de los datos en relación con su media aritmética.|
+|16. |Indica el promedio de los valores absolutos de las diferencias entre cada valor y la media.|
+|17. |Proporciona una medida de la dispersión de los datos que es independiente de la unidad de medida.|
+|18. |Mide la variabilidad de los datos en una muestra mediante la raíz cuadrada de la varianza.|
+|19. |Representa la suma de los valores observados dividida por el número total de observaciones.|
+|20. |Mide la dispersión relativa de los datos utilizando el coeficiente de variación.|
+|21. |Describe la dispersión de los datos utilizando el rango intercuartil.|
+|22. |Indica el valor que divide una muestra en dos mitades iguales.|
+|23. |Se obtiene al calcular la diferencia entre el tercer cuartil y la mediana.|
+|24. |Mide el grado de asimetría de una distribución en relación con su media y desviación estándar.|
+|25. |Proporciona una medida de la forma de la distribución, indicando si es más alta y delgada o más baja y ancha.|
+|26. |Indica el valor que se encuentra en la posición de la mediana en un conjunto de datos ordenados.|
+|27. |Describe la distribución de los datos en torno a la media utilizando la curtosis.|
+|28. |Mide la dispersión de los datos en relación con su media utilizando el coeficiente de Pearson.|
+|29. |Indica la diferencia entre el valor máximo y el primer cuartil en una distribución de datos.|
 
 </div>
 
@@ -139,7 +164,25 @@ Responda F (Falso)  o V (Verdadero), justificando la respuesta en caso de ser Fa
 |11. | Si multiplicamos la variable por una constante, el coeficiente de variación se altera. |
 |12. | La varianza de una constante por una variable es igual a la varianza de la variable. |
 |13. | Al sumar 4 a cada uno de los números de la serie : 2, 6, 5, 9, 1 se obtiene la serie 6, 10, 9, 13 y 5. Las series tienen igual varianza, distinta media y diferente coeficiente de variación. |
+|14. | La media aritmética es siempre mayor que la mediana en una distribución sesgada a la derecha. |
+|15. | En una distribución normal, aproximadamente el 95% de los datos se encuentra dentro de dos desviaciones estándar de la media. |
+|16. | La mediana es afectada por los valores extremos en un conjunto de datos. |
+|17. | La moda es el único promedio que puede tener más de un valor en un conjunto de datos. |
+|18. | El coeficiente de correlación de Pearson puede variar entre -1 y 1. |
+|19. | Si todos los valores de un conjunto de datos se multiplican por una constante, la media se multiplica por la misma constante. |
+|20. | La desviación estándar de una constante es siempre cero. |
+|21. | La suma de los cuadrados de las desviaciones respecto a la media es siempre mayor o igual a cero. |
+|22. | En un diagrama de caja y bigotes, el bigote inferior representa el primer cuartil. |
+|23. | La probabilidad de que ocurra un evento imposible es uno. |
+|24. | La covarianza mide la relación lineal entre dos variables. |
+|25. | El coeficiente de determinación (R²) indica la proporción de la variabilidad total de una variable que es explicada por la variabilidad de otra variable. |
+|26. | Una distribución bimodal tiene dos picos o modas. |
+|27. | Si la media es igual a la mediana y a la moda, la distribución es simétrica. |
+|28. | La media geométrica es siempre mayor que la media aritmética. |
+|29. | El intervalo intercuartílico es la diferencia entre el primer cuartil y el tercer cuartil. |
+|30. | Una variable continua puede asumir un número infinito de valores dentro de cualquier intervalo. |
 
+Estas nuevas preguntas siguen el mismo formato y estilo de las proporcionadas inicialmente.
 </div>
 
 <br/><br/><br/>
