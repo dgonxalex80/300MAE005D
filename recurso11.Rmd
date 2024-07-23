@@ -43,7 +43,10 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
 ```
 
-![](img/recursos1.png) 
+
+```{r, echo=FALSE, out.width="80%", fig.align = "left"}
+ knitr::include_graphics("img/recursos1.png")
+```
 
 <br/><br/>
 
@@ -233,12 +236,18 @@ Las variables se miden en diferentes escalas, dependiendo del tipo de valor que 
 #### **Escalas de medición**
 
 
-|tipo de variable | escala            |
-|:----------------|:------------------|
-| cualitativa     | nominal           |      
-| cualitativa     | ordinal           |
-| cuantitativa    | de intervalo      |
-|cuantitativa     | de razón          |
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+ knitr::include_graphics("img/escalas.png")
+```
+
+
+<!-- |tipo de variable | escala            | -->
+<!-- |:----------------|:------------------| -->
+<!-- | cualitativa     | nominal           |       -->
+<!-- | cualitativa     | ordinal           | -->
+<!-- | cuantitativa    | de intervalo      | -->
+<!-- |cuantitativa     | de razón          | -->
 
 <br/><br/>
 
@@ -787,7 +796,12 @@ DT::datatable(head(iris, 150),fillContainer = FALSE, options = list(pageLength =
 Las siguientes etapas comprenden el ciclo de los datos desde la importación hasta la comunicación. Estas etapas suceden al interior de la Metodología Estadística antes mencionada y constituyen una parte muy importante del proceso, pues de la calidad de los datos, depende la calidad de los resultados.
 
 
-<img src="img/proceso_datos.png" width="500">
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+ knitr::include_graphics("img/proceso_datos.png")
+```
+
+
 <br/><br/>
 
 Imagen tomada de : https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/

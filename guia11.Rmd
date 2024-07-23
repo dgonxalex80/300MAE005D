@@ -17,28 +17,14 @@ knitr::opts_chunk$set(echo = TRUE,comment = NA)
 library(ggplot2)
 
 # colores
-c0= "#b0394a"
-c1= "#ad6395"
-c2= "#a391c4"
-c3= "#8acfe6"
-c4= "#646420"
-c5= "#db524f"
-
-
-# ---------paletas de colores -------------------------------------------------
-co1="#002147" # ****
-co2="#325d8c" # ***
-co3="#6994bc" # **
-co4="#95b9db" # **
-co5="#c4d5f2"
-co6="#C8C8C8" # ***
-co7="#8A8D8F"
-paleta2=c(co1,co2)
-paleta3=c(co1,co2,co7)
-paleta4=c(co1,co2,co3,co7)
-paleta5=c(co1,co2,co3,co4,co7)
-paleta6=c(co1,co2,co3,co4,co5,co7)
-paleta7=c(co1,co2,co3,co4,co5,co6,co7)
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 ```
 
 <br/><br/>
