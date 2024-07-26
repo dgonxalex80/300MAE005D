@@ -25,12 +25,6 @@ c5= "#783AC7"
 c6= "#2C5697" # AZZUL INSTITUCIONAL
 c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
-```
-
-
-<br/><br/>
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # Crear el data.frame
 data <- data.frame(
   Nombre = c("OSMEL ALONSO SANCHEZ", "JUAN DIEGO AYALA ARCILA", "MOSQUERA CAICEDO", "JUAN CANCHALA JIMENEZ", "SIMON CARVAJAL CAMPO", "PERDOMO CASTAÑEDA", "ISABELLA CELIS RAMIREZ", "ALEJANDRA CORAL DUQUE", "JUAN DIAZ BENAVIDES", "MARIA GOMEZ PARAMO","CABRERA HERNANDEZ", "ERIC HOLZINGER MEDINA", "DANIELA LASSO GOMEZ", "LONDOÑO MARTINEZ", "JUAN MARULANDA POVEDA", "GUERRERO MONSALVE", "JUAN JOSE MURCIA DAZA", "CARLOS OGONAGA GARCIA", "ALEJANDRA OSPINA GARCIA", "AMY SOFIA PARRA MEJIA", "CATALINA PULIDO RUBIANO", "ANNE RINCON BARRIOS", "LAURA RIVERA TOCORA", "NAOMI RUIZ CEBALLOS", "ISABELA SANABRIA CHACON", "MOHAMAD SHAYEB SHAYEB", "JUAN TORRES MURILLO", "VALENCIA GONZALEZ", "MARIA VERANO RODRIGUEZ", "JUAN VILLARROEL LUENGAS"),
@@ -52,6 +46,14 @@ if (!require(paletteer)) install.packages("paletteer")
 library(paletteer)
 library(ggplot2)
 library(dplyr)
+
+```
+
+
+<br/><br/>
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
 
 # Crear una paleta de colores pastel
 # pastel_colors <- c("#FDBFB3", "#FFDDC1", "#FFC8A2", "#FFD8BE", "#FFCB9A", "#FFC3A0", "#FF9AA2", "#FFDAC1")
@@ -80,5 +82,11 @@ ggplot(data, aes(x = Carrera, y = Promedio, fill = Carrera)) +
 
 
 
+```
+```{r}
+non =data.frame(id<- 1:30,
+           data$Nombre)
+
+non
 ```
 
