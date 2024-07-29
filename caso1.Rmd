@@ -82,15 +82,15 @@ Finalmente adjunte un análisis de los resultados obtenidos.
 
 <pre>
 install.packages("devtools") # solo una vez
-devtools::install_github("dgonxalex80/paqueteDEG") # descarga paqueteDEG
-library(paqueteDEG) # activa paqueteDEG
+devtools::install_github("dgonxalex80/paquetePROB") # descarga paquetePROB
+library(paquetePROB) # activa paquetePROB
 data("beer") # carga la base beer
 </pre>
 
 ```{r, eval=FALSE}
 install.packages("devtools") # solo una vez
-devtools::install_github("dgonxalex80/paqueteDEG") # descarga paqueteDEG
-library(paqueteDEG) # activa paqueteDEG
+devtools::install_github("dgonxalex80/paquetePROB") # descarga paqueteDEG
+library(paquetePROB) # activa paqueteDEG
 data("beer") # carga la base beer
 ```
 
@@ -99,7 +99,7 @@ data("beer") # carga la base beer
 ## **Batos de datos**
 ```{r}
 library(DT)
-library(paqueteDEG)
+library(paquetePROB)
 data(beer)
 DT::datatable(head(beer, 69),fillContainer = FALSE, options = list(pageLength = 8))
 ```
