@@ -12,7 +12,7 @@
 <meta name="author" content="dgonzalez" />
 
 
-<title> Código 1.2</title>
+<title> </title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -30,10 +30,8 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/tabwid-1.1.3/tabwid.css" rel="stylesheet" />
@@ -225,70 +223,10 @@ $(document).ready(function () {
 </style>
 
 <!-- code folding -->
-
-
-
 <style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
+.code-folding-btn { margin-bottom: 4px; }
 </style>
+
 
 
 
@@ -298,16 +236,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -483,19 +411,26 @@ div.tocify {
 
 <div id="header">
 
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
-<h1 class="title toc-ignore"><span style="color:#ad6395"> <strong>Código
-1.2</strong></span></h1>
-<h3 class="subtitle"><span style="color:#ad6395"><strong>Módulo 1-
-Unidad 1.2</strong></span></h3>
+
+<h1 class="title toc-ignore"><span style="color:#235784"> </span></h1>
+<h3 class="subtitle"><span style="color:#235784"><strong>Unidad
+1.1</strong></span></h3>
 <h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p><img src="img/banner1.png" /></p>
-<p><br/><br/></p>
+<p><img src="img/codigo1.png" width="100%" style="display: block; margin: auto;" />
+<br/><br/></p>
 <div id="introducción" class="section level1">
 <h1><strong>1. Introducción</strong></h1>
 <p><br/></p>
@@ -527,10 +462,10 @@ en RStudio.</p>
 frecuencia e indicadores descriptivos es summarytools, a continuación se
 comparte código para su instalación :</p>
 <p><br/></p>
-<pre class="r"><code>install.packages(&quot;remotes&quot;)        # se puede tambien utulizar el paquete devtools
-library(remotes)
-install_github(&quot;rapporter/pander&quot;) # repositorio recomendado
-install_github(&quot;dcomtois/summarytools&quot;, build_vignettes = TRUE)</code></pre>
+<pre class="r"><code># install.packages(&quot;remotes&quot;)        # se puede tambien utulizar el paquete devtools
+# library(remotes)
+# install_github(&quot;rapporter/pander&quot;) # repositorio recomendado
+# install_github(&quot;dcomtois/summarytools&quot;, build_vignettes = TRUE)</code></pre>
 <p><br/><br/></p>
 </div>
 </div>
@@ -592,7 +527,7 @@ ft1 &lt;- ft1 %&gt;%
     width(j = 1,  width = 2) %&gt;%
     width(j = 2, width = 1)
 ft1</code></pre>
-<div class="tabwid"><style>.cl-8a304acc{}.cl-8a2ac1c4{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-8a2cf2e6{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-8a2cf2fa{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-8a2d0916{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a2d0920{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a2d092a{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a2d092b{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a2d0934{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a2d0935{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-8a304acc'><thead><tr style="overflow-wrap:break-word;"><th class="cl-8a2d0916"><p class="cl-8a2cf2e6"><span class="cl-8a2ac1c4">Tipo de tarjeta</span></p></th><th class="cl-8a2d0920"><p class="cl-8a2cf2fa"><span class="cl-8a2ac1c4">Frecuencia Absoluta</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-8a2d092a"><p class="cl-8a2cf2e6"><span class="cl-8a2ac1c4">American Express</span></p></td><td class="cl-8a2d092b"><p class="cl-8a2cf2fa"><span class="cl-8a2ac1c4">4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a2d092a"><p class="cl-8a2cf2e6"><span class="cl-8a2ac1c4">Discover</span></p></td><td class="cl-8a2d092b"><p class="cl-8a2cf2fa"><span class="cl-8a2ac1c4">8</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a2d092a"><p class="cl-8a2cf2e6"><span class="cl-8a2ac1c4">MasterCard</span></p></td><td class="cl-8a2d092b"><p class="cl-8a2cf2fa"><span class="cl-8a2ac1c4">28</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a2d092a"><p class="cl-8a2cf2e6"><span class="cl-8a2ac1c4">Star Card</span></p></td><td class="cl-8a2d092b"><p class="cl-8a2cf2fa"><span class="cl-8a2ac1c4">140</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a2d0934"><p class="cl-8a2cf2e6"><span class="cl-8a2ac1c4">Visa</span></p></td><td class="cl-8a2d0935"><p class="cl-8a2cf2fa"><span class="cl-8a2ac1c4">20</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-8ae26dd8{}.cl-8addbf7c{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(51, 51, 51, 1.00);background-color:transparent;}.cl-8adfdabe{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8adfdadc{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8adfe892{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8adfe89c{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8adfe8a6{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8adfe8a7{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8adfe8a8{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8adfe8b0{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-8ae26dd8'><thead><tr style="overflow-wrap:break-word;"><th class="cl-8adfe892"><p class="cl-8adfdabe"><span class="cl-8addbf7c">Tipo de tarjeta</span></p></th><th class="cl-8adfe89c"><p class="cl-8adfdadc"><span class="cl-8addbf7c">Frecuencia Absoluta</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-8adfe8a6"><p class="cl-8adfdabe"><span class="cl-8addbf7c">American Express</span></p></td><td class="cl-8adfe8a7"><p class="cl-8adfdadc"><span class="cl-8addbf7c">4</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8adfe8a6"><p class="cl-8adfdabe"><span class="cl-8addbf7c">Discover</span></p></td><td class="cl-8adfe8a7"><p class="cl-8adfdadc"><span class="cl-8addbf7c">8</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8adfe8a6"><p class="cl-8adfdabe"><span class="cl-8addbf7c">MasterCard</span></p></td><td class="cl-8adfe8a7"><p class="cl-8adfdadc"><span class="cl-8addbf7c">28</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8adfe8a6"><p class="cl-8adfdabe"><span class="cl-8addbf7c">Star Card</span></p></td><td class="cl-8adfe8a7"><p class="cl-8adfdadc"><span class="cl-8addbf7c">140</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8adfe8a8"><p class="cl-8adfdabe"><span class="cl-8addbf7c">Visa</span></p></td><td class="cl-8adfe8b0"><p class="cl-8adfdadc"><span class="cl-8addbf7c">20</span></p></td></tr></tbody></table></div>
 <p><br/></p>
 <p>El resultado corresponde a un conteo de cada uno de los valores de la
 variable. En caso de que se requiera calcular la proporción que
@@ -617,7 +552,7 @@ ft2 &lt;- ft2 %&gt;%
     width(j = 1,  width = 2) %&gt;%
     width(j = 2, width = 1)
 ft2</code></pre>
-<div class="tabwid"><style>.cl-8a3d9e20{}.cl-8a368950{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(51, 51, 51, 1.00);background-color:transparent;}.cl-8a3869aa{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8a3869b4{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8a387422{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a38742c{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a38742d{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a387436{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a387440{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a387441{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-8a3d9e20'><thead><tr style="overflow-wrap:break-word;"><th class="cl-8a387422"><p class="cl-8a3869aa"><span class="cl-8a368950">Tipo de tarjeta</span></p></th><th class="cl-8a38742c"><p class="cl-8a3869b4"><span class="cl-8a368950">Frecuencia relativa</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-8a38742d"><p class="cl-8a3869aa"><span class="cl-8a368950">American Express</span></p></td><td class="cl-8a387436"><p class="cl-8a3869b4"><span class="cl-8a368950">0.02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a38742d"><p class="cl-8a3869aa"><span class="cl-8a368950">Discover</span></p></td><td class="cl-8a387436"><p class="cl-8a3869b4"><span class="cl-8a368950">0.04</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a38742d"><p class="cl-8a3869aa"><span class="cl-8a368950">MasterCard</span></p></td><td class="cl-8a387436"><p class="cl-8a3869b4"><span class="cl-8a368950">0.14</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a38742d"><p class="cl-8a3869aa"><span class="cl-8a368950">Star Card</span></p></td><td class="cl-8a387436"><p class="cl-8a3869b4"><span class="cl-8a368950">0.70</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a387440"><p class="cl-8a3869aa"><span class="cl-8a368950">Visa</span></p></td><td class="cl-8a387441"><p class="cl-8a3869b4"><span class="cl-8a368950">0.10</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-8aecff82{}.cl-8ae851d0{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(51, 51, 51, 1.00);background-color:transparent;}.cl-8aea57b4{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8aea57c8{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8aea6416{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8aea6420{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8aea6421{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8aea6422{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8aea642a{width:2in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8aea642b{width:1in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-8aecff82'><thead><tr style="overflow-wrap:break-word;"><th class="cl-8aea6416"><p class="cl-8aea57b4"><span class="cl-8ae851d0">Tipo de tarjeta</span></p></th><th class="cl-8aea6420"><p class="cl-8aea57c8"><span class="cl-8ae851d0">Frecuencia relativa</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-8aea6421"><p class="cl-8aea57b4"><span class="cl-8ae851d0">American Express</span></p></td><td class="cl-8aea6422"><p class="cl-8aea57c8"><span class="cl-8ae851d0">0.02</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8aea6421"><p class="cl-8aea57b4"><span class="cl-8ae851d0">Discover</span></p></td><td class="cl-8aea6422"><p class="cl-8aea57c8"><span class="cl-8ae851d0">0.04</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8aea6421"><p class="cl-8aea57b4"><span class="cl-8ae851d0">MasterCard</span></p></td><td class="cl-8aea6422"><p class="cl-8aea57c8"><span class="cl-8ae851d0">0.14</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8aea6421"><p class="cl-8aea57b4"><span class="cl-8ae851d0">Star Card</span></p></td><td class="cl-8aea6422"><p class="cl-8aea57c8"><span class="cl-8ae851d0">0.70</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8aea642a"><p class="cl-8aea57b4"><span class="cl-8ae851d0">Visa</span></p></td><td class="cl-8aea642b"><p class="cl-8aea57c8"><span class="cl-8ae851d0">0.10</span></p></td></tr></tbody></table></div>
 <p><br/></p>
 <p>Si utilizamos la función <code>freq</code> del paquete
 <code>summarytools</code>, la salida es una tabla más elaborada</p>
@@ -678,20 +613,20 @@ summarytools::freq(Colombia23$edadR)</code></pre>
 
                             Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
 ------------------------- ------ --------- -------------- --------- --------------
-        1. (0  a 5  años]    656      6.81           6.81      6.81           6.81
-        2. (5  a 11 años]    330      3.42          10.23      3.42          10.23
-        3. (11 a 17 años]    113      1.17          11.41      1.17          11.41
-        4. (17 a 26 años]    867      9.00          20.40      9.00          20.40
-        5. (26 a 59 años]   3797     39.40          59.81     39.40          59.81
-      6. (Más de 59 años]   3873     40.19         100.00     40.19         100.00
+        1. (0  a 5  años]    310      3.22           3.22      3.22           3.22
+        3. (11 a 17 años]    114      1.18           4.40      1.18           4.40
+        4. (17 a 26 años]    993     10.31          14.71     10.31          14.71
+        5. (26 a 59 años]   4094     42.49          57.19     42.49          57.19
+      6. (Más de 59 años]   4125     42.81         100.00     42.81         100.00
                      &lt;NA&gt;      0                               0.00         100.00
                     Total   9636    100.00         100.00    100.00         100.00</code></pre>
 <p>Esta tabla nos permite identificar los rangos de mayor frecuencia</p>
 <p>Tambien podemo realizar una tabla sin tener que realizar la
 recodificación. Esto se logra con la función <strong>hist()</strong></p>
 <p><br/><br/></p>
-<pre class="r"><code>h=hist(Colombia23$edad)</code></pre>
-<p><img src="codigo102_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code>Colombia23$edad &lt;- as.numeric(Colombia23$edad)
+h=hist(Colombia23$edad)</code></pre>
+<p><img src="codigo12_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <pre class="r"><code>h$breaks   # puntos de corte</code></pre>
 <pre><code> [1]   0  10  20  30  40  50  60  70  80  90 100 110 120</code></pre>
 <pre class="r"><code>h$counts   # frecuencias absolutas en cada intervalo</code></pre>
@@ -724,7 +659,7 @@ summarytools::freq(Edad.fallecidos)</code></pre>
 <p><br/><br/></p>
 <p>O tambien</p>
 <pre class="r"><code>h=hist(Colombia23$edad, breaks = c(0,4.9, 11.9,17.9,26.9, 59.9,115))</code></pre>
-<p><img src="codigo102_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="codigo12_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <pre class="r"><code># Con los valores contenidos en el objeto h construimos la tabla
 LI=h$breaks[1:6]
 LS=h$breaks[2:7]
@@ -964,14 +899,12 @@ df1</code></pre>
 <pre class="r"><code>colnames(df1)=c(&quot;Id&quot;, &quot;Nombre&quot;, &quot;Edad&quot;,&quot;grado&quot;, &quot;Nota1&quot;, &quot;Nota2&quot;, &quot;Nota Final&quot;, &quot;Registrado&quot;)
 df1=flextable(df1)
 df1</code></pre>
-<div class="tabwid"><style>.cl-8a81a516{}.cl-8a7db9d8{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(51, 51, 51, 1.00);background-color:transparent;}.cl-8a7f717e{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8a7f7188{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8a7f7f7a{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a7f7f7b{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a7f7f84{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a7f7f85{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a7f7f86{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8a7f7f87{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-8a81a516'><thead><tr style="overflow-wrap:break-word;"><th class="cl-8a7f7f7a"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">Id</span></p></th><th class="cl-8a7f7f7b"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Nombre</span></p></th><th class="cl-8a7f7f7a"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">Edad</span></p></th><th class="cl-8a7f7f7b"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">grado</span></p></th><th class="cl-8a7f7f7a"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">Nota1</span></p></th><th class="cl-8a7f7f7a"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">Nota2</span></p></th><th class="cl-8a7f7f7a"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">Nota Final</span></p></th><th class="cl-8a7f7f7a"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">Registrado</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">1</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Bob</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">28</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">C</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.9</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.1</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.00</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">2</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Ashley</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">27</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">A</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.5</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.1</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.30</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">3</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">James</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">30</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">A</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.6</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.2</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.40</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">4</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">David</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">28</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">C</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.9</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.1</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.00</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">5</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Jenny</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">29</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">B</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.1</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.9</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.00</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">6</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Hans</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">29</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">B</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.3</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.5</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.90</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">7</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Leo</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">27</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">B</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.3</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.2</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.25</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">John</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">27</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">A</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.9</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.3</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.60</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Emily</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">31</span></p></td><td class="cl-8a7f7f85"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">C</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.5</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">9.1</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.80</span></p></td><td class="cl-8a7f7f84"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8a7f7f86"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">10</span></p></td><td class="cl-8a7f7f87"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">Lee</span></p></td><td class="cl-8a7f7f86"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">30</span></p></td><td class="cl-8a7f7f87"><p class="cl-8a7f7188"><span class="cl-8a7db9d8">C</span></p></td><td class="cl-8a7f7f86"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.6</span></p></td><td class="cl-8a7f7f86"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.8</span></p></td><td class="cl-8a7f7f86"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">8.70</span></p></td><td class="cl-8a7f7f86"><p class="cl-8a7f717e"><span class="cl-8a7db9d8">FALSE</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-8b242b4c{}.cl-8b1daa38{font-family:'Helvetica';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(51, 51, 51, 1.00);background-color:transparent;}.cl-8b20a0da{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8b20a0f8{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:4pt;padding-right:4pt;line-height: 1;background-color:transparent;}.cl-8b20b35e{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8b20b368{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 1.5pt solid rgba(190, 190, 190, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8b20b372{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8b20b373{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8b20b374{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8b20b37c{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(190, 190, 190, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-8b242b4c'><thead><tr style="overflow-wrap:break-word;"><th class="cl-8b20b35e"><p class="cl-8b20a0da"><span class="cl-8b1daa38">Id</span></p></th><th class="cl-8b20b368"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Nombre</span></p></th><th class="cl-8b20b35e"><p class="cl-8b20a0da"><span class="cl-8b1daa38">Edad</span></p></th><th class="cl-8b20b368"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">grado</span></p></th><th class="cl-8b20b35e"><p class="cl-8b20a0da"><span class="cl-8b1daa38">Nota1</span></p></th><th class="cl-8b20b35e"><p class="cl-8b20a0da"><span class="cl-8b1daa38">Nota2</span></p></th><th class="cl-8b20b35e"><p class="cl-8b20a0da"><span class="cl-8b1daa38">Nota Final</span></p></th><th class="cl-8b20b35e"><p class="cl-8b20a0da"><span class="cl-8b1daa38">Registrado</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">1</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Bob</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">28</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">C</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.9</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.1</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.00</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">2</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Ashley</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">27</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">A</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.5</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.1</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.30</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">3</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">James</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">30</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">A</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.6</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.2</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.40</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">4</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">David</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">28</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">C</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.9</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.1</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.00</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">5</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Jenny</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">29</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">B</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.1</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.9</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.00</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">6</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Hans</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">29</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">B</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.3</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.5</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.90</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">7</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Leo</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">27</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">B</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.3</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.2</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.25</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">TRUE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">John</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">27</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">A</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.9</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.3</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.60</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Emily</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">31</span></p></td><td class="cl-8b20b373"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">C</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.5</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">9.1</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.80</span></p></td><td class="cl-8b20b372"><p class="cl-8b20a0da"><span class="cl-8b1daa38">FALSE</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-8b20b374"><p class="cl-8b20a0da"><span class="cl-8b1daa38">10</span></p></td><td class="cl-8b20b37c"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">Lee</span></p></td><td class="cl-8b20b374"><p class="cl-8b20a0da"><span class="cl-8b1daa38">30</span></p></td><td class="cl-8b20b37c"><p class="cl-8b20a0f8"><span class="cl-8b1daa38">C</span></p></td><td class="cl-8b20b374"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.6</span></p></td><td class="cl-8b20b374"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.8</span></p></td><td class="cl-8b20b374"><p class="cl-8b20a0da"><span class="cl-8b1daa38">8.70</span></p></td><td class="cl-8b20b374"><p class="cl-8b20a0da"><span class="cl-8b1daa38">FALSE</span></p></td></tr></tbody></table></div>
 </div>
 </div>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -1003,36 +936,12 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
-
 <script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
 });
 </script>
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
