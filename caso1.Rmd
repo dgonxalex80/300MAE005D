@@ -50,6 +50,8 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 knitr::include_graphics("img/banner001.png")
 ```
 
+<br/><br/>
+
 ## **Enunciado**
 
 ![](img/cerveza.png)
@@ -99,11 +101,14 @@ data("beer") # carga la base beer
 ## **Batos de datos**
 ```{r}
 library(DT)
-library(paquetePROB)
+# Cargar los datos
 data(beer)
-DT::datatable(head(beer, 69),fillContainer = FALSE, options = list(pageLength = 8))
-```
+# Mostrar la tabla con DataTable
+DT::datatable(
+  head(beer, fillContainer = FALSE, options = list(pageLength = 8))
+)
 
+```
 <br/>
 
 
