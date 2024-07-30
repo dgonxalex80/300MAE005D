@@ -116,10 +116,10 @@ knitr::include_graphics("img/horario-005D.png")
 ## **Atención a Estudiantes**
 <div class="box2">
 
-Será publicado en la segunda semana de clases
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-knitr::include_graphics("img/atencion1.png")
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/atencion2.png")
 ```
 
 </div>
