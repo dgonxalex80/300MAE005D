@@ -72,7 +72,8 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |Trabajo individual | A partir de la base de datos trabajada en las dos unidades anteriores construya un **tablero** (Dashboard)  que contenga gráficos e indicadores estaísticos  de las variables contenidas  en la base de datos seleccionada en la Actividad 112 de la unidad 1.1. Realice una descripción con los resultados obtenidos en el tablero. |
 | Recurso       |  Código 13.R  y TableroM1 |
 ||[Resumen R base](https://www.i3s.unice.fr/~malapert/R/pdf/base-r.pdf)|
-||[Dashboard en R](https://pkgs.rstudio.com/flexdashboard/)
+||[Dashboard en R](https://pkgs.rstudio.com/flexdashboard/)   |  
+||[**Tableros con flexdashboard**](https://warin.ca/dpr/dashboards.html) |
 ||[Resumen ggplot2](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)|
 ||[Resumen RMarkdown](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)|
 |Fecha  | 12 de agosto de 2024 |
