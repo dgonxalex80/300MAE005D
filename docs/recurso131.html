@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="dgonzalez" />
+
+
+<title> </title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"> </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    PyE
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 0
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo0.html">Módulo 0</a>
+    </li>
+    <li>
+      <a href="sumatoria.html">Sumatoria</a>
+    </li>
+    <li>
+      <a href="productoria.html">Productoria</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Teoría de conjuntos</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Técnicas de conteo</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Función exponencial</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Función logaritmica</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Derivación</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Integración</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo1.html">Módulo 1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="guia11.html">Guía 1.1</a>
+    </li>
+    <li>
+      <a href="recurso11.html">Recurso 1.1</a>
+    </li>
+    <li>
+      <a href="introduccionR.html">Introducción a R</a>
+    </li>
+    <li>
+      <a href="codigo11.html">Código 1.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="guia12.html">Guía 1.2</a>
+    </li>
+    <li>
+      <a href="recurso12.html">Recurso 1.2</a>
+    </li>
+    <li>
+      <a href="codigo11.html">Código 1.2</a>
+    </li>
+    <li>
+      <a href="caso1.html">Caso 1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="guia13.html">Guía 1.3</a>
+    </li>
+    <li>
+      <a href="recursos13.html">Gráficos básicos</a>
+    </li>
+    <li>
+      <a href="codigo13.html">Código 1.3</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="monitoria1.html">Monitoria 1</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo2.html">Módulo 2</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo3.html">Módulo 3</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo4.html">Módulo 4</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 5
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Modulo5.html">Módulo 5</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Proyecto
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso000.html">Guía proyecto</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    grupo D 
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="about.html">Grupo D</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore"><span style="color:#235784"> </span></h1>
+<h3 class="subtitle"><span style="color:#235784"><strong>Unidad
+1.1</strong></span></h3>
+<h4 class="author">dgonzalez</h4>
+
+</div>
+
+
+<p><br/><br/></p>
+<div id="gráficos-básicos" class="section level1">
+<h1><strong>Gráficos básicos</strong></h1>
+<p><br/><br/></p>
+<p>La <strong>visualización de datos</strong> es una de las partes más
+importantes del análisis de datos, que permite de manera gráfica
+representar la información con el fin de poder resumirlos e
+interpretarlos.</p>
+<p>Ya sea que estemos parados desde el lado de los lectores de informes
+o de los diferentes medios de cumunicación, los gráficos nos permiten
+entender mejor la realidad que los rodea.</p>
+<p><br/><br/></p>
+<p><img src="img/visualizacion.png" width="60%" style="display: block; margin: auto;" /></p>
+<p>Los gráficos constituyen una forma eficiente de mostrar los
+resultados obtenidos en una investigación, pero tambien nos permiten
+revisar la información contendida en una base de datos y darnos una
+primera imporesión sobre los resultados obtenidos.</p>
+<p><strong>Algunas consideraciones</strong></p>
+<p>Empezaremos determinando el gráfico apropiado dependiendo del tipo de
+escala que tenga la variable a representar</p>
+<p><br/><br/></p>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="20%" />
+<col width="33%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tipo de variable</th>
+<th align="left">Tipos de escala</th>
+<th align="left">Tipo de gráfico</th>
+<th align="left">Sintaxis R</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cualitativa</td>
+<td align="left">Nominal</td>
+<td align="left">diagrama de torta</td>
+<td align="left">pie(table(x))</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Ordinal</td>
+<td align="left">diagrama de barras</td>
+<td align="left">barplot(table(x))</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diag.barras dobles</td>
+<td align="left">barplot(table(x,y))</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diag. mosaico</td>
+<td align="left">plot(x,y)</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Cuantitativa</td>
+<td align="left">De intervalo</td>
+<td align="left">diagrama de tallos y hojas</td>
+<td align="left">stem(x)</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">histograma</td>
+<td align="left">hist(x)</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">De razón</td>
+<td align="left">diagrama de puntos</td>
+<td align="left">plot(x,y)</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de densidad</td>
+<td align="left">density(x)</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de cajas</td>
+<td align="left">boxplot(x)</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de linea</td>
+<td align="left">plot(x, type=“l”)</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nota</strong>: Además de estas formas de representación
+gráfica existen otras formas que combinan variables como:</p>
+<ul>
+<li>Mapas</li>
+<li>Diagrama de mosaico</li>
+<li>Diagramas de radar</li>
+<li>diagramas likert</li>
+<li>diagramas de piramide</li>
+<li>diagramas animados</li>
+</ul>
+<p><br/><br/><br/></p>
+</div>
+<div id="variable-cualitativa-nominal" class="section level1">
+<h1><strong>Variable cualitativa-nominal</strong></h1>
+<p>Recordemos que una variable cualitativa (@) corresponde a una
+variables cuyos posibles valores que toma son palabras. En el caso de la
+escala nominal, indica que los valores solo se pueden comparar <span
+class="math inline">\(=\)</span> o <span
+class="math inline">\(\neq\)</span> .</p>
+<div id="ejemplo" class="section level3">
+<h3><strong>Ejemplo</strong></h3>
+<ul>
+<li><strong>Tipo de homicidio </strong>: femenicidio, homicidio culposo,
+homicidio doloso ….</li>
+<li><strong>Causa de muerte</strong>: suicidio, accidente, ……</li>
+<li><strong>Tipo de arma utilizada</strong>: arma de fuego, arma blanca,
+objeto contundente, ….</li>
+<li><strong>Condición legal del cadáver</strong>: no identificado,
+desaparecido,….</li>
+<li><strong>Tipo de droga encontrada en el cuerpo</strong>: cocaína,
+heroína, cannabis,…</li>
+</ul>
+<p>Para este tipo y escala de medición se recomiendan el diagrama
+circular, tambien llamados diagrama de torta, evitando los diagramas en
+3D.</p>
+</div>
+<div id="diagrama-circular" class="section level2">
+<h2><strong>Diagrama circular</strong></h2>
+<pre>
+pie(x,                    # Vector numérico de valores para las porciones del pastel
+labels = ,                # Vector de etiquetas para las porciones del pastel
+edges = 200,              # Número de lados para aproximar un círculo
+radius = 0.8,             # Radio del pastel
+clockwise = FALSE,        # Indica si las porciones del pastel se dibujan en sentido horario o antihorario
+init.angle = if(clockwise) 90 else 0,  # Ángulo inicial para la primera porción del pastel
+density = NULL,           # Densidad de líneas para rellenar las porciones del pastel
+angle = 45,               # Ángulo de inclinación para las etiquetas
+col = NULL,               # Colores de las porciones del pastel
+border = NULL,            # Color del borde de las porciones del pastel
+lty = NULL,               # Tipo de línea del borde de las porciones del pastel
+main = NULL,              # Título principal del gráfico
+... )                     # Argumentos adicionales para la función pie
+</pre>
+<pre class="r"><code>homicidios = c(3456, 10080,   8064)
+names(homicidios) = c(&quot;Feminicidio&quot;,&quot;Homicidio culposo&quot;,&quot;Homicidio doloso&quot;)
+
+# Ejemplo de datos
+x &lt;- c(10, 20, 30, 40)
+nombres &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;)
+
+pie(homicidios)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Fuente : crimen_mx.csv</p>
+<p><br/><br/></p>
+<pre class="r"><code>labs &lt;- names(homicidios)
+pct=round(homicidios/sum(homicidios)*100) 
+labs=paste(labs, pct);labs=paste(labs, &quot;%&quot;, sep = &quot; &quot;) 
+t1 = homicidios
+pie(t1, 
+    labels=labs, 
+    main=&quot; Tipo de homicidio&quot;,
+    col=c(&quot;#023047&quot;, &quot;#f4d35e&quot;, &quot;#ee964b&quot;))</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="variable-cualitativa-ordinal" class="section level1">
+<h1><strong>Variable cualitativa-ordinal</strong></h1>
+<p><br/></p>
+<p>Para las variables cualitativas de escala ordinal (sus valores son
+palabras, pero se pueden ordenar)</p>
+<div id="ejemplo-1" class="section level3">
+<h3>Ejemplo</h3>
+<ul>
+<li>Grado de lesión: leve, moderado o grave.</li>
+<li>Grado de intoxicación:leve, moderado o grave.</li>
+<li>Grado de quemadura: primer grado, segundo grado o tercer grado.</li>
+<li>Estado mental: consciente, confuso o inconsciente.</li>
+<li>Grado de violencia: leve, moderado o grave.</li>
+</ul>
+</div>
+<div id="gráfico-de-barras" class="section level2">
+<h2><strong>Gráfico de barras</strong></h2>
+<pre>
+# Crear un gráfico de barras
+barplot(x,                    # tabla de datos
+  names.arg = nombres,       # Etiquetas para los datos
+  beside = TRUE,             # Si es TRUE, las barras se apilan una al lado de la otra
+  horiz = FALSE,             # Si es TRUE, las barras se dibujan horizontalmente
+  density = NULL,            # Densidad de las líneas de relleno de las barras
+  angle = 45,                # Ángulo de inclinación de las etiquetas
+  col = NULL,                # Colores de las barras
+  border = NULL,             # Color del borde de las barras
+  main = NULL,               # Título principal del gráfico
+  xlab = NULL,               # Etiqueta del eje x
+  ylab = NULL,               # Etiqueta del eje y
+  xlim = NULL,               # Límites del eje x
+  ylim = NULL,               # Límites del eje y
+  axes = TRUE,               # Si es TRUE, se dibujan los ejes
+  axisnames = TRUE,          # Si es TRUE, se dibujan los nombres de los ejes
+  cex.axis = 1,              # Tamaño de la fuente de los nombres de los ejes
+  las = 1,                   # Orientación de los nombres de los ejes (1 = horizontal, 2 = perpendicular, 3 = vertical)
+  ...)
+</pre>
+<pre class="r"><code># Generar datos aleatorios para un mayor número de pacientes
+set.seed(123)  # Establecer una semilla para la reproducibilidad
+num_pacientes &lt;- 65
+quemadura &lt;-c(&quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;4º&quot;, &quot;1º&quot;, &quot;2º&quot;,
+              &quot;2º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;4º&quot;, &quot;3º&quot;, &quot;2º&quot;, &quot;2º&quot;, &quot;4º&quot;, &quot;2º&quot;, &quot;2º&quot;,
+              &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;4º&quot;, &quot;3º&quot;, &quot;2º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, 
+              &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;1º&quot;,
+              &quot;2º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;2º&quot;)
+datos &lt;- data.frame(Paciente = 1:65, Grado = quemadura)
+
+tabla2 &lt;- table(quemadura)
+# Ejemplo de datos
+altura &lt;- c(10, 20, 30, 40)
+nombres &lt;- c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;)</code></pre>
+<pre class="r"><code>tabla4 &lt;- c(36,17,8,4)
+names(tabla4) &lt;- c(&quot;1º&quot;, &quot;2º&quot;, &quot;3º&quot;, &quot;4º&quot;) 
+
+barplot(tabla4,  col=c(&quot;#FAf0CA&quot;, &quot;#F4D35E&quot;, &quot;#EE964B&quot;, &quot;#F95738&quot;), 
+        main = &quot;Tipos de quemaduras 2023&quot;,
+        las=1 )</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-5-1.png" width="672" />
+Fuente : información simulada</p>
+<pre class="r"><code>tabla4 &lt;- c(36, 17, 8, 4)
+names(tabla4) &lt;- c(&quot;1º&quot;, &quot;2º&quot;, &quot;3º&quot;, &quot;4º&quot;)
+
+# Crear el gráfico de barras
+barplot(tabla4, col = c(&quot;#FAf0CA&quot;, &quot;#F4D35E&quot;, &quot;#EE964B&quot;, &quot;#F95738&quot;),
+        main = &quot;Tipos de quemaduras 2023&quot;,
+        ylim = c(0, 40) ,  # Ajustar el límite del eje y para que quepan los valores
+        las = 1,
+        ylab = &quot;frecuencia&quot;, 
+        xlab = &quot; grado de la quemadura&quot; )
+
+# Agregar los valores en cada barra
+text(x = 1:4, y = tabla4, label = tabla4, pos = 1, cex = 1, col = &quot;black&quot;)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="gráfico-de-barras-1" class="section level2">
+<h2><strong>Gráfico de barras</strong></h2>
+<p>Es posible que se desee representar dos variables cualitativas al
+tiempo, por ejemplo</p>
+<pre class="r"><code>namedadR &lt;- c(&quot;menos de 1&quot;, &quot; 1 - 5&quot;, &quot; 6 - 11&quot;, &quot;12 - 17&quot;, &quot;18 - 28&quot;)
+edadR &lt;- c(22, 455, 701, 804, 472)
+names(edadR) &lt;- namedadR
+barplot(edadR, las = 1, ylim = c(0, 900),
+        main = &quot;Violencia sexual por rango de edad - 2021&quot;,
+        xlab = &quot;edad - años&quot;,
+        ylab = &quot;frecuencia&quot;)
+grid()</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code>namedadR &lt;- c(&quot;menos de 1&quot;, &quot; 1 - 5&quot;, &quot; 6 - 11&quot;, &quot;12 - 17&quot;, &quot;18 - 28&quot;)
+edadR &lt;- c(22, 455, 701, 804, 472)
+names(edadR) &lt;- namedadR
+
+barplot(edadR, las = 1, ylim = c(0, 900),
+        main = &quot;Violencia sexual por rango de edad - 2021&quot;,
+        xlab = &quot;edad - años&quot;,
+        ylab = &quot;frecuencia&quot;,
+        col = &quot;#FF8C00&quot; , density = 45)
+grid()</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Ahora quiero visualizar por lugar de residencia - urbano rural</p>
+</div>
+<div id="diagrama-de-barras-bivariado" class="section level2">
+<h2><strong>Diagrama de barras bivariado</strong></h2>
+<pre class="r"><code>data1 &lt;- data.frame(quemadura &lt;-c(&quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;4º&quot;, &quot;1º&quot;, &quot;2º&quot;,
+              &quot;2º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;4º&quot;, &quot;3º&quot;, &quot;2º&quot;, &quot;2º&quot;, &quot;4º&quot;, &quot;2º&quot;, &quot;2º&quot;,
+              &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;4º&quot;, &quot;3º&quot;, &quot;2º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, 
+              &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;1º&quot;,
+              &quot;2º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;3º&quot;, &quot;1º&quot;, &quot;2º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;1º&quot;, &quot;2º&quot;),
+              sexo = rbinom(65,1,0.4) )
+  
+tabla5 &lt;- table(data1$sexo, data1$quemadura)
+barplot(tabla5)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<pre class="r"><code>tabla6 &lt;- table(data1$quemadura, data1$sexo)
+barplot(tabla6)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code>colnames(tabla6) = c(&quot;Mujer&quot;, &quot;Hombre&quot;)
+barplot(tabla6, 
+        las = 1,
+        beside = TRUE,
+        legend.text = c(&quot;1º&quot;, &quot;2º&quot;, &quot;3º&quot;,&quot;4º&quot;),
+        xlab = &quot;sexo&quot;,
+        args.legend = list(x = &quot;topright&quot;, title = &quot;grado quemadura&quot;))</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code># Crear una paleta de colores degradada de rojos
+red_palette &lt;- colorRampPalette(c(&quot;#FFC685&quot;, &quot;#AE123A&quot;))(4)
+barplot(tabla6, 
+        las = 1,
+        main = &quot;Tipo por sexo&quot;,
+        beside = TRUE,
+        legend.text = c(&quot;1º&quot;, &quot;2º&quot;, &quot;3º&quot;,&quot;4º&quot;),
+        xlab = &quot;sexo&quot;,
+        args.legend = list(x = &quot;topright&quot;, title = &quot;grado quemadura&quot;),
+        col = red_palette)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+<div id="diagrama-de-mosaico" class="section level2">
+<h2><strong>4. Diagrama de mosaico </strong></h2>
+<pre class="r"><code>mosaicplot(~sexo + quemadura,
+            data =data1,
+            main = &quot; Tipo quemadura por sexo&quot;, 
+            col=red_palette,
+            las = 1, 
+            ylab = &quot;Tipo&quot;,
+            xlab= &quot;Sexo&quot;,
+            cex.axis = 1) </code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="variables-cuantitativas" class="section level1">
+<h1><strong>Variables cuantitativas</strong></h1>
+<div id="diagrama-de-tallos-y-hojas" class="section level2">
+<h2><strong>Diagrama de tallos y hojas</strong></h2>
+<pre class="r"><code># Diagrama de tallos y hojas
+stem(data2$edad)</code></pre>
+<pre><code>
+  The decimal point is at the |
+
+   2 | 000000000
+   3 | 00000000
+   4 | 0000000000000000
+   5 | 000000000
+   6 | 0000
+   7 | 00000000
+   8 | 0000000
+   9 | 00000000000000000000000000000
+  10 | 00000000000000000000000
+  11 | 0000000000
+  12 | 0000000000000000000000000000000
+  13 | 0000000000000000000000000000000000000000000000000000000000
+  14 | 00000000000000000000000
+  15 | 0</code></pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="histograma" class="section level2">
+<h2><strong>6. Histograma</strong></h2>
+<pre class="r"><code>hist(data2$edad)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<pre class="r"><code>h1=hist(data2$edad, 
+        breaks = 5,
+        main = &quot;Edad&quot;, 
+        xlab = &quot;años&quot;, 
+        ylab=&quot;frecuencias&quot;, 
+        labels=TRUE, 
+        col=&quot;#ABBCC9&quot;,
+        ylim = c(0,100),
+        las =1)
+grid()</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-16-1.png" width="672" />
+<br/><br/><br/></p>
+</div>
+<div id="diagrama-de-densidad" class="section level2">
+<h2><strong>7. Diagrama de densidad</strong></h2>
+<pre class="r"><code>plot(density(data2$edad, na.rm = TRUE))</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<pre class="r"><code>plot(density(data2$edad, na.rm = TRUE),
+     main=&quot;Distribución edad&quot;, 
+     col=&quot;#0d3b66&quot;, 
+     lwd=2,
+     las=1, 
+     xlab = &quot;Nota&quot;,
+     ylab = &quot;Densidad&quot;)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="diagrama-de-cajas" class="section level2">
+<h2><strong>8. Diagrama de cajas</strong></h2>
+<pre>
+# Ejemplo de datos
+altura <- c(10, 20, 30, 40)
+grupo <- c("A", "B", "A", "B")
+
+# Crear un gráfico de diagrama de caja
+boxplot(x,                    # Datos numéricos a visualizar
+  data = NULL,                # Un data frame (opcional) del cual extraer los datos
+  horizontal = FALSE,         # Si es TRUE, los diagramas de caja se dibujan horizontalmente
+  add = FALSE,                # Si es TRUE, añade el diagrama al gráfico actual
+  at = NULL,                  # Posiciones en las que dibujar los diagramas de caja
+  coef = 1.5,                 # Coeficiente para determinar los valores atípicos
+  boxwex = 0.8,               # Ancho relativo de las cajas
+  staplewex = 0.5,            # Ancho relativo de las líneas que conectan las cajas y los bigotes
+  range = 1.5,                # Factor multiplicativo para calcular el rango de los bigotes
+  outline = TRUE,             # Si es TRUE, se dibujan los puntos atípicos fuera de los bigotes
+  border = par("fg"),         # Color del borde de las cajas
+  col = NULL,                 # Colores de las cajas
+  log = "",                   # Especifica si se deben hacer transformaciones logarítmicas
+  ylab = "Valores",           # Etiqueta del eje y
+  xlab = "Grupos",            # Etiqueta del eje x
+  notch = FALSE,              # Si es TRUE, se dibujan muescas en las cajas
+  outlinecolors = par("fg"), # Color de los puntos atípicos
+  
+  # Parámetros relacionados con la leyenda
+  names = NULL,                # Nombres de los diagramas de caja
+  main = NULL,                 # Título principal del gráfico
+  sub = NULL,                  # Subtítulo del gráfico
+  cex = 1,                     # Tamaño de las etiquetas
+  font = NULL,                 # Fuente de las etiquetas
+  col.main = NULL,             # Color del título principal
+  col.sub = NULL,              # Color del subtítulo
+  col.lab = NULL,              # Color de las etiquetas de los ejes
+  cex.main = 1,                # Tamaño del título principal
+  cex.sub = 1,                 # Tamaño del subtítulo
+  cex.axis = 1,                # Tamaño de las etiquetas de los ejes
+  mgp = NULL,                  # Posición de las etiquetas de los ejes
+  font.axis = NULL,            # Fuente de las etiquetas de los ejes
+  col.axis = NULL,             # Color de las etiquetas de los ejes
+  ...)
+</pre>
+<pre class="r"><code>boxplot(data2$edad)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<pre class="r"><code>boxplot(data2$edad, main=&quot;Edad&quot;,
+        col=&quot;#f4d35e&quot;,
+        las=1)
+abline(h=6, col=&quot;#f95738&quot;, lwd=3)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<pre class="r"><code>boxplot(data2$edad, main=&quot;Edad&quot;,
+        col=&quot;#f4d35e&quot;,
+        las=1,
+        horizontal = TRUE)
+abline(v=6, col=&quot;#f95738&quot;, lwd=3)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="comparación-diagrama-de-cajas" class="section level2">
+<h2><strong>9. Comparación diagrama de cajas</strong></h2>
+<pre class="r"><code>boxplot(data2$edad ~ data2$sexo,
+         main=&quot;Edad por sexo&quot;,  
+         col=c(&quot;#34b5aa&quot;,&quot;#ecbe14&quot;),
+         xlab = &quot;Grupo&quot;, ylab = &quot;años&quot;)
+
+abline(h=4, col=&quot;#447270&quot;, lwd=2)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="gráfico-de-series-de-tiempo" class="section level2">
+<h2><strong>10. Gráfico de series de tiempo</strong></h2>
+<pre class="r"><code>t=1:300 ; x=w=rnorm(300,0,1); x&lt;-w; for(t in 2:300) x[t]&lt;-x[t-1]+w[t]
+
+plot(x, type=&quot;l&quot;,
+     main=&quot;Número de pasajeros&quot;, 
+     col=&quot;#ee964b&quot;, 
+     lwd = 2)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="resumen" class="section level2">
+<h2><strong>11. Resumen</strong></h2>
+<pre class="r"><code>x=rnorm(100,100,20)
+y=rnorm(100,100,25)
+z=rbinom(100,4,0.30)
+t=1:100
+pie(table(z))
+barplot(table(z))
+stem(x)
+hist(x)
+boxplot(x)
+plot(x,y)
+plot(t,y, type=&quot;l&quot;)
+plot(density(x))</code></pre>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="paquetes-adicionales" class="section level1">
+<h1><strong>Paquetes adicionales</strong></h1>
+<p>Hasta el momento se ha utilizado R base para la elaboración de
+gráficos, a continuación se presentan algunos paquetes que mejoran la
+construcción de gráficos y su visualización :</p>
+<p><br/><br/></p>
+<div id="ggplot2." class="section level2">
+<h2><strong>ggplot2</strong>.</h2>
+<p><img src="img/ggplot2.png" /></p>
+<p>Este paquete de R permite la construcción de gráficos utilizando para
+ello una “grámatica” de los grafocos, la cual incorpora componentes como
+: los datos (data), un conjunto de coordenadas ( ), una serie de
+geometrias (geoms)</p>
+<p>Componentes de un gráfico en ggplot2:</p>
+<ul>
+<li><p><strong>Data</strong>: capa de los datos</p></li>
+<li><p><strong>Aesthetics</strong>: capa estetica (aes), definimos las
+variables a utilizar en el gráfico</p></li>
+<li><p><strong>Geometries</strong>: capa de geometrias, se define el
+tipo de gráfica a realizar</p></li>
+<li><p><strong>Facets</strong>: capa de facetas, permite detallar la
+gráfica por categorias</p></li>
+<li><p><strong>Statistics</strong>: capa de estadística, permite agregar
+modelos</p></li>
+<li><p>*<strong>Coordinates</strong>: capa de coordenadas, permite
+ajustar las escalas de los ejes</p></li>
+<li><p><strong>Theme</strong>: capas de características del gráfico que
+no dependen de los datos</p></li>
+</ul>
+<p><br/><br/></p>
+<p>Para empezar, inicialmente se instalar el paquete</p>
+<pre class="r"><code>install.packages(&quot;ggplo2&quot;)</code></pre>
+<p>Y luego habilitarlo para su uso</p>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>Se empieza con el primero de los lienzo, donde se declara la data que
+vamos a utilizar</p>
+<p><img src="img/ge_data.png" style="width:50.0%" /></p>
+<pre class="r"><code>library(ggplot2)
+fig=ggplot(data=data2)
+fig</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Como segundo paso se definen las variables que se van a utilizar en
+la construcción del gráfico</p>
+<p><img src="img/ge_aes.png" style="width:50.0%" /></p>
+<pre class="r"><code>library(ggplot2)
+fig=ggplot(data=data2,  aes(x=edad , y=sexo))
+fig</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Luego de tener definida la base y las variables a utilizar se indica
+la geometria a utilizar, en este caso se trata de puntos</p>
+<p><img src="img/ge_geom.png" style="width:50.0%" /></p>
+<pre class="r"><code>library(ggplot2)
+fig=ggplot(data=data2,  aes(x=edad , y=sexo)) +
+  geom_boxplot()
+fig</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Otros elementos a utilizar son :</p>
+<div
+id="facet-que-nos-ayuda-a-visualizar-el-gráfico-por-factor-construyendo-la-gráfica-para-cada-mes-en-este-caso"
+class="section level3">
+<h3><strong>facet</strong> que nos ayuda a visualizar el gráfico por
+factor, construyendo la gráfica para cada mes en este caso</h3>
+<p><img src="img/ge_facet.png" style="width:50.0%" /></p>
+<pre class="r"><code>library(ggplot2)
+fig=ggplot(data=data2,  aes(x=edad , y=sexo)) +
+  geom_boxplot() + 
+  facet_wrap(~ tipo) 
+fig</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+</div>
+<div
+id="stat-permite-realizar-modelos-lineales-y-mostrar-asi-la-relación-existente-entre-las-variables"
+class="section level3">
+<h3><strong>stat</strong> permite realizar modelos lineales y mostrar
+asi la relación existente entre las variables</h3>
+<p><img src="img/ge_stats.png" style="width:50.0%" /></p>
+<pre class="r"><code>library(ggplot2)
+fig=ggplot(data=data2,  aes(x=edad , y=sexo)) +
+  geom_boxplot() + 
+  facet_wrap(~ tipo) +
+  coord_flip()
+fig</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+</div>
+<div
+id="coordinates-la-cual-permite-ajustar-los-ejes-por-ejemplo-podemos-determian-el-rango-de-que-queremos-presentar-en-la-gráfica"
+class="section level3">
+<h3><strong>coordinates</strong> la cual permite ajustar los ejes , por
+ejemplo podemos determian el rango de que queremos presentar en la
+gráfica</h3>
+<p><img src="img/ge_coord.png" style="width:50.0%" /></p>
+<pre class="r"><code>library(ggplot2)
+fig=ggplot(data=data2,  aes(x=edad , y=sexo)) +
+  geom_boxplot() + 
+  facet_wrap(~ tipo) +
+  coord_flip() +
+  scale_y_discrete(name = &quot;Sexo&quot;) +
+  scale_x_continuous(name = &quot;Edad&quot;, breaks = seq(0, 20, by = 2))
+fig</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+</div>
+<div id="themes-finalmente-la-capa-del-tema-o-fondo-de-la-gráfica"
+class="section level3">
+<h3><strong>themes</strong> finalmente la capa del tema o fondo de la
+gráfica</h3>
+<p><img src="img/ge_themes.png" style="width:50.0%" /></p>
+<pre class="r"><code>library(ggplot2)
+fig=ggplot(data=data2,  aes(x=edad , y=sexo, fill = tipo)) +
+  geom_boxplot() + 
+  scale_fill_manual(values = red_palette)+
+  facet_wrap(~ tipo) +
+  coord_flip() +
+  scale_y_discrete(name = &quot;Sexo&quot;) +
+  scale_x_continuous(name = &quot;Edad&quot;, breaks = seq(0, 20, by = 5)) +
+  theme()
+fig</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+</div>
+</div>
+<div id="highcharter" class="section level2">
+<h2><strong>highcharter</strong></h2>
+<p><br/><br/></p>
+<pre class="r"><code> require(sp)</code></pre>
+<pre><code>Loading required package: sp</code></pre>
+<pre class="r"><code> require(rgdal)</code></pre>
+<pre><code>Loading required package: rgdal</code></pre>
+<pre><code>Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+logical.return = TRUE, : there is no package called &#39;rgdal&#39;</code></pre>
+<pre class="r"><code> require(raster)</code></pre>
+<pre><code>Loading required package: raster</code></pre>
+<pre class="r"><code> require(RColorBrewer)</code></pre>
+<pre><code>Loading required package: RColorBrewer</code></pre>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ lubridate 1.9.3     ✔ tibble    3.2.1
+✔ purrr     1.0.2     ✔ tidyr     1.3.1</code></pre>
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ tidyr::extract() masks raster::extract()
+✖ dplyr::filter()  masks stats::filter()
+✖ dplyr::lag()     masks stats::lag()
+✖ dplyr::select()  masks raster::select()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<pre class="r"><code> mi.palette &lt;- brewer.pal(n = 7, name = &quot;OrRd&quot;)   # paleta de colores
+ mapco=shapefile(&quot;/home/deg/Documentos/JAVERIANA/EDUCON/repository/cursoML/presenta1/map/colombia/depto.shp&quot;)  # importa mapa en formato .shp
+ # colombia=readRDS(&quot;data/Colombia.RDS&quot;)
+ # colombia$departamento_nom= str_to_upper(colombia$departamento_nom)
+ # t=table(colombia$departamento_nom,colombia$estado)
+ fallecidos=c(15174,3876,26516,807,2417,2151,880,1333,2388,3487,6495,382,2880,
+             1296,1380,2076,2861,3961,1635,2119,6934,1546,3411,11929,400,844,
+             620,249,29,87,17,45,133) # vector con información
+ mapco@data$fallecidos=fallecidos # se adiciona variable con 33 valores = 33 dptos, en mismo orden
+ spplot(mapco[,6], col.regions = mi.palette, cuts = 6)  # mapa</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+</div>
+<div id="tmap" class="section level2">
+<h2><strong>tmap</strong></h2>
+<p><a href="https://www.jstatsoft.org/article/view/v084i06"
+class="uri">https://www.jstatsoft.org/article/view/v084i06</a></p>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="margenes-de-los-gráficos" class="section level1">
+<h1><strong>Margenes de los gráficos</strong></h1>
+<pre class="r"><code># Grafico normal
+x=rnorm(100,100,20)
+plot(density(x))</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<div id="margenes-de-la-grafica-cbottom-left-top-right"
+class="section level3">
+<h3><strong>margenes de la grafica c(bottom, left, top,
+right)</strong></h3>
+<pre class="r"><code>par(mar = c(5, 4, 4, 2) + 0.1)
+x=rnorm(100,100,20)
+plot(density(x))</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+</div>
+<div id="margenes-de-la-gráfica" class="section level3">
+<h3><strong>margenes de la gráfica</strong></h3>
+<pre class="r"><code>par(mai = c(1.5, 1.5, 1.5, 1.5))
+x=rnorm(100,100,20)
+plot(density(x))</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>### <strong>Matriz de gráficos mfrow = c(2, 2)</strong></p>
+<pre class="r"><code>x=rnorm(100,100,20)
+y=rnorm(100,100,25)
+z=rbinom(100,4,0.30)
+t=1:100
+par(mfrow = c(2, 2) ) # definición de la matriz
+
+plot(density(x))
+barplot(table(z))
+hist(x)
+plot(x,y)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+</div>
+<div id="margenes-exteriores-cbottom-left-top-right"
+class="section level3">
+<h3><strong>margenes exteriores c(bottom, left, top,
+right)</strong></h3>
+<pre class="r"><code>par(mfrow = c(2, 2),   # matriz de graficos 2x2
+    oma = c(3, 5, 2, 4) )  # margenes de la imagen
+plot(density(x))
+barplot(table(z))
+hist(x)
+plot(x,y)</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+</div>
+</div>
+<div id="tamaño-texto" class="section level1">
+<h1><strong>Tamaño texto</strong></h1>
+<pre class="r"><code>x=rnorm(100,100,20)
+plot(density(x),cex.lab=.8,  # tamaño de etiqueta ejes
+                cex.axis=2, # tamaño escalas de los ejes 
+                cex.main=1.5, # tamaño del titulo
+                cex.sub=1)    # tamaño del subtitulo</code></pre>
+<p><img src="recurso131_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p><a href="https://r-charts.com/es/r-base/margenes/"
+class="uri">https://r-charts.com/es/r-base/margenes/</a></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
