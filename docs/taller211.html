@@ -465,7 +465,6 @@ $(document).ready(function () {
 </div>
 
 
-<p><br/><br/></p>
 <p></br></br></br></p>
 <p><img src="img/banner002.png" width="100%" style="display: block; margin: auto auto auto 0;" />
 </br></br></br></p>
@@ -670,15 +669,90 @@ dos años después de completar el tratamiento</p>
 <p></br></p>
 <p>Encuentre las probabilidades para los eventos:</p>
 <ul>
-<li><p><span class="math inline">\(A\)</span></p></li>
-<li><p><span class="math inline">\(B\)</span></p></li>
-<li><p><span class="math inline">\(A \cap B\)</span></p></li>
-<li><p><span class="math inline">\(A \cup B\)</span></p></li>
-<li><p><span class="math inline">\(A&#39;\)</span></p></li>
-<li><p><span class="math inline">\((A \cap B)&#39;\)</span></p></li>
-<li><p><span class="math inline">\((A \cup B)&#39;\)</span></p>
-</div></li>
+<li><span class="math inline">\(A\)</span></li>
+<li><span class="math inline">\(B\)</span></li>
+<li><span class="math inline">\(A \cap B\)</span></li>
+<li><span class="math inline">\(A \cup B\)</span></li>
+<li><span class="math inline">\(A&#39;\)</span></li>
+<li><span class="math inline">\((A \cap B)&#39;\)</span></li>
+<li><span class="math inline">\((A \cup B)&#39;\)</span></li>
 </ul>
+</div>
+</div>
+<p></br></br></br></p>
+<div class="box1 with-label">
+<div class="label">
+Problema 8
+</div>
+<div id="consejeria-académica" class="section level4">
+<h4><strong>Consejeria Académica</strong></h4>
+<p></br></p>
+<p>En una universidad de la región hay 4000 estudiantes distribuidos en
+tres grupos. Primeros semestre (1 a 3), mitad de carrera (4 a7) y final
+de carrera (8 a 10). Esta población esta conformada por estudiantes que
+realizan actividades extracuricolares y aquellos que no participan en
+ninguna actividad, distribuidos como se muestra en la siguiente
+tabla:</p>
+<pre class="r"><code>library(knitr)
+
+x &lt;- c(1250, 465, 270, 1530, 350, 270)
+m &lt;- matrix(x, nrow = 3)
+colnames(m) &lt;- c(&quot;MU&quot;, &quot;MU*&quot;)
+rownames(m) &lt;- c(&quot;Primeros semestres&quot;, &quot;Mitad de carrera&quot;, &quot;Final de carrera&quot;)
+
+kable(m, caption = &quot;Tabla de Resultados por Etapa de la Carrera&quot;, align = &quot;c&quot;)</code></pre>
+<table>
+<caption>Tabla de Resultados por Etapa de la Carrera</caption>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="center">MU</th>
+<th align="center">MU*</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Primeros semestres</td>
+<td align="center">1250</td>
+<td align="center">1530</td>
+</tr>
+<tr class="even">
+<td align="left">Mitad de carrera</td>
+<td align="center">465</td>
+<td align="center">350</td>
+</tr>
+<tr class="odd">
+<td align="left">Final de carrera</td>
+<td align="center">270</td>
+<td align="center">270</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>MU</strong> : Participa de actividades programadas por el
+Medio Universitario</li>
+<li><strong>MU* </strong> : No participa de actividades programadas por
+el Medio Universitario</li>
+</ul>
+<p><br/></p>
+<p>Se ha encomendado a un grupo de profesores consejeros, seleccionar un
+estudiante de este grupo para guiarlos académicamente en su proceso de
+formación. El grupo de profesores está conformado por Sandra, Isabel,
+David, Daniel y Gerardo</p>
+<p>Sandra prefiere que el grupo de estudiantes a su cargo sean
+estudiantes de primeros semestre y que participan en actividades del
+Medio Universitario (MU) . Isabel en cambio los eligirá dentro del grupo
+de estudiantes que está finalizando carrera, dentro de los que prefieren
+no participar en actividades del MU. Por su parte David desea
+estudiantes sean del rango intermedio o mitad de carrera, pues ellos no
+han realizado la escogencia del énfasis. Daniel solicita un listado de
+los estudiantes que participan e actividades del MU y de ellos desea que
+el estudiante a su cargo esté cursando últimos semestre. Finalmente
+Gerardo solo quiere que el estudiante seleccionado para su
+acompañamiento sea de primeros semestre. Si en cada caso los estudiantes
+son seleccionados de manera aleatoria de toda la población tiene la
+mayor probabilidad de ver cumplido sus deseos?</p>
+</div>
 </div>
 
 

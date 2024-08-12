@@ -34,6 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -889,7 +891,70 @@ alelo dominante color rojo). Cuando se acoplaron estas individuos, se
 observó que 3/4 de la descendencia tenía flores rojas y 1/4 flores
 blancas. En la tabla se resume este acoplamiento; cada padre da uno de
 sus alelos para formar el gen de la descendencia.</p>
-<p><img src="img/genetica.png" width="70%" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>library(kableExtra)
+
+# Definir los datos de la tabla
+tabla &lt;- data.frame(
+  &quot;Padre 1&quot; = c(&quot;**r**&quot;, &quot;**R**&quot;),
+  &quot;rr&quot; = c(&quot;rr&quot;, &quot;Rr&quot;),
+  &quot;rR&quot; = c(&quot;rR&quot;, &quot;RR&quot;)
+)
+
+# Cambiar nombres de las columnas para que coincidan con la tabla original
+colnames(tabla) &lt;- c(&quot;**Padre 1**&quot;, &quot;rr&quot;, &quot;rR&quot;)
+
+# Crear la tabla usando kable y kableExtra para mejorar la presentación
+kable(tabla, align = c(&quot;c&quot;, &quot;c&quot;, &quot;c&quot;), escape = FALSE, col.names = c(&quot;**Padre 1**&quot;, &quot;**r**&quot;, &quot;**R**&quot;)) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;)) %&gt;%
+  add_header_above(c(&quot; &quot; = 1, &quot;**Padre 2**&quot; = 2))</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+<strong>Padre 2</strong>
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+<strong>Padre 1</strong>
+</th>
+<th style="text-align:center;">
+<strong>r</strong>
+</th>
+<th style="text-align:center;">
+<strong>R</strong>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+<strong>r</strong>
+</td>
+<td style="text-align:center;">
+rr
+</td>
+<td style="text-align:center;">
+rR
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<strong>R</strong>
+</td>
+<td style="text-align:center;">
+Rr
+</td>
+<td style="text-align:center;">
+RR
+</td>
+</tr>
+</tbody>
+</table>
 <p>Se supone que cada padre tiene las mismas probabilidades de dar
 cualquiera de los alelos y que, si alguno de los dos es dominante (R),
 la descendencia tendrá las flores rojas.</p>
@@ -948,6 +1013,13 @@ kable(m, caption = &quot;Tabla de Resultados por Etapa de la Carrera&quot;, alig
 </tr>
 </tbody>
 </table>
+<ul>
+<li><strong>MU</strong> : Participa de actividades programadas por el
+Medio Universitario</li>
+<li><strong>MU* </strong> : No participa de actividades programadas por
+el Medio Universitario</li>
+</ul>
+<p><br/></p>
 <p>Se ha encomendado a un grupo de profesores consejeros, seleccionar un
 estudiante de este grupo para guiarlos académicamente en su proceso de
 formación. El grupo de profesores está conformado por Sandra, Isabel,

@@ -367,12 +367,27 @@ c. Un estudiante que consume drogas pase ambas pruebas.
 Genética vegetal Gregor Mendel fue un monje que sugirió una teoría de la herencia en 1865 con base en la ciencia de la genética; identificó a los individuos heterocigotos por el color de la flor que tenían dos alelos (uno *r* = alelo recesivo color blanco y uno *𝑅* = alelo dominante color rojo). Cuando se acoplaron estas individuos, se observó que 3/4 de la descendencia tenía flores rojas y 1/4 flores blancas. En la tabla se resume este acoplamiento; cada padre da uno de sus alelos para formar el gen de la descendencia.
 
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-knitr::include_graphics("img/genetica.png")
+```{r}
+library(kableExtra)
+
+# Definir los datos de la tabla
+tabla <- data.frame(
+  "Padre 1" = c("**r**", "**R**"),
+  "rr" = c("rr", "Rr"),
+  "rR" = c("rR", "RR")
+)
+
+# Cambiar nombres de las columnas para que coincidan con la tabla original
+colnames(tabla) <- c("**Padre 1**", "rr", "rR")
+
+# Crear la tabla usando kable y kableExtra para mejorar la presentación
+kable(tabla, align = c("c", "c", "c"), escape = FALSE, col.names = c("**Padre 1**", "**r**", "**R**")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) %>%
+  add_header_above(c(" " = 1, "**Padre 2**" = 2))
+
 ```
 
 
- 
 Se supone que cada padre tiene las mismas probabilidades de dar cualquiera de los alelos y que, si alguno de los dos es dominante (R), la descendencia tendrá las flores rojas.
 
 a. ¿Cuál es la probabilidad de que una descendencia de esta unión tenga por lo menos un alelo dominante?
@@ -393,7 +408,6 @@ c. ¿Cuál es la probabilidad de que una descendencia tenga un alelo recesivo, d
 
 En una universidad de la región hay 4000 estudiantes distribuidos en tres grupos. Primeros semestre (1 a 3), mitad de carrera (4 a7) y final de carrera (8 a 10). Esta población esta conformada por estudiantes que realizan actividades extracuricolares y aquellos que no participan en ninguna actividad, distribuidos como se muestra en la siguiente tabla:
 
-
 ```{r, fig.align='center', fig.width=6}
 library(knitr)
 
@@ -406,6 +420,10 @@ kable(m, caption = "Tabla de Resultados por Etapa de la Carrera", align = "c")
 
 ```
 
+* **MU** : Participa de actividades programadas por el Medio Universitario
+* **MU* ** : No participa de actividades programadas por el Medio Universitario
+
+<br/>
 
 Se ha encomendado a un grupo de profesores consejeros, seleccionar un estudiante de este grupo para guiarlos académicamente en su proceso de formación. El grupo de profesores está conformado por Sandra, Isabel, David, Daniel y Gerardo
 			
