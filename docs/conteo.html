@@ -274,10 +274,10 @@ $(document).ready(function () {
       <a href="productoria.html">Productoria</a>
     </li>
     <li>
-      <a href="recurso000.html">Teoría de conjuntos</a>
+      <a href="conjuntos.html">Teoría de conjuntos</a>
     </li>
     <li>
-      <a href="recurso000.html">Técnicas de conteo</a>
+      <a href="conteo.html">Técnicas de conteo</a>
     </li>
     <li>
       <a href="recurso000.html">Función exponencial</a>
@@ -356,6 +356,22 @@ $(document).ready(function () {
       <a href="Modulo2.html">Módulo 2</a>
     </li>
     <li class="divider"></li>
+    <li>
+      <a href="guia21.html">Guía 2.1</a>
+    </li>
+    <li>
+      <a href="recurso21.html">Recurso 2.1</a>
+    </li>
+    <li>
+      <a href="codigo21.html">Código 2.1</a>
+    </li>
+    <li>
+      <a href="taller211.html">Taller 211</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="monitoria2.html">Monitoria 2</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -448,7 +464,7 @@ $(document).ready(function () {
 </div>
 
 
-<p><img src="img/banner000.png" /></p>
+<p><img src="img/banner000.png" width="100%" style="display: block; margin: auto;" /></p>
 <div id="técnicas-de-conteo" class="section level1">
 <h1><strong>TÉCNICAS DE CONTEO</strong></h1>
 <p><br/><br/></p>
@@ -470,7 +486,10 @@ procedimiento <span class="math inline">\(P_1\)</span> o el
 procedimiento <span class="math inline">\(P_2\)</span> es de <span
 class="math inline">\(n_1 + n_2\)</span> maneras diferentes.</p>
 <p><br/><br/></p>
-<p><img src="img/ej1.png" style="width:10.0%" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 1
+</div>
 <p>Un estudiante tiene dos posibilidades de ir de su casa a la
 universidad: En transporte público o en transporte particular. Para el
 caso del transporte público existen 5 alternativas. Para el caso de
@@ -480,8 +499,10 @@ class="math inline">\(n_{2}=6\)</span>. El número de maneras como se
 puede transportar de la casa a la universidad será <span
 class="math inline">\(n=n_{1}+n_{2}=11\)</span> formas diferentes de ir
 a la U.</p>
+</div>
 <p><br/></p>
-<p><img src="img/psuma.png" style="width:50.0%" /> <br/><br/></p>
+<p><img src="img/psuma.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
 </div>
 <div id="principio-de-la-multiplicación" class="section level2">
 <h2><strong>Principio de la multiplicación</strong></h2>
@@ -496,7 +517,10 @@ realizar los procedimientos <span class="math inline">\(P1\)</span> y
 <span class="math inline">\(P2\)</span> de manera consecutiva es <span
 class="math inline">\(n1*n2\)</span> formas diferentes.</p>
 <p><br/><br/></p>
-<p><img src="img/ej2.png" style="width:10.0%" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 2
+</div>
 <p>En el proceso de fabricación de una silla se diferencian las
 siguientes etapas: El diseño de la silla (<span
 class="math inline">\(P_{1}\)</span>) y el proceso de pintado (<span
@@ -505,11 +529,12 @@ class="math inline">\(P_{1}\)</span> se puede realizar de 3 formas
 diferentes. Para el proceso <span class="math inline">\(P_{2}\)</span>
 se puede optar por 4 formas diferentes. ¿De cuantas formas diferentes se
 puede construir una silla?</p>
+</div>
 <p><br/><br/></p>
 <p>El número de posibles formas como puede fabricar una silla será:
 <span class="math inline">\(n_{1} \times n_{2} = 3 \times 4 =
 14\)</span></p>
-<p><img src="img/pmultiplicacion.png" style="width:50.0%" /></p>
+<p><img src="img/pmultiplicacion.png" width="50%" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 </div>
 <div id="otras-técnicas-de-conteo" class="section level2">
@@ -520,7 +545,9 @@ siguiente experimento aleatorio:</p>
 elementos todos numerables ( se pueden contar) y de ellos se quiere
 seleccionar <span class="math inline">\(k\)</span> elementos como se
 muestra en la siguiente figura.</p>
-<p><img src="img/urna.png" /></p>
+<p><br/><br/></p>
+<p><img src="img/urna.png" width="30%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
 <p>Este procedimiento se puede realizar de varias formas:</p>
 <p>A. Importando el orden</p>
 <ul>
@@ -547,12 +574,14 @@ tienen los elementos al ser seleccionados y también que después de la
 extracción de un elemento, este se regresa a la urna antes de la
 siguiente selección. Esto implica que hay siempre en la urna n elementos
 antes de la cada selección.</p>
+<p><br/><br/></p>
 <p><strong>A2</strong> : <span
 class="math inline">\(\mathcal{P}(n,k)\)</span>: Conjunto de todas la
 formas posibles como se puede seleccionar una muestra de tamaño k de una
 urna que contiene n elementos importando el orden, sin sustitución. En
 este caso los elementos que son seleccionados van quedando por fuera de
 la urna y no participan en la siguiente selección.</p>
+<p><br/><br/></p>
 <p><strong>B1</strong> : <span
 class="math inline">\(\mathcal{C}&#39;(n,k)\)</span>: Conjunto de todas
 las maneras posible como se puede seleccionar una muestra de tamaño k de
@@ -560,12 +589,14 @@ una urna que contiene n elementos sin importar el orden pero con
 sustitución. En esta caso no tiene importancia el orden en que se
 seleccionan los elementos de la urna, pero los elementos seleccionados
 regresan a la urna y podrían se seleccionados nuevamente.</p>
+<p><br/><br/></p>
 <p><strong>B2</strong> : <span
 class="math inline">\(\mathcal{C}(n,k)\)</span>: Conjunto de todas las
 formas posibles como se puede selecciona una muestra de tamaño k de una
 urna que contiene n elementos, sin importar el orden, pero en este caso
 los elementos seleccionados previamente son excluidos de la siguiente
 selección.</p>
+<p><br/><br/></p>
 <p>Contemplados estos casos vamos a definir la forma en que se pueden
 contar los conjuntos anteriores</p>
 <p><br/><br/></p>
@@ -587,11 +618,15 @@ tamaño k de una urna que contiene n elementos importando el orden y sin
 sustitución es: <span class="math inline">\(\dfrac{n!}{(n-k)!}\)</span>,
 el cual se lee n permutado con k.</p>
 <p><br/><br/></p>
-<p><img src="img/ej3.png" style="width:10.0%" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 3
+</div>
 <p>Un Ingeniero debe realizar visitas a 6 aéreas de trabajo diferentes
 durante el día. A fin de impedir a los funcionarios que sepan cuando
 realizara su visita, varía el orden de sus visitas. De cuantas maneras
 puede hacerlo?</p>
+</div>
 <p><br/><br/></p>
 <p><span class="math display">\[ _{6}\mathcal{P}_{6} =
 \dfrac{6!}{(6-6)!}=6! =720\]</span></p>
@@ -606,10 +641,14 @@ tamaño k de una urna que contiene n elementos importando el orden y sin
 sustitución es: <span class="math inline">\(\binom{n}{k}\)</span>, el
 cual se lee n combinado con k</p>
 <p><br/><br/></p>
-<p><img src="img/ej4.png" style="width:10.0%" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 4
+</div>
 <p>El juego del Baloto está conformado por una urna que contiene 45
 bolas numeradas del 1 al 46. ¿De cuantas formas diferentes puede salir
 el resultado un sorteo?</p>
+</div>
 <p><br/><br/></p>
 <p>De las 46 bolas se pueden eligen 6 sin importar el orden y sin que
 ninguna de las bolas se repita. Este experimento cumple con las
@@ -753,8 +792,10 @@ que adivine correctamente en el primer intento?</li>
 </ol>
 <p>Problemas tomados y basados en Meyer(1986)</p>
 <p><br/><br/></p>
-<div id="códigos-en-r" class="section level3">
-<h3><strong>Códigos en R</strong></h3>
+<div class="box1 with-label">
+<div class="label">
+Código R
+</div>
 <table>
 <tbody>
 <tr class="odd">

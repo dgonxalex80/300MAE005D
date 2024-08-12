@@ -26,7 +26,10 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
 ```
 
-![](img/banner000.png) 
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/banner000.png")
+```
 
 # **TÉCNICAS DE CONTEO**
 
@@ -44,13 +47,22 @@ Supongamos que un  procedimiento, designado con $P_1$, se puede hacer de $n_1$ m
 <br/><br/>
 
 
-![](img/ej1.png){width=10%}
+
+<div class="box1 with-label">
+<div class="label">Ejemplo 1</div>
 
 Un estudiante tiene dos posibilidades de ir de su casa a la universidad: En transporte público o en transporte particular. Para el caso del transporte público existen 5 alternativas. Para el caso de transporte particular tienen 6 alternativas. En este caso $n_{1}=5$ y $n_{2}=6$. El número de maneras como se puede transportar de la casa a la universidad será $n=n_{1}+n_{2}=11$ formas diferentes de ir a la U. 
 
+</div>
+
+
 <br/>
 
-![](img/psuma.png){width=50%}
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/psuma.png")
+```
+
 <br/><br/>
 
 ## **Principio de la multiplicación**
@@ -60,15 +72,23 @@ Supongamos que un  procedimiento $P1$ , se  puede realizar de $n_1$ maneras dife
 <br/><br/>
 
 
-![](img/ej2.png){width=10%}
+<div class="box1 with-label">
+<div class="label">Ejemplo 2</div>
 
 En el proceso de fabricación de una silla se diferencian las siguientes etapas: El diseño de la silla ($P_{1}$) y el proceso de pintado ($P_{2}$). El proceso $P_{1}$ se puede realizar de 3 formas diferentes. Para el proceso $P_{2}$ se puede optar por 4 formas diferentes. ¿De cuantas formas diferentes se puede construir una silla? 
+
+</div>
 
 <br/><br/>
 
 El número de posibles formas como puede fabricar una silla será:  $n_{1} \times n_{2} = 3 \times 4 = 14$
 
-![](img/pmultiplicacion.png){width=50%}
+
+
+```{r, echo=FALSE, out.width="50%", fig.align = "center"}
+knitr::include_graphics("img/pmultiplicacion.png")
+```
+
 
 <br/><br/>
 
@@ -78,7 +98,14 @@ Para explicar un poco los otros casos de conteo utilizaremos el siguiente experi
 
 Se tiene una urna  que contiene $n$ elementos todos numerables ( se pueden contar) y de ellos se quiere seleccionar $k$ elementos como se muestra en  la siguiente figura.
 
-![](img/urna.png)
+<br/><br/>
+
+
+```{r, echo=FALSE, out.width="30%", fig.align = "center"}
+knitr::include_graphics("img/urna.png")
+```
+
+<br/><br/>
 
 Este procedimiento se puede realizar de varias  formas:
 
@@ -100,11 +127,19 @@ Es decir que se definen  los siguientes procedimientos:
 
 **A1** : $\mathcal{P}'(n,k)$: Conjunto formado por todas las manera posible como se puede seleccionar una  muestra de tamaño k de una urna que contiene n elementos importando el  orden, con  sustitución. En este procedimiento se hace diferencia de la posición que tienen los elementos al ser seleccionados y también que después de  la extracción de un elemento, este se regresa  a la urna antes  de  la siguiente selección. Esto implica que hay siempre en la urna n  elementos antes de la cada selección.
 
+<br/><br/>
+
 **A2** : $\mathcal{P}(n,k)$: Conjunto de todas la formas posibles como se puede seleccionar una muestra de tamaño k de una urna que  contiene n elementos importando el orden, sin  sustitución. En este caso los elementos que son  seleccionados van  quedando por fuera de  la urna  y no participan en la siguiente selección.
+
+<br/><br/>
 
 **B1** : $\mathcal{C}'(n,k)$: Conjunto de  todas las maneras  posible como se puede  seleccionar una  muestra de tamaño k de una urna que contiene n  elementos sin importar el orden pero con  sustitución. En  esta  caso  no  tiene importancia el orden en que se seleccionan los elementos de la urna, pero  los elementos seleccionados  regresan  a  la  urna y podrían se seleccionados nuevamente.
 
+<br/><br/>
+
 **B2** : $\mathcal{C}(n,k)$: Conjunto  de  todas  las formas posibles como se puede selecciona una  muestra de tamaño k de una  urna que contiene n elementos, sin importar el  orden, pero en este caso los elementos seleccionados previamente son excluidos de la siguiente selección.
+
+<br/><br/>
 
 Contemplados estos casos vamos a definir la  forma  en  que se pueden contar  los conjuntos anteriores
 
@@ -128,9 +163,12 @@ El numero de  maneras diferentes como  se  puede extraer  una  muestra de tamañ
  
 <br/><br/>
  
-![](img/ej3.png){width=10%}
+<div class="box1 with-label">
+<div class="label">Ejemplo 3</div>
 
 Un Ingeniero debe realizar  visitas a 6 aéreas de trabajo diferentes durante el día. A fin de impedir a los funcionarios que sepan cuando realizara su visita, varía el orden de sus visitas. De cuantas maneras puede hacerlo? 
+
+</div>
 
 <br/><br/>
 
@@ -147,9 +185,13 @@ El número de  maneras diferentes como  se  puede extraer  una  muestra de tama�
 
 <br/><br/>
 
-![](img/ej4.png){width=10%}
+<div class="box1 with-label">
+<div class="label">Ejemplo 4</div>
 
  El juego del Baloto está conformado por una urna que contiene 45 bolas numeradas del 1 al 46. ¿De cuantas formas diferentes puede salir el resultado un sorteo? 
+ 
+ 
+ </div>
  
  <br/><br/>
 
@@ -243,7 +285,9 @@ Problemas tomados y basados en  Meyer(1986)
 
 <br/><br/>
 
-### **Códigos en R** 
+
+<div class="box1 with-label">
+<div class="label">Código R</div>
 
 |               |                                                      |
 |:--------------|:-----------------------------------------------------|
@@ -251,7 +295,7 @@ Problemas tomados y basados en  Meyer(1986)
 |combinación    | `nCk=function(a,b){choose(n,k)}`                     |
 |               |                                                      |
 
-
+</div>
 
 
 
