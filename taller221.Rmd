@@ -153,7 +153,7 @@ En una población de plantas, el 25% tiene flores rojas, el 50% tiene flores ama
 <br/><br/><br/>
 
 <div class="box1 with-label">
-<div class="label">Problema 5</div>
+<div class="label">Problema 6</div>
 
 </br>
 
