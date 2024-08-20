@@ -1,40 +1,55 @@
 ---
-title: <span style="color:#ad6395"> </span>  
+title: <span style="color:#235784"> </span>  
+subtitle: <span style="color:#235784">**Unidad 1.1**</span> 
 author: "dgonzalez "
-subtitle: <span style="color:#2C5697">**Módulo 1- Unidad 1.1**</span> 
 output:
   html_document:
     toc: no
     toc_depth: 2
     toc_float: yes
+    code_folding: hide
     theme: flatly
----
+    css: style.css
+---     
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(comment = NA)
-
-library(RColorBrewer)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
+library(psych)
 library(summarytools)
-library(knitr)
-library(readxl)
-library(tidyverse)
 
-#install.packages('remotes')  # solo una vez
-# library(remotes) # solo una vez
-# install_github("dgonxalex80/paqueteDEG", force = TRUE) # solo una vez
-library(paqueteDEG)
-data(Colombia23)
+# install.packages("devtools")
+#devtools::install_github("dgonxalex80/paqueteDEG")
+#library(paqueteDEG)
 
 # colores
-c0= "#b0394a"
-c1= "#ad6395"
-c2= "#a391c4"
-c3= "#8acfe6"
-c4= "#646420"
-c5= "#db524f"
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
+# install.packages('gtools')
+# install.packages("TeachingSampling")
+
+#load library
+#library(gtools)
+#library(TeachingSampling)
+#library(readr)
+#base_muestreo <- read_delim("data/base_muestreo.csv", 
+#    delim = ";", escape_double = FALSE, col_types = cols(ID = col_integer()), 
+#    trim_ws = TRUE)
+
+Colombia23 <- readRDS("data/Colombia23.RDS")
+library(tidyverse)
+library(flextable)
 ```
 
-![](img/codigo1.png) 
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/codigo1.png")
+```
 
 <br/><br/>
 
