@@ -98,11 +98,7 @@ knitr::include_graphics("img/tabla221.png")
 
 </br>
 
-Un dispositivo sirve para identificar una cierta enfermedad. Si alguien está enfer
-mo, hay un 90 % de posibilidades de que la prueba sea positiva. Si no está enfermo
-hay todavía un 1 % de posibilidades de que la prueba sea positiva. Aproximada-
-mente el 1 % de la población está enferma. Smith pasa la prueba y resulta positiva.
-La probabilidad de que tenga la enfermedad es? (Carmen Diaz-2005)
+Un dispositivo sirve para identificar una cierta enfermedad. Si alguien está enfermo, hay un 90 % de posibilidades de que la prueba sea positiva. Si no está enfermo hay todavía un 1 % de posibilidades de que la prueba sea positiva. Aproximadamente el 1 % de la población está enferma. Smith pasa la prueba y resulta positiva. La probabilidad de que tenga la enfermedad es? (Carmen Diaz-2005)
 
 </div>
 
@@ -115,9 +111,7 @@ La probabilidad de que tenga la enfermedad es? (Carmen Diaz-2005)
 </br>
 
 
-En una ciudad hay 60 hombres y 40 mujeres por cada 100 habitantes. La mitad de
-los hombres y una tercera parte de las mujeres fuman. Si se selecciona al azar un
-fumador, ¿qué es más probable, que sea hombre o mujer? (Carmen Diaz-2005)
+En una ciudad hay 60 hombres y 40 mujeres por cada 100 habitantes. La mitad de los hombres y una tercera parte de las mujeres fuman. Si se selecciona al azar un fumador, ¿qué es más probable, que sea hombre o mujer? (Carmen Diaz-2005)
 
 </div>
 
@@ -130,9 +124,7 @@ fumador, ¿qué es más probable, que sea hombre o mujer? (Carmen Diaz-2005)
 </br>
 
 
-En un grupo de 1000 sujetos se encontraron 500 sujetos aptos de los que 300
-tenían inteligencia superior. De los 400 con inteligencia superior 300 resultaron
-aptos. ¿Son los sucesos A: “ser superior a la media en inteligencia” y B “ser apto
+En un grupo de 1000 sujetos se encontraron 500 sujetos aptos de los que 300 tenían inteligencia superior. De los 400 con inteligencia superior 300 resultaron aptos. ¿Son los sucesos A: “ser superior a la media en inteligencia” y B “ser apto
 en rendimiento” independientes? (Botella, León y San Martín, 1993, p. 283)
 
 </div>
