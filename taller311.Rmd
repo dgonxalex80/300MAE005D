@@ -156,7 +156,7 @@ La vida útil en días, para frascos de cierta medicina de prescripción es una 
 
 $$f_{_{X}}(x) = \left \{ 
 				\begin{matrix} 
-				\dfrac{20000}{(x+100)^{3}}, & \mbox{  }	x \geq 0\\ 
+				\dfrac{20000}{(x*100)^{3}}, & \mbox{  }	x \geq 0\\ 
 				& \\
 				0 , & \mbox{en cualquier otro caso }
 				\end{matrix}\right.  
@@ -207,19 +207,18 @@ Una variable aleatoria continua $X$ que puede tomar valores entre $x = 1$ y $x =
 * Muestre que el área bajo la curva es igual a $1$.
 
 * Encuentre :
-    + $P(2 < X < 2.5)$  
-    + $P(X = 2.5)$ 
-    + $P(2 \leq X < 2.5)$ 
-    + $P(X > 2.5)$ 
-    + $P(X \geq 2.5)$.
+* $P(2 < X < 2.5)$  
+* $P(X = 2.5)$ 
+* $P(2 \leq X < 2.5)$ 
+* $P(X > 2.5)$ 
+* $P(X \geq 2.5)$.
 
 Para la función de densidad del ejercicio anterior encuentre $F(x)$. Utilíce la función obtenida para encontrar: 
-
-  + $P(2 < X < 2.5)$ 
-  + $P(X = 2.5)$ 
-  + $P(2 \leq X < 2.5)$  
-  + $P(X >2.5)$ 
-  + $P(X \geq 2.5)$
+* $P(2 < X < 2.5)$ 
+* $P(X = 2.5)$ 
+* $P(2 \leq X < 2.5)$  
+* $P(X >2.5)$ 
+* $P(X \geq 2.5)$
   
 </div>
   
@@ -299,17 +298,44 @@ $$f(x) = \binom{25}{x} (0.80)^{x} (0.20)^{25−x}  \text{,  } x = 0, 1, . . . , 
 
 ### <span style="color:#686868">**AYUDAS**</span>
 
-```{r}
-#-----------------------------------------------------------------------
+<pre>
+x=0:2
+sum(choose(2,x)*choose(3,3-x))
+</pre>
+
+
+```{r, eval=FALSE}
+
 x=0:2
 sum(choose(2,x)*choose(3,3-x))
 ```
 
 
-```{r}
-# Definir la función ----------------------------------------------------
+<br/><br/><br/>
+
+<pre>
+# Definir la función 
 fx7 <- function(x) {
-  20000 / (x + 100)^3
+  20000 / (x * 100)^3
+}
+# Calcular la integral definida desde 0 hasta infinito
+result <- integrate(fx7, lower = 0, upper = Inf)
+
+# Imprimir el resultado
+result
+
+
+
+Show in New Window
+1 with absolute error < 4.7e-07
+</pre>
+
+
+
+```{r, eval=FALSE}
+# Definir la función 
+fx7 <- function(x) {
+  20000 / (x * 100)^3
 }
 # Calcular la integral definida desde 0 hasta infinito
 result <- integrate(fx7, lower = 0, upper = Inf)

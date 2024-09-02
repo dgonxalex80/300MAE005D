@@ -404,6 +404,9 @@ $(document).ready(function () {
     <li>
       <a href="codigo31.html">Código 2.1</a>
     </li>
+    <li>
+      <a href="taller311.html">Taller 311</a>
+    </li>
     <li class="divider"></li>
     <li>
       <a href="monitoria3.html">Monitoria 3</a>
@@ -661,7 +664,7 @@ Problema 7
 es una variable aleatoria que tiene función de densidad,</p>
 <p><span class="math display">\[f_{_{X}}(x) = \left \{
                 \begin{matrix}
-                \dfrac{20000}{(x+100)^{3}}, &amp; \mbox{  } x \geq 0\\
+                \dfrac{20000}{(x*100)^{3}}, &amp; \mbox{  } x \geq 0\\
                 &amp; \\
                 0 , &amp; \mbox{en cualquier otro caso }
                 \end{matrix}\right.  
@@ -712,27 +715,22 @@ class="math inline">\(f (x) = 1/2\)</span>.</p>
 <ul>
 <li><p>Muestre que el área bajo la curva es igual a <span
 class="math inline">\(1\)</span>.</p></li>
-<li><p>Encuentre :</p>
-<ul>
-<li><span class="math inline">\(P(2 &lt; X &lt; 2.5)\)</span><br />
-</li>
-<li><span class="math inline">\(P(X = 2.5)\)</span></li>
-<li><span class="math inline">\(P(2 \leq X &lt; 2.5)\)</span></li>
-<li><span class="math inline">\(P(X &gt; 2.5)\)</span></li>
-<li><span class="math inline">\(P(X \geq 2.5)\)</span>.</li>
-</ul></li>
+<li><p>Encuentre :</p></li>
+<li><p><span class="math inline">\(P(2 &lt; X &lt; 2.5)\)</span><br />
+</p></li>
+<li><p><span class="math inline">\(P(X = 2.5)\)</span></p></li>
+<li><p><span class="math inline">\(P(2 \leq X &lt;
+2.5)\)</span></p></li>
+<li><p><span class="math inline">\(P(X &gt; 2.5)\)</span></p></li>
+<li><p><span class="math inline">\(P(X \geq 2.5)\)</span>.</p></li>
 </ul>
 <p>Para la función de densidad del ejercicio anterior encuentre <span
 class="math inline">\(F(x)\)</span>. Utilíce la función obtenida para
-encontrar:</p>
-<ul>
-<li><span class="math inline">\(P(2 &lt; X &lt; 2.5)\)</span></li>
-<li><span class="math inline">\(P(X = 2.5)\)</span></li>
-<li><span class="math inline">\(P(2 \leq X &lt; 2.5)\)</span><br />
-</li>
-<li><span class="math inline">\(P(X &gt;2.5)\)</span></li>
-<li><span class="math inline">\(P(X \geq 2.5)\)</span></li>
-</ul>
+encontrar: * <span class="math inline">\(P(2 &lt; X &lt; 2.5)\)</span> *
+<span class="math inline">\(P(X = 2.5)\)</span> * <span
+class="math inline">\(P(2 \leq X &lt; 2.5)\)</span><br />
+* <span class="math inline">\(P(X &gt;2.5)\)</span> * <span
+class="math inline">\(P(X \geq 2.5)\)</span></p>
 </div>
 <p><br/><br/><br/></p>
 <div class="box2 with-label">
@@ -813,20 +811,38 @@ probabilidades solicitadas.</p>
 <p><br/><br/><br/></p>
 <div id="ayudas" class="section level3">
 <h3><span style="color:#686868"><strong>AYUDAS</strong></span></h3>
-<pre class="r"><code>#-----------------------------------------------------------------------
+<pre>
 x=0:2
+sum(choose(2,x)*choose(3,3-x))
+</pre>
+<pre class="r"><code>x=0:2
 sum(choose(2,x)*choose(3,3-x))</code></pre>
-<pre><code>## [1] 10</code></pre>
-<pre class="r"><code># Definir la función ----------------------------------------------------
+<p><br/><br/><br/></p>
+<pre>
+# Definir la función 
+fx7 <- function(x) {
+  20000 / (x * 100)^3
+}
+# Calcular la integral definida desde 0 hasta infinito
+result <- integrate(fx7, lower = 0, upper = Inf)
+
+# Imprimir el resultado
+result
+
+
+
+Show in New Window
+1 with absolute error < 4.7e-07
+</pre>
+<pre class="r"><code># Definir la función 
 fx7 &lt;- function(x) {
-  20000 / (x + 100)^3
+  20000 / (x * 100)^3
 }
 # Calcular la integral definida desde 0 hasta infinito
 result &lt;- integrate(fx7, lower = 0, upper = Inf)
 
 # Imprimir el resultado
 result</code></pre>
-<pre><code>## 1 with absolute error &lt; 4.7e-07</code></pre>
 </div>
 
 

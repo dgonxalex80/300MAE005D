@@ -68,7 +68,8 @@ En este caso se puede utilizar la función sumatoria  `sum(x, na.rm = FALSE)`, d
 
 <br/><br/>
 
-### Ejemplo 1 
+<div class="box2 with-label">
+<div class="label">Ejemplo1</div>
 
 Para la función $f(x)$   
 
@@ -79,6 +80,14 @@ $$f_{_{X}}(x) = \left \{
 				0  & \mbox{en otro caso }
 				\end{matrix}\right.  
 				$$
+
+* Construir su representación gráfica
+* Verificar que la suma de todas las probabilidades es igual a uno
+* Calcular $P(20 \leq X \leq 30)$
+* Calcular $E[X]$
+* Calcular $V[X]$
+
+</div>
 
 <br/><br/>
 
@@ -169,7 +178,8 @@ Estas verificaciones se pueden realizar en R con dos instrucciones:
  
  <br/><br/><br/>
  
-### Ejemplo 2 
+<div class="box2 with-label">
+<div class="label">Ejemplo 2</div>
 
 Para la función $f(x)$   
 
@@ -183,7 +193,14 @@ $$f_{_{X}}(x) = \left \{
 				$$
 <br/>
 
-$$P(X < 5)$$				
+$P(X < 5)$$				
+
+* Representar gráficamente la ingral
+* Calcular su valor
+* Calcular para esta variable $E[X]$
+* Calcular $V[X]$
+
+</div>
 
 <br/>
  

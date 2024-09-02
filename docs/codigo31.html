@@ -404,6 +404,9 @@ $(document).ready(function () {
     <li>
       <a href="codigo31.html">Código 2.1</a>
     </li>
+    <li>
+      <a href="taller311.html">Taller 311</a>
+    </li>
     <li class="divider"></li>
     <li>
       <a href="monitoria3.html">Monitoria 3</a>
@@ -506,8 +509,10 @@ de todas las probabilidades es igual a uno</p></li>
 <code>sum(x, na.rm = FALSE)</code>, donde <code>x</code> es un vector y
 <code>na.rm</code> indica si el vector tienen datos faltantes.</p>
 <p><br/><br/></p>
-<div id="ejemplo-1" class="section level3">
-<h3>Ejemplo 1</h3>
+<div class="box2 with-label">
+<div class="label">
+Ejemplo1
+</div>
 <p>Para la función <span class="math inline">\(f(x)\)</span></p>
 <p><span class="math display">\[f_{_{X}}(x) = \left \{
                 \begin{matrix}
@@ -517,6 +522,16 @@ de todas las probabilidades es igual a uno</p></li>
                 0  &amp; \mbox{en otro caso }
                 \end{matrix}\right.  
                 \]</span></p>
+<ul>
+<li>Construir su representación gráfica</li>
+<li>Verificar que la suma de todas las probabilidades es igual a
+uno</li>
+<li>Calcular <span class="math inline">\(P(20 \leq X \leq
+30)\)</span></li>
+<li>Calcular <span class="math inline">\(E[X]\)</span></li>
+<li>Calcular <span class="math inline">\(V[X]\)</span></li>
+</ul>
+</div>
 <p><br/><br/></p>
 <pre class="r"><code># declaracion de la funcion
 fw=function(w){choose(40,w)*0.70^w*0.30^(40-w)}
@@ -539,7 +554,6 @@ sum(fw(w))</code></pre>
 <pre class="r"><code>sum(fw(20:30))</code></pre>
 <pre><code>[1] 0.8016552</code></pre>
 <p><br/><br/><br/></p>
-</div>
 <div id="valor-esperado" class="section level3">
 <h3><strong>Valor esperado</strong></h3>
 <p><br/></p>
@@ -597,8 +611,10 @@ instrucciones:</p>
 </ul>
 <p><code>integrate(function(x), lower = 0, upper = 1)</code></p>
 <p><br/><br/><br/></p>
-<div id="ejemplo-2" class="section level3">
-<h3>Ejemplo 2</h3>
+<div class="box2 with-label">
+<div class="label">
+Ejemplo 2
+</div>
 <p>Para la función <span class="math inline">\(f(x)\)</span></p>
 <p><span class="math display">\[f_{_{X}}(x) = \left \{
                 \begin{matrix}
@@ -607,7 +623,15 @@ instrucciones:</p>
                 0  &amp; \mbox{en otro caso }
                 \end{matrix}\right.  
                 \]</span> <br/></p>
-<p><span class="math display">\[P(X &lt; 5)\]</span></p>
+<p><span class="math inline">\(P(X &lt; 5)\)</span>$</p>
+<ul>
+<li>Representar gráficamente la ingral</li>
+<li>Calcular su valor</li>
+<li>Calcular para esta variable <span
+class="math inline">\(E[X]\)</span></li>
+<li>Calcular <span class="math inline">\(V[X]\)</span></li>
+</ul>
+</div>
 <p><br/></p>
 <pre class="r"><code># declaracion de la funcion
 fx=function(x){1/4*exp(-x/4)}
@@ -626,7 +650,6 @@ polygon(c(0,x1,5),c(0,f1,0),col=&quot;#4983F6&quot;)</code></pre>
 integrate(fx, 0,5)</code></pre>
 <pre><code>0.7134952 with absolute error &lt; 7.9e-15</code></pre>
 <p><br/><br/><br/></p>
-</div>
 </div>
 <div id="valor-esperado-1" class="section level2">
 <h2><strong>Valor esperado</strong></h2>
