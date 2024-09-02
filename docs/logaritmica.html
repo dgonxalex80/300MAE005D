@@ -280,16 +280,16 @@ $(document).ready(function () {
       <a href="conteo.html">Técnicas de conteo</a>
     </li>
     <li>
-      <a href="recurso000.html">Función exponencial</a>
+      <a href="exponencial.html">Función exponencial</a>
     </li>
     <li>
-      <a href="recurso000.html">Función logaritmica</a>
+      <a href="logaritmica.html">Función logaritmica</a>
     </li>
     <li>
-      <a href="recurso000.html">Derivación</a>
+      <a href="derivacion.html">Derivación</a>
     </li>
     <li>
-      <a href="recurso000.html">Integración</a>
+      <a href="integracion.html">Integración</a>
     </li>
   </ul>
 </li>
@@ -488,11 +488,129 @@ $(document).ready(function () {
 
 
 <p><img src="img/banner000.png" /></p>
+<p><br/><br/></p>
 <div id="función-logarítmica" class="section level1">
 <h1><strong>FUNCIÓN LOGARÍTMICA</strong></h1>
 <p><br/><br/></p>
-<div id="definición" class="section level2 content-box-blue">
+<div id="definición" class="section level2">
 <h2><strong>Definición</strong></h2>
+<p>La función logarítmica es la inversa de la función exponencial. Se
+define como:</p>
+<p><span class="math display">\[
+f(x) = \log_b(x)
+\]</span></p>
+<p>Donde: - <span class="math inline">\(b\)</span> es la base del
+logaritmo, y debe ser un número positivo distinto de 1. - <span
+class="math inline">\(x\)</span> es la variable independiente, y debe
+ser un número positivo.</p>
+<p><br/><br/><br/></p>
+<div id="propiedades-de-la-función-logarítmica" class="section level3">
+<h3>Propiedades de la Función Logarítmica</h3>
+<p><br/></p>
+<ul>
+<li><strong>Dominio</strong>: <span class="math inline">\(x &gt;
+0\)</span></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>Rango</strong>: Todos los números reales (<span
+class="math inline">\(-\infty &lt; f(x) &lt; \infty\)</span>)</li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>Intercepto en el Eje X</strong>: La función corta al eje X
+en <span class="math inline">\((1, 0)\)</span> porque <span
+class="math inline">\(\log_b(1) = 0\)</span>.</li>
+</ul>
+<p><br/></p>
+<ul>
+<li><strong>Monotonía</strong>:</li>
+</ul>
+<p><br/></p>
+<ul>
+<li><p>Si <span class="math inline">\(b &gt; 1\)</span>, la función es
+creciente.</p></li>
+<li><p>Si <span class="math inline">\(0 &lt; b &lt; 1\)</span>, la
+función es decreciente.</p></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><p><strong>Propiedades Operacionales</strong>:</p>
+<ul>
+<li><p><span class="math inline">\(\log_b(xy) = \log_b(x) +
+\log_b(y)\)</span></p></li>
+<li><p><span class="math inline">\(\log_b\left(\dfrac{x}{y}\right) =
+\log_b(x) - \log_b(y)\)</span></p></li>
+<li><p><span class="math inline">\(\log_b(x^y) = y \cdot
+\log_b(x)\)</span></p></li>
+<li><p><span class="math inline">\(\log_b(b) = 1\)</span></p></li>
+<li><p><span class="math inline">\(\log_b(1) = 0\)</span></p></li>
+<li><p>Cambio de base: <span class="math inline">\(\log_b(x) =
+\dfrac{\log_k(x)}{\log_k(b)}\)</span> donde <span
+class="math inline">\(k\)</span> es cualquier base positiva distinta de
+1.</p></li>
+</ul></li>
+</ul>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="ejemplos" class="section level2">
+<h2><strong>Ejemplos</strong></h2>
+<div id="ejemplo-1-gráfico-de-la-función-logarítmica"
+class="section level3">
+<h3><strong>Ejemplo 1: Gráfico de la Función Logarítmica</strong></h3>
+<pre class="r"><code>library(ggplot2)
+
+# Datos para la función logarítmica
+x &lt;- seq(0.1, 10, by = 0.1)
+y &lt;- log(x)
+data &lt;- data.frame(x = x, y = y)
+
+# Gráfico
+ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = &quot;darkred&quot;) +
+  labs(title = &quot;Gráfico de la función logarítmica f(x) = log(x)&quot;,
+       x = &quot;x&quot;,
+       y = &quot;y = log(x)&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="logaritmica_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="problemas-propuestos" class="section level2">
+<h2><strong>Problemas Propuestos</strong></h2>
+<p><br/></p>
+<p>Ejercicio 1:</p>
+<p>Grafica la función logarítmica para las bases <span
+class="math inline">\(b = 2\)</span>, <span class="math inline">\(b =
+e\)</span> y <span class="math inline">\(b = 10\)</span> en el mismo
+gráfico. Compara cómo cambia la forma de la curva al cambiar la
+base.</p>
+<p><br/></p>
+<p>Ejercicio 2:</p>
+<p>Utilizando la propiedad de los logaritmos <span
+class="math inline">\(\log_b(xy) = \log_b(x) + \log_b(y)\)</span>,
+demuestra que <span class="math inline">\(\log_2(16) + \log_2(4) =
+\log_2(64)\)</span>.</p>
+<p><br/></p>
+<p>Ejercicio 3:</p>
+<p>Si una población se triplica cada 5 años, ¿cuántos años se
+necesitarán para que la población se multiplique por 10? Utiliza
+logaritmos en base 3 para resolverlo.</p>
+<p><br/></p>
+<p>Ejercicio 4:</p>
+<p>Demuestra que <span
+class="math inline">\(\log_b\left(\dfrac{x}{y}\right) = \log_b(x) -
+\log_b(y)\)</span> utilizando valores específicos para <span
+class="math inline">\(x\)</span>, <span
+class="math inline">\(y\)</span>, y <span
+class="math inline">\(b\)</span>.</p>
+<p><br/></p>
+<p>Ejercicio 5:</p>
+<p>Resuelve la ecuación <span class="math inline">\(\log_5(x) =
+2\)</span> y verifica tu respuesta. Luego, interpreta el resultado en
+términos de la función exponencial.</p>
+<p><br/><br/><br/></p>
 </div>
 </div>
 

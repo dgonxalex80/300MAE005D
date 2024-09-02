@@ -34,7 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/font-awesome-6.5.2/js/script.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -279,16 +280,16 @@ $(document).ready(function () {
       <a href="conteo.html">Técnicas de conteo</a>
     </li>
     <li>
-      <a href="recurso000.html">Función exponencial</a>
+      <a href="exponencial.html">Función exponencial</a>
     </li>
     <li>
-      <a href="recurso000.html">Función logaritmica</a>
+      <a href="logaritmica.html">Función logaritmica</a>
     </li>
     <li>
-      <a href="recurso000.html">Derivación</a>
+      <a href="derivacion.html">Derivación</a>
     </li>
     <li>
-      <a href="recurso000.html">Integración</a>
+      <a href="integracion.html">Integración</a>
     </li>
   </ul>
 </li>
@@ -1263,7 +1264,7 @@ Justifique su respuesta.</p>
 <!--   self_contained = FALSE -->
 <!-- ) -->
 <!-- ``` -->
-<p><br/><br/><br/></p>
+<!-- <br/><br/><br/> -->
 <!-- ## **Taller 333** -->
 <!-- <br/><br/> -->
 <!-- **1.** Para una variable $Z$ con distribución de probabilidad normal estandar determine el área bajo la curva: -->
@@ -1347,350 +1348,287 @@ Justifique su respuesta.</p>
 <!-- <br/> -->
 <!-- (Ejercicios tomados de Navidi(2006) Cap.4). -->
 <!-- <br/><br/> -->
-<div id="algunas-soluciones-en-r" class="section level2">
-<h2><strong>Algunas soluciones en R</strong></h2>
-<p><br/></p>
-<pre class="r"><code># Problema 3 Navidi(2006) Cap 4 ------
-X2=rnorm(1000,mean=2.0,sd=0.1)
-Y2=rnorm(1000,mean=3.0,sd=0.2)
-Z2=data.frame(X2,Y2)
-A2=apply(Z2,1,prod)
-mediaA=mean(A2)
-varianzaA=var(A2)
-B2=as.numeric(A2&gt;5.9 &amp; A2&lt;6.1)
-Pro3c=sum(B2)/1000
-hist(A2)
-qqnorm(A2)</code></pre>
-<p><br/><br/></p>
-<pre class="r"><code># Problema 3 Navidi(2006) Cap 4 ------
-X2=rnorm(1000,mean=2.0,sd=0.1)
-Y2=rnorm(1000,mean=3.0,sd=0.2)
-Z2=data.frame(X2,Y2)
-A2=apply(Z2,1,prod)
-mediaA=mean(A2)
-varianzaA=var(A2)
-B2=as.numeric(A2&gt;5.9 &amp; A2&lt;6.1)
-Pro3c=sum(B2)/1000
-hist(A2)
-qqnorm(A2)</code></pre>
-<p><br/><br/></p>
-<pre class="r"><code># Problema 1 Navidi(2006) Cap 4 --
-#a.-----------------------------
-# X Binomial(n=100, p=0.03)
-# Y Binomial(n=100, p=0.05)
-# b.-----------------------------
-X=rbinom(1000,size=100,prob=0.03)
-Y=rbinom(1000,size=100,prob=0.05)
-# c. ----------------------------
-Z=apply(data.frame(X,Y),1,sum)
-C=as.numeric(Z&lt;10)
-Pro1c=sum(C)/1000
-# d.------------------------------
-W=apply(data.frame(X,-Y),1,sum)
-D=as.numeric(W&gt;0)
-Pro1d=sum(D)/1000
-# e.------------------------------
-qqnorm(Z)
-qqline(Z)
-hist(Z)</code></pre>
-<p><br/><br/></p>
-<pre class="r"><code># problema 9 Navidi(2006) Cap 4 ------
-# Generación de los tiempos de A
-A=rlnorm(1000,meanlog=1, sdlog=0.5)
-# Generación de los tiempos de B
-B=rlnorm(1000,meanlog=2, sdlog=1)
-# Estreuctura como sistema de 
-# los tiempos simulados
-AB=data.frame(A,B)
-# Generación de los tiempos del sistema
-minAB=apply(AB,1,min)
-# Calculo de la media de los tiempos 
-# del sistema
-mean(minAB)  
-# Cosntrucción de variable Bernoulli 
-# que toma valores de uno cuando se 
-# cumple condición
-D=as.numeric(minAB&lt;2) 
-# Calculo de la probabilidad desde 
-# enfoque frecuentista
-Prob2=sum(D)/1000
-# Calculo de percentil 20
-quantile(minAB,.20)
-# Generación del histograma
-hist(minAB)
-# Generación del grafico de normalidad qqplot
-qqnorm(minAB)
-qqline(minAB)</code></pre>
-<p><br/><br/></p>
-<pre class="r"><code># Punto 2 Navidi(2006) Cap 4-------------
-X2=rnorm(1000,mean=2.0,sd=0.1)
-Y2=rnorm(1000,mean=3.0,sd=0.2)
-Z2=data.frame(X2,Y2)
-A2=apply(Z2,1,prod)
-mediaA=mean(A2)
-varianzaA=var(A2)
-B2=as.numeric(A2&gt;5.9 &amp; A2&lt;6.1)
-Pro3c=sum(B2)/1000
-hist(A2)</code></pre>
-<p><br/><br/><br/></p>
-</div>
-<div id="formulario" class="section level2">
-<h2><strong>Formulario</strong></h2>
-<p><br/><br/></p>
-<div id="distribución-bernoulli" class="section level3">
-<h3><strong>Distribución Bernoulli</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=\left\lbrace
-\begin{array}{lll}
-p &amp; \mbox{si } x=1 \\
-q &amp; \mbox{si } x=0 \\
-0 &amp; \mbox{en cualquier otro caso}
-\end{array}
-\right.
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]= p\]</span></p>
-<p><span class="math display">\[V[X]= pq\]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-binomial" class="section level3">
-<h3><strong>Distribución binomial</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} , x=0,1,2, \ldots, n
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=np\]</span></p>
-<p><span class="math display">\[V[X]= np(1-p) \]</span></p>
-<p style="text-align:center;">
-<span class="math inline">\(X\)</span> : número de éxitos en los <span
-class="math inline">\(n\)</span> ensayos
-</p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-poisson" class="section level3">
-<h3><strong>Distribución Poisson</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=\dfrac{\lambda^{x}}{x!} \hspace{.2cm} e^{-\lambda} , x \geq 0
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=\lambda\]</span></p>
-<span class="math display">\[V[X]=\lambda \]</span>
-<p style="text-align:center;">
-<span class="math inline">\(X\)</span> : número de eventos que ocurren
-por unidad de tiempo, longitud, superficie o volumen.
-</p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-geométrica" class="section level3">
-<h3><strong>Distribución geométrica</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-    f(x)=p(1-p)^{x-1} , x \geq 1
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=\dfrac{1}{p}\]</span></p>
-<p><span class="math display">\[V[X]=\dfrac{1-p}{p^{2}}\]</span></p>
-<p style="text-align:center;">
-<span class="math inline">\(X\)</span>: número del evento donde ocurre
-el primer éxito
-</p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-hipergeometrica" class="section level3">
-<h3><strong>Distribución hipergeometrica</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=P(X=x)=\dfrac{\displaystyle\binom{R}{x}
-\displaystyle\binom{N-R}{n-x}}{\displaystyle\binom{N}{n}} ,{\text{ si }
-0 \leq x \leq \min(n,R) }
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=\dfrac{nR}{N}\]</span></p>
-<p><span class="math display">\[V[X]=n\binom{R}{N}
-\Bigg(1-\dfrac{R}{N}\Bigg)\Bigg(\dfrac{N-n}{N-1}\Bigg)\]</span></p>
-<p style="text-align:center;">
-<span class="math inline">\(X\)</span>: número de éxitos encontrados en
-una muestra de tamaño <span class="math inline">\(n\)</span> (sin orden,
-sin repetición), extraída de una urna que contiene N elementos de los
-cuales K son éxitos.
-</p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-binomial-negativa" class="section level3">
-<h3><strong>Distribución binomial negativa</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=\displaystyle \binom{x-1}{r-1} p^{r} (1-p)^{x-r} , x= r, r+1,
-\ldots
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=\dfrac{r}{p}\]</span></p>
-<p><span class="math display">\[V[X]=\dfrac{r(1-p)}{p^{2}}\]</span></p>
-<p style="text-align:center;">
-<span class="math inline">\(X\)</span> : número del evento donde ocurre
-el r-esimo éxito
-</p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-uniforme-ab" class="section level3">
-<h3><strong>Distribución uniforme (<span
-class="math inline">\(a,b)\)</span></strong></h3>
-<p><span class="math display">\[f(x)=\dfrac{1}{b-a} ,
-\hspace{.3cm}\text{ para } a \leq x \leq b \]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[ E[X]=\dfrac{a+b}{2}\]</span></p>
-<p><span class="math display">\[V[X]=\dfrac{(b-a)^{2}}{12}\]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-normal-mu-sigma2" class="section level3">
-<h3><strong>Distribución Normal (<span class="math inline">\(\mu,
-\sigma^{2}\)</span>)</strong></h3>
-<p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
-\hspace{.1cm} exp{\bigg(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\bigg)},
-\hspace{.3cm} -\infty \leq x \leq \infty \]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=\mu\]</span></p>
-<p><span class="math display">\[V[X]=\sigma^{2}\]</span></p>
-<p><span class="math display">\[Z= \dfrac{X-\mu}{\sigma} \sim
-N(0,1)\]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-exponencial-lambda" class="section level3">
-<h3><strong>Distribución exponencial (<span
-class="math inline">\(\lambda\)</span>)</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=\lambda e^{-\lambda x} , x &gt; 0
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=\dfrac{1}{\lambda}\]</span></p>
-<p><span class="math display">\[V[X]=
-\dfrac{1}{\lambda^{2}}\]</span></p>
-<p><span class="math display">\[F(x)=P(X \leq x)=1-e^{-\lambda
-x}\]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-lognormal-mu-sigma2" class="section level3">
-<h3><strong>Distribución lognormal (<span class="math inline">\(\mu,
-\sigma^{2}\)</span>)</strong></h3>
-<p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
-\hspace{.01cm} exp{\bigg(-\frac{1}{2\sigma^{2}}(\ln(x)-\mu)^{2}\bigg)},
-\hspace{.25cm} -\infty \leq x \leq \infty \]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X]=\exp(\mu+\sigma^{2}/2)\]</span></p>
-<p><span class="math display">\[V[X]=\exp(2\mu+\sigma^{2})
-\exp(\sigma^{2})-1\]</span></p>
-<p><span class="math display">\[z = \dfrac{\ln(x) - \mu}{\sigma} \sim
-N(0,1) \]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-gamma-alpha-beta" class="section level3">
-<h3><strong>Distribución gamma (<span class="math inline">\(\alpha,
-\beta\)</span>)</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=\dfrac{1}{\beta^{\alpha}\Gamma(\alpha)} x^{\alpha-1}
-\exp{\big(-x/\beta\big)},   x&gt;0 , \alpha&gt;0, \beta&gt;0
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[E[X] =  \alpha \beta \]</span></p>
-<p><span class="math display">\[V[X] = \alpha \beta^{2} \]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="distribución-weibull-alpha-beta" class="section level3">
-<h3><strong>Distribución Weibull (<span class="math inline">\(\alpha,
-\beta\)</span>)</strong></h3>
-<p><span class="math display">\[\begin{equation*}
-f(x)=\alpha \beta^{\alpha} x^{\alpha-1} e^{-(\beta x)^{\alpha}}
-,\hspace{.3cm} x &gt; 0
-\end{equation*}\]</span></p>
-<p><br/><br/></p>
-<p><span class="math display">\[F(x)=1-\exp{\{-\alpha
-x^{\beta}\}}\]</span></p>
-<p><span class="math display">\[E[X]=\frac{1}{\beta}
-\hspace{.2cm}\Gamma\Bigg(1+\frac{1}{\alpha}\Bigg)\]</span></p>
-<p><span class="math display">\[V[X]=\frac{1}{\beta^{2}}
-\Bigg(\Gamma\Bigg(1+\frac{2}{\alpha}\Bigg)- \Bigg[\Gamma
-\Bigg(1+\frac{1}{\alpha}\Bigg)\Bigg]^{2}\Bigg) \]</span></p>
-<p><br/><br/></p>
-</div>
-<div id="aproximaciones" class="section level3">
-<h3><strong>Aproximaciones</strong></h3>
-<ul>
-<li><p>binomial a la normal</p>
-<ul>
-<li>Si <span class="math inline">\(X\sim binom(n,p)\)</span> y si <span
-class="math inline">\(np&gt;10\)</span> y <span
-class="math inline">\(nq&gt;10\)</span>, entonces se puede aproximar
-<span class="math inline">\(X \sim norm(np, np(1-p))\)</span></li>
-</ul></li>
-<li><p>Poisson a la normal</p>
-<ul>
-<li>Si <span class="math inline">\(X \sim poiss(\lambda)\)</span>, donde
-<span class="math inline">\(\lambda&gt;10\)</span>, entonces se puede
-aproximar <span class="math inline">\(X \sim norm(\lambda,
-\lambda)\)</span></li>
-</ul></li>
-</ul>
-<p><br/><br/></p>
-</div>
-<div id="tasa-de-fallas" class="section level3">
-<h3><strong>Tasa de fallas</strong></h3>
-<p><span class="math display">\[Z(t)= \dfrac{f(t)}{1-F(t)} \]</span></p>
-<p><br/><br/></p>
-</div>
-</div>
-</div>
-<div id="examen-parcial-2016" class="section level1">
-<h1><strong>Examen Parcial 2016</strong></h1>
-<a href="https://github.com/dgonxalex80/pye20222/blob/main/pdf/FORMULARIO%20SEGUNDO_PARCIAL_300MAE004_20162c.pdf">
-<button class="btn btn-primary"><i class="fa fa-save"></i> Descarga: segundo parcial 2016 pdf </button>
-</a>
-<p><br/><br/></p>
-</div>
-<div id="examen-parcial-2020" class="section level1">
-<h1><strong>Examen parcial 2020</strong></h1>
-<p><br/><br/></p>
-<div id="section" class="section level2">
-<h2><strong>1</strong></h2>
-<p><img src="img/p1_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-1" class="section level2">
-<h2><strong>2</strong></h2>
-<p><img src="img/p2_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-2" class="section level2">
-<h2><strong>3</strong></h2>
-<p><img src="img/p3_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-3" class="section level2">
-<h2><strong>4</strong></h2>
-<p><img src="img/p4_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-4" class="section level2">
-<h2><strong>5</strong></h2>
-<p><img src="img/p5_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-5" class="section level2">
-<h2><strong>6</strong></h2>
-<p><img src="img/p6_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-6" class="section level2">
-<h2><strong>7</strong></h2>
-<p><img src="img/p7_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-7" class="section level2">
-<h2><strong>8</strong></h2>
-<p><img src="img/p8_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
-<div id="section-8" class="section level2">
-<h2><strong>9</strong></h2>
-<p><img src="img/p9_parcial2.png" width="100%" style="display: block; margin: auto;" /></p>
-<p><br/><br/></p>
-</div>
+<!-- ## **Algunas soluciones en R** -->
+<!-- <br/> -->
+<!-- ```{r, eval=FALSE} -->
+<!-- # Problema 3 Navidi(2006) Cap 4 ------ -->
+<!-- X2=rnorm(1000,mean=2.0,sd=0.1) -->
+<!-- Y2=rnorm(1000,mean=3.0,sd=0.2) -->
+<!-- Z2=data.frame(X2,Y2) -->
+<!-- A2=apply(Z2,1,prod) -->
+<!-- mediaA=mean(A2) -->
+<!-- varianzaA=var(A2) -->
+<!-- B2=as.numeric(A2>5.9 & A2<6.1) -->
+<!-- Pro3c=sum(B2)/1000 -->
+<!-- hist(A2) -->
+<!-- qqnorm(A2) -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ```{r, eval=FALSE} -->
+<!-- # Problema 3 Navidi(2006) Cap 4 ------ -->
+<!-- X2=rnorm(1000,mean=2.0,sd=0.1) -->
+<!-- Y2=rnorm(1000,mean=3.0,sd=0.2) -->
+<!-- Z2=data.frame(X2,Y2) -->
+<!-- A2=apply(Z2,1,prod) -->
+<!-- mediaA=mean(A2) -->
+<!-- varianzaA=var(A2) -->
+<!-- B2=as.numeric(A2>5.9 & A2<6.1) -->
+<!-- Pro3c=sum(B2)/1000 -->
+<!-- hist(A2) -->
+<!-- qqnorm(A2) -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ```{r, eval=FALSE} -->
+<!-- # Problema 1 Navidi(2006) Cap 4 -- -->
+<!-- #a.----------------------------- -->
+<!-- # X Binomial(n=100, p=0.03) -->
+<!-- # Y Binomial(n=100, p=0.05) -->
+<!-- # b.----------------------------- -->
+<!-- X=rbinom(1000,size=100,prob=0.03) -->
+<!-- Y=rbinom(1000,size=100,prob=0.05) -->
+<!-- # c. ---------------------------- -->
+<!-- Z=apply(data.frame(X,Y),1,sum) -->
+<!-- C=as.numeric(Z<10) -->
+<!-- Pro1c=sum(C)/1000 -->
+<!-- # d.------------------------------ -->
+<!-- W=apply(data.frame(X,-Y),1,sum) -->
+<!-- D=as.numeric(W>0) -->
+<!-- Pro1d=sum(D)/1000 -->
+<!-- # e.------------------------------ -->
+<!-- qqnorm(Z) -->
+<!-- qqline(Z) -->
+<!-- hist(Z) -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ```{r, eval=FALSE} -->
+<!-- # problema 9 Navidi(2006) Cap 4 ------ -->
+<!-- # Generación de los tiempos de A -->
+<!-- A=rlnorm(1000,meanlog=1, sdlog=0.5) -->
+<!-- # Generación de los tiempos de B -->
+<!-- B=rlnorm(1000,meanlog=2, sdlog=1) -->
+<!-- # Estreuctura como sistema de  -->
+<!-- # los tiempos simulados -->
+<!-- AB=data.frame(A,B) -->
+<!-- # Generación de los tiempos del sistema -->
+<!-- minAB=apply(AB,1,min) -->
+<!-- # Calculo de la media de los tiempos  -->
+<!-- # del sistema -->
+<!-- mean(minAB)   -->
+<!-- # Cosntrucción de variable Bernoulli  -->
+<!-- # que toma valores de uno cuando se  -->
+<!-- # cumple condición -->
+<!-- D=as.numeric(minAB<2)  -->
+<!-- # Calculo de la probabilidad desde  -->
+<!-- # enfoque frecuentista -->
+<!-- Prob2=sum(D)/1000 -->
+<!-- # Calculo de percentil 20 -->
+<!-- quantile(minAB,.20) -->
+<!-- # Generación del histograma -->
+<!-- hist(minAB) -->
+<!-- # Generación del grafico de normalidad qqplot -->
+<!-- qqnorm(minAB) -->
+<!-- qqline(minAB) -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ```{r, eval=FALSE} -->
+<!-- # Punto 2 Navidi(2006) Cap 4------------- -->
+<!-- X2=rnorm(1000,mean=2.0,sd=0.1) -->
+<!-- Y2=rnorm(1000,mean=3.0,sd=0.2) -->
+<!-- Z2=data.frame(X2,Y2) -->
+<!-- A2=apply(Z2,1,prod) -->
+<!-- mediaA=mean(A2) -->
+<!-- varianzaA=var(A2) -->
+<!-- B2=as.numeric(A2>5.9 & A2<6.1) -->
+<!-- Pro3c=sum(B2)/1000 -->
+<!-- hist(A2) -->
+<!-- ``` -->
+<!-- <br/><br/><br/> -->
+<!-- ## **Formulario** -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución Bernoulli** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=\left\lbrace -->
+<!-- \begin{array}{lll} -->
+<!-- p & \mbox{si } x=1 \\ -->
+<!-- q & \mbox{si } x=0 \\ -->
+<!-- 0 & \mbox{en cualquier otro caso} -->
+<!-- \end{array} -->
+<!-- \right. -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$E[X]= p$$ -->
+<!-- $$V[X]= pq$$  -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución binomial** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=\displaystyle\binom{n}{x} p^{x} (1-p)^{n-x} , x=0,1,2, \ldots, n  -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=np$$ -->
+<!-- $$V[X]= np(1-p) $$ -->
+<!-- <p style="text-align:center;"> -->
+<!-- $X$ : número de  éxitos en los $n$ ensayos  -->
+<!-- </p> -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución Poisson** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=\dfrac{\lambda^{x}}{x!} \hspace{.2cm} e^{-\lambda} , x \geq 0  -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=\lambda$$ -->
+<!-- $$V[X]=\lambda $$ -->
+<!-- <p style="text-align:center;"> -->
+<!-- $X$ : número de  eventos que ocurren por unidad de tiempo, longitud, superficie o volumen. -->
+<!-- </p> -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución geométrica** -->
+<!-- \begin{equation*} -->
+<!--    f(x)=p(1-p)^{x-1} , x \geq 1  -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=\dfrac{1}{p}$$ -->
+<!-- $$V[X]=\dfrac{1-p}{p^{2}}$$ -->
+<!-- <p style="text-align:center;"> -->
+<!-- $X$: número del evento donde ocurre el primer éxito  -->
+<!-- </p> -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución hipergeometrica** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=P(X=x)=\dfrac{\displaystyle\binom{R}{x} \displaystyle\binom{N-R}{n-x}}{\displaystyle\binom{N}{n}} ,{\text{ si } 0 \leq x \leq \min(n,R) } -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=\dfrac{nR}{N}$$ -->
+<!-- $$V[X]=n\binom{R}{N} \Bigg(1-\dfrac{R}{N}\Bigg)\Bigg(\dfrac{N-n}{N-1}\Bigg)$$ -->
+<!-- <p style="text-align:center;"> -->
+<!-- $X$: número de éxitos encontrados en una muestra de tamaño $n$ (sin orden, sin repetición), extraída de una urna que contiene N elementos de los cuales K son éxitos. -->
+<!-- </p> -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución binomial negativa** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=\displaystyle \binom{x-1}{r-1} p^{r} (1-p)^{x-r} , x= r, r+1, \ldots  -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=\dfrac{r}{p}$$ -->
+<!-- $$V[X]=\dfrac{r(1-p)}{p^{2}}$$ -->
+<!-- <p style="text-align:center;"> -->
+<!-- $X$ : número del evento donde ocurre el r-esimo éxito  -->
+<!-- </p> -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución uniforme ($a,b)$** -->
+<!-- $$f(x)=\dfrac{1}{b-a} , \hspace{.3cm}\text{ para } a \leq x \leq b $$ -->
+<!-- <br/><br/> -->
+<!-- $$ E[X]=\dfrac{a+b}{2}$$  -->
+<!-- $$V[X]=\dfrac{(b-a)^{2}}{12}$$ -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución Normal  ($\mu, \sigma^{2}$)** -->
+<!-- $$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} exp{\bigg(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\bigg)}, \hspace{.3cm} -\infty \leq x \leq \infty $$  -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=\mu$$ -->
+<!-- $$V[X]=\sigma^{2}$$  -->
+<!-- $$Z= \dfrac{X-\mu}{\sigma} \sim N(0,1)$$ -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución exponencial ($\lambda$)** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=\lambda e^{-\lambda x} , x > 0  -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=\dfrac{1}{\lambda}$$ -->
+<!-- $$V[X]= \dfrac{1}{\lambda^{2}}$$ -->
+<!-- $$F(x)=P(X \leq x)=1-e^{-\lambda x}$$  -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución lognormal ($\mu, \sigma^{2}$)** -->
+<!-- $$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.01cm} exp{\bigg(-\frac{1}{2\sigma^{2}}(\ln(x)-\mu)^{2}\bigg)}, \hspace{.25cm} -\infty \leq x \leq \infty $$  -->
+<!-- <br/><br/> -->
+<!-- $$E[X]=\exp(\mu+\sigma^{2}/2)$$  -->
+<!-- $$V[X]=\exp(2\mu+\sigma^{2}) \exp(\sigma^{2})-1$$  -->
+<!-- $$z = \dfrac{\ln(x) - \mu}{\sigma} \sim N(0,1) $$ -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución gamma ($\alpha, \beta$)** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=\dfrac{1}{\beta^{\alpha}\Gamma(\alpha)} x^{\alpha-1} \exp{\big(-x/\beta\big)},   x>0 , \alpha>0, \beta>0 -->
+<!-- \end{equation*}     -->
+<!-- <br/><br/> -->
+<!-- $$E[X] =  \alpha \beta $$ -->
+<!-- $$V[X] = \alpha \beta^{2} $$ -->
+<!-- <br/><br/> -->
+<!-- ### **Distribución Weibull ($\alpha, \beta$)** -->
+<!-- \begin{equation*} -->
+<!-- f(x)=\alpha \beta^{\alpha} x^{\alpha-1} e^{-(\beta x)^{\alpha}} ,\hspace{.3cm} x > 0  -->
+<!-- \end{equation*} -->
+<!-- <br/><br/> -->
+<!-- $$F(x)=1-\exp{\{-\alpha x^{\beta}\}}$$ -->
+<!-- $$E[X]=\frac{1}{\beta} \hspace{.2cm}\Gamma\Bigg(1+\frac{1}{\alpha}\Bigg)$$ -->
+<!-- $$V[X]=\frac{1}{\beta^{2}} \Bigg(\Gamma\Bigg(1+\frac{2}{\alpha}\Bigg)- \Bigg[\Gamma \Bigg(1+\frac{1}{\alpha}\Bigg)\Bigg]^{2}\Bigg) $$   -->
+<!-- <br/><br/> -->
+<!-- ### **Aproximaciones** -->
+<!-- + binomial a la normal      -->
+<!--   + Si $X\sim binom(n,p)$ y si $np>10$ y $nq>10$, entonces se puede  aproximar $X \sim norm(np, np(1-p))$ -->
+<!-- + Poisson a la normal -->
+<!--   + Si $X \sim poiss(\lambda)$, donde $\lambda>10$, entonces se puede aproximar $X \sim norm(\lambda, \lambda)$  -->
+<!-- <br/><br/> -->
+<!-- ### **Tasa de fallas**  -->
+<!-- $$Z(t)= \dfrac{f(t)}{1-F(t)} $$ -->
+<!-- <br/><br/> -->
+<!-- # **Examen Parcial 2016** -->
+<!-- ```{r, echo=FALSE} -->
+<!-- library(downloadthis) -->
+<!-- download_link( -->
+<!--   link = "https://github.com/dgonxalex80/pye20222/blob/main/pdf/FORMULARIO%20SEGUNDO_PARCIAL_300MAE004_20162c.pdf", -->
+<!--   button_label = "Descarga: segundo parcial 2016 pdf ", -->
+<!--   button_type = "primary", -->
+<!--   has_icon = TRUE, -->
+<!--   icon = "fa fa-save", -->
+<!--   self_contained = FALSE -->
+<!-- ) -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- # **Examen parcial 2020** -->
+<!-- <br/><br/> -->
+<!-- ## **1** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p1_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **2** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p2_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **3** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p3_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **4** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p4_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **5** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p5_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **6** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p6_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **7** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p7_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **8** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p8_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
+<!-- ## **9** -->
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!-- knitr::include_graphics("img/p9_parcial2.png") -->
+<!-- ``` -->
+<!-- <br/><br/> -->
 </div>
 
 

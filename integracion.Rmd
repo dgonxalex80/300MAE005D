@@ -33,18 +33,3 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
 <br/><br/>
 
-
-<div class="box2">
-
-## **Definición**
-
-</div>
-
-
-<!-- Caja con etiqueta (box1) -->
-<div class="box1 with-label">
-<div class="label">Problema 1</div>
-Este es el contenido de la caja. Aquí puedes colocar cualquier información relevante.
-</div>
-
-   

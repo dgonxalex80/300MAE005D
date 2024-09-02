@@ -280,16 +280,16 @@ $(document).ready(function () {
       <a href="conteo.html">Técnicas de conteo</a>
     </li>
     <li>
-      <a href="recurso000.html">Función exponencial</a>
+      <a href="exponencial.html">Función exponencial</a>
     </li>
     <li>
-      <a href="recurso000.html">Función logaritmica</a>
+      <a href="logaritmica.html">Función logaritmica</a>
     </li>
     <li>
-      <a href="recurso000.html">Derivación</a>
+      <a href="derivacion.html">Derivación</a>
     </li>
     <li>
-      <a href="recurso000.html">Integración</a>
+      <a href="integracion.html">Integración</a>
     </li>
   </ul>
 </li>
@@ -516,7 +516,7 @@ decrece exponencialmente.</li>
 independiente. Representa el valor que se evalua para obtener el valor
 de <span class="math inline">\(f(x)\)</span>.</li>
 </ul>
-<p><br/><br/></p>
+<p><br/><br/><br/></p>
 <div id="propiedades" class="section level3">
 <h3><strong>Propiedades</strong></h3>
 <ul>
@@ -549,7 +549,7 @@ ggplot(data, aes(x = x, y = y)) +
        x = &quot;x&quot;,
        y = &quot;y&quot;) +
   theme_minimal()</code></pre>
-<p><img src="exponencial_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="exponencial_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/><br/></p>
 </div>
 <div id="caso-fx-exp-x" class="section level3">
@@ -568,7 +568,8 @@ ggplot(data, aes(x = x, y = y)) +
        x = &quot;x&quot;,
        y = &quot;y&quot;) +
   theme_minimal()</code></pre>
-<p><img src="exponencial_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="exponencial_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
 <p>Una de las funciones de densidad de probabilidad más conocida en
 estadística es el modelo exponencial</p>
 <p><span class="math display">\[f(x) = \dfrac{1}{\lambda} \hspace{.2cm}
@@ -576,7 +577,7 @@ exp{(-1/\lambda)}\]</span></p>
 <p>Para un valor de <span class="math inline">\(\lambda = 2\)</span>
 tenemos la siguiente función:</p>
 <p><span class="math display">\[f(x) = \dfrac{1}{2} \hspace{.2cm}
-exp{(-x/2)}, \hspace{1cm} x&gt;0\]</span></p>
+exp{(-x/2)}, \hspace{1cm} x&gt;0\]</span> <br/><br/></p>
 <pre class="r"><code>library(ggplot2)
 
 # Datos
@@ -591,7 +592,55 @@ ggplot(data, aes(x = x, y = y)) +
        x = &quot;x&quot;,
        y = &quot;y&quot;) +
   theme_minimal()</code></pre>
-<p><img src="exponencial_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="exponencial_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="problemas-propuestos" class="section level2">
+<h2>Problemas propuestos</h2>
+<ol style="list-style-type: decimal">
+<li>Dado un valor inicial de <span class="math inline">\(a = 2\)</span>
+y una tasa de crecimiento <span class="math inline">\(b = 1.5\)</span>,
+escribe la función exponencial correspondiente y calcula el valor de
+<span class="math inline">\(f(x)\)</span> cuando <span
+class="math inline">\(x = 3\)</span>. ¿Cómo cambia el valor de <span
+class="math inline">\(f(x)\)</span> si <span
+class="math inline">\(b\)</span> es mayor o menor a 1?</li>
+</ol>
+<p><br/><br/></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Verifica la propiedad <span class="math inline">\(b^x \cdot b^y =
+b^{x+y}\)</span> usando <span class="math inline">\(b = 2\)</span>,
+<span class="math inline">\(x = 3\)</span> y <span
+class="math inline">\(y = 4\)</span>. Escribe la ecuación y demuestra
+que ambos lados son iguales.</li>
+</ol>
+<p><br/><br/></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Considera la función exponencial <span class="math inline">\(f(x) =
+3 \cdot (0.5)^x\)</span>. Grafica la función y analiza cómo cambia el
+valor de <span class="math inline">\(f(x)\)</span> a medida que <span
+class="math inline">\(x\)</span> aumenta. ¿Qué sucede cuando <span
+class="math inline">\(x\)</span> es negativo?</li>
+</ol>
+<p><br/><br/></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Compara las funciones <span class="math inline">\(f(x) =
+2^x\)</span> y <span class="math inline">\(g(x) = 3^x\)</span>. Grafica
+ambas funciones en el mismo plano y determina para qué valores de <span
+class="math inline">\(x\)</span> <span
+class="math inline">\(f(x)\)</span> es mayor que <span
+class="math inline">\(g(x)\)</span>.</li>
+</ol>
+<p><br/><br/></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Considera la función de densidad de probabilidad exponencial <span
+class="math inline">\(f(x) = \frac{1}{2} \cdot
+\exp{\left(-\frac{x}{2}\right)}\)</span>, donde <span
+class="math inline">\(\lambda = 2\)</span>. Calcula la probabilidad de
+que <span class="math inline">\(x\)</span> sea menor que 2 utilizando la
+función de distribución acumulativa correspondiente.</li>
+</ol>
+<p><br/><br/></p>
 </div>
 </div>
 

@@ -19,13 +19,13 @@ navbar:
         - text: "Técnicas de conteo"
           href: conteo.html  
         - text: "Función exponencial"
-          href: recurso000.html  
+          href: exponencial.html  
         - text: "Función logaritmica"
-          href: recurso000.html            
+          href: logaritmica.html            
         - text: "Derivación"
-          href: recurso000.html
+          href: derivacion.html
         - text: "Integración"
-          href: recurso000.html          
+          href: integracion.html          
 
          
     - text: "Módulo 1"
