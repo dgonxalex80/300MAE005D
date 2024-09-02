@@ -298,7 +298,9 @@ fx=choose(20,x)*0.70^x*0.30^(20-x)
 Fx=cumsum(fx)
 
 tabla=data.frame(x, fx, Fx)
-DT::datatable(head(tabla, 21),fillContainer = FALSE, options = list(pageLength = 12))
+knitr::kable(tabla)
+
+#DT::datatable(head(tabla, 21),fillContainer = FALSE, options = list(pageLength = 12))
 ```
 
 

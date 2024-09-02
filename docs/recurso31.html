@@ -34,15 +34,6 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
-<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
-<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -792,9 +783,124 @@ fx=choose(20,x)*0.70^x*0.30^(20-x)
 Fx=cumsum(fx)
 
 tabla=data.frame(x, fx, Fx)
-DT::datatable(head(tabla, 21),fillContainer = FALSE, options = list(pageLength = 12))</code></pre>
-<div class="datatables html-widget html-fill-item" id="htmlwidget-7b6309bd53e5726d3a61" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-7b6309bd53e5726d3a61">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21"],[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],[3.486784400999997e-11,1.627166053799999e-09,3.606884752589998e-08,5.049638653625996e-07,5.007558331512446e-06,3.738976887529293e-05,0.0002181069851058754,0.001017832597160752,0.003859281930901184,0.01200665489613702,0.03081708090008501,0.06536956554563488,0.114396739704861,0.1642619852172363,0.1916389827534423,0.1788630505698795,0.1304209743738705,0.07160367220526223,0.02784587252426864,0.006839337111223877,0.0007979226629761189],[3.486784400999997e-11,1.662033897809999e-09,3.773088142370997e-08,5.426947467863096e-07,5.550253078298756e-06,4.294002195359168e-05,0.0002610470070594671,0.001278879604220219,0.005138161535121403,0.01714481643125842,0.04796189733134343,0.1133314628769783,0.2277282025818393,0.3919901877990756,0.583629170552518,0.7624922211223976,0.892913195496268,0.9645168677015302,0.9923627402257988,0.9992020773370228,0.9999999999999989]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>x<\/th>\n      <th>fx<\/th>\n      <th>Fx<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"x","targets":1},{"name":"fx","targets":2},{"name":"Fx","targets":3}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,12,25,50,100]},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":[],"jsHooks":[]}</script>
+knitr::kable(tabla)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="right">fx</th>
+<th align="right">Fx</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">0</td>
+<td align="right">0.0000000</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">0.0000000</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="right">0.0000000</td>
+<td align="right">0.0000000</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="right">0.0000005</td>
+<td align="right">0.0000005</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="right">0.0000050</td>
+<td align="right">0.0000056</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="right">0.0000374</td>
+<td align="right">0.0000429</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="right">0.0002181</td>
+<td align="right">0.0002610</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">0.0010178</td>
+<td align="right">0.0012789</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">0.0038593</td>
+<td align="right">0.0051382</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="right">0.0120067</td>
+<td align="right">0.0171448</td>
+</tr>
+<tr class="odd">
+<td align="right">10</td>
+<td align="right">0.0308171</td>
+<td align="right">0.0479619</td>
+</tr>
+<tr class="even">
+<td align="right">11</td>
+<td align="right">0.0653696</td>
+<td align="right">0.1133315</td>
+</tr>
+<tr class="odd">
+<td align="right">12</td>
+<td align="right">0.1143967</td>
+<td align="right">0.2277282</td>
+</tr>
+<tr class="even">
+<td align="right">13</td>
+<td align="right">0.1642620</td>
+<td align="right">0.3919902</td>
+</tr>
+<tr class="odd">
+<td align="right">14</td>
+<td align="right">0.1916390</td>
+<td align="right">0.5836292</td>
+</tr>
+<tr class="even">
+<td align="right">15</td>
+<td align="right">0.1788631</td>
+<td align="right">0.7624922</td>
+</tr>
+<tr class="odd">
+<td align="right">16</td>
+<td align="right">0.1304210</td>
+<td align="right">0.8929132</td>
+</tr>
+<tr class="even">
+<td align="right">17</td>
+<td align="right">0.0716037</td>
+<td align="right">0.9645169</td>
+</tr>
+<tr class="odd">
+<td align="right">18</td>
+<td align="right">0.0278459</td>
+<td align="right">0.9923627</td>
+</tr>
+<tr class="even">
+<td align="right">19</td>
+<td align="right">0.0068393</td>
+<td align="right">0.9992021</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">0.0007979</td>
+<td align="right">1.0000000</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>#DT::datatable(head(tabla, 21),fillContainer = FALSE, options = list(pageLength = 12))</code></pre>
 <p><img src="recurso31_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" />
 <br/></p>
 <p><img src="recurso31_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
