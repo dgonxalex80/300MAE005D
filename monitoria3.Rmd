@@ -92,9 +92,47 @@ Calcule la probabilidad de que el tiempo que  pase para que el radar detecte ent
 
 * usando la función de distribución de probabilidad acumulada de $X$
 * utilizando la función de densidad de probabilidad de $X$
-* Represente las funciones $f(x)$ y $F(x)$ gráficamente
+* Represente las función $f(x)$ gráficamente
 
 </div>
+
+```{r, fig.align='center'}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función F(x)
+Fx <- function(x) {
+  ifelse(x <= 0, 0, 1 - exp(-8 * x))
+}
+
+# Crear un rango de valores para x
+x_values <- seq(0, 1, length.out = 500)
+
+# Calcular los valores de F(x)
+Fx_values <- Fx(x_values)
+
+# Crear un dataframe con los valores
+data <- data.frame(x = x_values, Fx = Fx_values)
+
+# Graficar usando ggplot2
+ggplot(data, aes(x = x, y = Fx)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = "x", y = "F(x)", title = expression(F[x](x))) +
+  theme_minimal() +
+  xlim(0, 1) +
+  ylim(0, 1) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") + 
+  geom_vline(xintercept = 0, linetype = "dashed")
+
+
+```
+
+
 
 <br/><br/>
 
@@ -174,6 +212,43 @@ Con base en las pruebas extensas, el fabricante de una lavadora determinó que e
   
 </div>
 
+
+```{r, fig.align='center'}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_Y(y)
+fy <- function(y) {
+  ifelse(y >= 0, (1 / 4) * exp(-y / 4), 0)
+}
+
+# Crear un rango de valores para y
+y_values <- seq(0, 20, length.out = 500)
+
+# Calcular los valores de f_Y(y)
+fy_values <- fy(y_values)
+
+# Crear un dataframe con los valores
+data_fy <- data.frame(y = y_values, fy = fy_values)
+
+# Graficar usando ggplot2
+ggplot(data_fy, aes(x = y, y = fy)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = "y", y = "f(y)", title = expression(f[Y](y))) +
+  theme_minimal() +
+  xlim(0, 20) +
+  ylim(0, 0.3) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") + 
+  geom_vline(xintercept = 0, linetype = "dashed")
+
+```
+
+
 <br/><br/>
 
 <div class="box1 with-label">
@@ -210,6 +285,44 @@ El congestionamiento de pasajeros es un problema de servicio en los aeropuertos,
 * Represente la función $f(x)$ gráficamente
 
 </div>
+
+```{r, fig.align='center'}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx <- function(x) {
+  ifelse(x >= 0 & x <= 10, 1/10, 0)
+}
+
+# Crear un rango de valores para x
+x_values <- seq(0, 10, length.out = 500)
+
+# Calcular los valores de f_X(x)
+fx_values <- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx <- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = "x", y = "f(x)", title = expression(f[X](x))) +
+  theme_minimal() +
+  xlim(0, 10) +
+  ylim(0, 0.12) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") + 
+  geom_vline(xintercept = 0, linetype = "dashed")
+
+```
+
+
+
 
 <br/>
 
@@ -302,7 +415,7 @@ Para una variable con función de distribución de probabilidad :
 
  $$f_{_{X}}(x) = \left \{ 
 				\begin{matrix} 
-				\dfrac{2x * 1}{25} & \mbox{ , }	x=0, 1, 2, 3, 4\\ 
+				\dfrac{2x + 1}{25} & \mbox{ , }	x=0, 1, 2, 3, 4\\ 
 				0  & \mbox{en otro caso }
 				\end{matrix}\right.  
 				$$
@@ -313,6 +426,41 @@ Determine:
 * $P(2 \leq X < 4)$
 
 </div>
+
+```{r, fig.align='center'}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx <- function(x) {
+  ifelse(x %in% 0:4, (2*x + 1)/25, 0)
+}
+
+# Crear un rango de valores para x
+x_values <- 0:4
+
+# Calcular los valores de f_X(x)
+fx_values <- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx <- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2 en un diagrama de puntos
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_point(color = c3, size = 4) +
+  #geom_line(color = "blue", linetype = "dashed") +
+  labs(x = "x", y = "f(x)", title = expression(f[X](x))) +
+  theme_minimal() +
+  ylim(0, 0.4) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  )
+
+
+```
+
 
 <br/><br/>
 

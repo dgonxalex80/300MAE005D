@@ -559,10 +559,42 @@ velocidad sea menor a 12 minutos</p>
 class="math inline">\(X\)</span></li>
 <li>utilizando la función de densidad de probabilidad de <span
 class="math inline">\(X\)</span></li>
-<li>Represente las funciones <span class="math inline">\(f(x)\)</span> y
-<span class="math inline">\(F(x)\)</span> gráficamente</li>
+<li>Represente las función <span class="math inline">\(f(x)\)</span>
+gráficamente</li>
 </ul>
 </div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función F(x)
+Fx &lt;- function(x) {
+  ifelse(x &lt;= 0, 0, 1 - exp(-8 * x))
+}
+
+# Crear un rango de valores para x
+x_values &lt;- seq(0, 1, length.out = 500)
+
+# Calcular los valores de F(x)
+Fx_values &lt;- Fx(x_values)
+
+# Crear un dataframe con los valores
+data &lt;- data.frame(x = x_values, Fx = Fx_values)
+
+# Graficar usando ggplot2
+ggplot(data, aes(x = x, y = Fx)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = &quot;x&quot;, y = &quot;F(x)&quot;, title = expression(F[x](x))) +
+  theme_minimal() +
+  xlim(0, 1) +
+  ylim(0, 1) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) + 
+  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)</code></pre>
+<p><img src="monitoria3_files/figure-html/unnamed-chunk-2-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <div class="box1 with-label">
 <div class="label">
@@ -649,6 +681,38 @@ reparación mayor durante el primer año?</p></li>
 gráficamente</p></li>
 </ul>
 </div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_Y(y)
+fy &lt;- function(y) {
+  ifelse(y &gt;= 0, (1 / 4) * exp(-y / 4), 0)
+}
+
+# Crear un rango de valores para y
+y_values &lt;- seq(0, 20, length.out = 500)
+
+# Calcular los valores de f_Y(y)
+fy_values &lt;- fy(y_values)
+
+# Crear un dataframe con los valores
+data_fy &lt;- data.frame(y = y_values, fy = fy_values)
+
+# Graficar usando ggplot2
+ggplot(data_fy, aes(x = y, y = fy)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = &quot;y&quot;, y = &quot;f(y)&quot;, title = expression(f[Y](y))) +
+  theme_minimal() +
+  xlim(0, 20) +
+  ylim(0, 0.3) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) + 
+  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)</code></pre>
+<p><img src="monitoria3_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <div class="box1 with-label">
 <div class="label">
@@ -701,6 +765,38 @@ minutos</li>
 gráficamente</li>
 </ul>
 </div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx &lt;- function(x) {
+  ifelse(x &gt;= 0 &amp; x &lt;= 10, 1/10, 0)
+}
+
+# Crear un rango de valores para x
+x_values &lt;- seq(0, 10, length.out = 500)
+
+# Calcular los valores de f_X(x)
+fx_values &lt;- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx &lt;- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = &quot;x&quot;, y = &quot;f(x)&quot;, title = expression(f[X](x))) +
+  theme_minimal() +
+  xlim(0, 10) +
+  ylim(0, 0.12) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) + 
+  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)</code></pre>
+<p><img src="monitoria3_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/></p>
 <p>Problemas tomado de walpole (2006)</p>
 <p><br/><br/><br/></p>
@@ -796,7 +892,7 @@ Problema 14
 <p>Para una variable con función de distribución de probabilidad :</p>
 <p><span class="math display">\[f_{_{X}}(x) = \left \{
                 \begin{matrix}
-                \dfrac{2x * 1}{25} &amp; \mbox{ , } x=0, 1, 2, 3, 4\\
+                \dfrac{2x + 1}{25} &amp; \mbox{ , } x=0, 1, 2, 3, 4\\
                 0  &amp; \mbox{en otro caso }
                 \end{matrix}\right.  
                 \]</span></p>
@@ -804,6 +900,36 @@ Problema 14
 class="math inline">\(P(X \leq 1)\)</span> * <span
 class="math inline">\(P(2 \leq X &lt; 4)\)</span></p>
 </div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx &lt;- function(x) {
+  ifelse(x %in% 0:4, (2*x + 1)/25, 0)
+}
+
+# Crear un rango de valores para x
+x_values &lt;- 0:4
+
+# Calcular los valores de f_X(x)
+fx_values &lt;- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx &lt;- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2 en un diagrama de puntos
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_point(color = c3, size = 4) +
+  #geom_line(color = &quot;blue&quot;, linetype = &quot;dashed&quot;) +
+  labs(x = &quot;x&quot;, y = &quot;f(x)&quot;, title = expression(f[X](x))) +
+  theme_minimal() +
+  ylim(0, 0.4) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  )</code></pre>
+<p><img src="monitoria3_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <div class="box1 with-label">
 <div class="label">

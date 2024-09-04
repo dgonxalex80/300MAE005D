@@ -664,7 +664,7 @@ Problema 7
 es una variable aleatoria que tiene función de densidad,</p>
 <p><span class="math display">\[f_{_{X}}(x) = \left \{
                 \begin{matrix}
-                \dfrac{20000}{(x*100)^{3}}, &amp; \mbox{  } x \geq 0\\
+                \dfrac{20000}{(x+100)^{3}}, &amp; \mbox{  } x \geq 0\\
                 &amp; \\
                 0 , &amp; \mbox{en cualquier otro caso }
                 \end{matrix}\right.  
@@ -843,6 +843,38 @@ result &lt;- integrate(fx7, lower = 0, upper = Inf)
 
 # Imprimir el resultado
 result</code></pre>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx &lt;- function(x) {
+  ifelse(x &gt;= 0, 20000 / (x + 100)^3, 0)
+}
+
+# Crear un rango de valores para x
+x_values &lt;- seq(0, 300, length.out = 500)
+
+# Calcular los valores de f_X(x)
+fx_values &lt;- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx &lt;- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = &quot;x&quot;, y = &quot;f(x)&quot;, title = expression(f(x) == frac(20000, (x + 100)^3))) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  xlim(0, 300) +
+  ylim(0, 0.025) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) + 
+  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)</code></pre>
+<p><img src="taller311_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 
 
