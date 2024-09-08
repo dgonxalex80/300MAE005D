@@ -10,24 +10,14 @@ navbar:
       menu:
         - text: "Módulo 0"
           href: Modulo0.html
-        - text: "Sumatoria"
-          href: sumatoria.html  
-        - text: "Productoria"
-          href: productoria.html  
-        - text: "Teoría de conjuntos"
-          href: conjuntos.html  
-        - text: "Técnicas de conteo"
-          href: conteo.html  
-        - text: "Función exponencial"
-          href: exponencial.html  
-        - text: "Función logaritmica"
-          href: logaritmica.html            
-        - text: "Derivación"
-          href: derivacion.html
-        - text: "Integración"
-          href: integracion.html          
-
-         
+        - text: "Recurso 0.1"
+          href: recurso001.html  
+        - text: "Recurso 0.2"
+          href: recurso002.html  
+        - text: "Recurso 0.3"
+          href: recurso003.html  
+        - text: "Recurso 0.4"
+          href: recurso000.html  
     - text: "Módulo 1"
       menu:
         - text: "Módulo 1"
@@ -35,94 +25,102 @@ navbar:
         - text: "---------"          
         - text: "Guía 1.1"
           href: guia11.html            
-        - text: "Recurso 1.1"
-          href: recurso11.html
+        - text: "Guía 1.2"
+          href: guia12.html            
+        - text: "Guía 1.3"
+          href: guia13.html 
+        - text: "---------"  
+        - text: "Recursos 1.1"
+          href: recurso11.html  
+        - text: "Recursos 1.2"
+          href: recurso12.html  
+        - text: "Recursos 1.3"
+          href: recurso13.html
+        - text: "---------"            
+        - text: "Monitoria 1"
+          href: monitoria1.html
+        - text: "Caso 1"
+          href: caso1.html    
+        - text: "---------"          
         - text: "Introducción a R"
           href: introduccionR.html
         - text: "Código 1.1"
           href: codigo11.html
-        - text: "---------"            
-        - text: "Guía 1.2"
-          href: guia12.html            
-        - text: "Recurso 1.2"
-          href: recurso12.html        
         - text: "Código 1.2"
-          href: codigo11.html   
-        - text: "Caso 1"
-          href: caso1.html            
-        - text: "---------"   
-        - text: "Guía 1.3"
-          href: guia13.html            
-        - text: "Gráficos básicos"  
-          href: recursos13.html    
+          href: codigo12.html  
         - text: "Código 1.3"
           href: codigo13.html   
-          
-        - text: "---------"             
-        - text: "Monitoria 1"
-          href: monitoria1.html 
-          
+  
     - text: "Módulo 2"
       menu:
         - text: "Módulo 2"
-          href: Modulo2.html 
+          href: Modulo2.html
         - text: "---------"  
         - text: "Guía 2.1"
-          href: guia21.html            
-        - text: "Recurso 2.1"
-          href: recurso21.html
-        - text: "Código 2.1"
-          href: codigo21.html
-        - text: "Taller 211"
-          href: taller211.html          
-        - text: "---------"
+          href: guia21.html
         - text: "Guía 2.2"
-          href: guia22.html            
-        - text: "Recurso 2.2"
-          href: recurso22.html
-        - text: "Taller 221"
-          href: taller221.html          
-        - text: "---------"        
+          href: Guia202.html             
+        - text: "---------"            
+        - text: "Recursos 2.1"
+          href: recurso21.html  
+        - text: "Recursos 2.2"
+          href: recurso22.html  
+        - text: "---------"  
         - text: "Monitoria 2"
-          href: monitoria2.html         
-    
+          href: monitoria2.html   
+        - text: "---------"  
+        - text: "Código 2.1"
+          href: codigo21.html 
+        - text: "Taller 211"
+          href: taller211.html   
+        - text: "Taller 221"
+          href: taller221.html  
     - text: "Módulo 3"
       menu:
         - text: "Módulo 3"
-          href: Modulo3.html 
+          href: Modulo3.html
         - text: "---------"
         - text: "Guía 3.1"
-          href: guia31.html            
-        - text: "Recurso 2.1"
-          href: recurso31.html
-        - text: "Código 2.1"
+          href: guia31.html
+        - text: "Guía 3.2"
+          href: guia32.html
+        - text: "---------"  
+        - text: "Recursos 3.1"
+          href: recurso31.html  
+        - text: "Recursos 3.2"
+          href: recurso32.html  
+        - text: "---------"            
+        - text: "Monitoria 3"
+          href: monitoria3.html
+        - text: "---------"   
+        - text: "Código 3.1"
           href: codigo31.html
+        - text: "Código 3.2"
+          href: codigo32.html
+        - text: "---------"            
         - text: "Taller 311"
           href: taller311.html
-        - text: "---------"        
-        - text: "Monitoria 3"
-          href: monitoria3.html 
-
+        - text: "Taller 323"
+          href: taller323.html           
+        - text: "---------"                
+     
+          
+          
     - text: "Módulo 4"
       menu:
         - text: "Módulo 4"
-          href: Modulo4.html 
+          href: Modulo4.html
         - text: "---------"
 
     - text: "Módulo 5"
       menu:
         - text: "Módulo 5"
-          href: Modulo5.html 
-        - text: "---------"          
+          href: Modulo5.html
 
     - text: "Proyecto"
       menu:
         - text: "Guía proyecto"
-          href: recurso000.html 
-    - text: "grupo D "
-      menu:
-        - text: "Grupo D"
-          href: about.html           
+          href: recurso000.html   
 output:
   html_document:
     theme: flatly
