@@ -84,11 +84,16 @@ navbar:
           href: guia31.html
         - text: "Guía 3.2"
           href: guia32.html
+        - text: "Guía 3.3"
+          href: guia33.html        
+          
         - text: "---------"  
         - text: "Recursos 3.1"
           href: recurso31.html  
         - text: "Recursos 3.2"
           href: recurso32.html  
+        - text: "Recursos 3.3"
+          href: recurso33.html           
         - text: "---------"            
         - text: "Monitoria 3"
           href: monitoria3.html
@@ -97,13 +102,18 @@ navbar:
           href: codigo31.html
         - text: "Código 3.2"
           href: codigo32.html
+        - text: "Código 3.3"
+          href: codigo33.html
         - text: "---------"            
         - text: "Taller 311"
           href: taller311.html
         - text: "Taller 321"
-          href: taller321.html           
+          href: taller321.html
         - text: "---------"                
-     
+        - text: "Actividad 331"
+          href: actividad331.html
+        - text: "Actividad 331"
+          href: actividad332.html
           
           
     - text: "Módulo 4"
