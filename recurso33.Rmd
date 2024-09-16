@@ -65,7 +65,13 @@ El siguiente diagrama presenta los principales modelo de probabilidad y sus dife
 
 <br/><br/>
 
-![](img/poster.png)
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+ knitr::include_graphics("img/poster.png")
+```
+
+
 Fuente: construcción propia. basado en Univariate Distribution Relationships  ([Lawrence M. LEEMIS and Jacquelyn T. MCQUESTON](http://www.math.wm.edu/~leemis/2008amstat.pdf))
 
 <br/><br/>
@@ -102,9 +108,8 @@ Empezaremos  enunciando el modelo Bernoulli, aunque algunos autores no lo recono
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución Bernoulli**
+<div class="box2 with-label">
+<div class="label">Distribución Bernoulli</div>
 		
 Una variable que se distribuye Bernoulli, procede de un experimento Bernoulli, descrito por las siguientes características:
 	
@@ -136,13 +141,17 @@ $$V[X]= pq$$
 
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej1.png)| Un biólogo realiza una salida de campo para estudiar el comportamiento del cucarachero común. Se considera éxito si puede filmar al animal y fracaso si no puede hacerlo. Por información suministrada en artículos científicos la probabilidad de lograrlo se estima en 0.20. |
+<div class="box1 with-label">
+<div class="label">Ejemplo 1</div>
+
+Un biólogo realiza una salida de campo para estudiar el comportamiento del cucarachero común. Se considera éxito si puede filmar al animal y fracaso si no puede hacerlo. Por información suministrada en artículos científicos la probabilidad de lograrlo se estima en 0.20. 
+
+</div>
+
 
 <br/><br/>
 
-**Solución** 
+### **Solución** 
 
 Se requiere examinar si dentro de este contexto existe una variable que proceda de un experimento Bernoulli y ese caso como se podría caracterizar.
 
@@ -176,9 +185,8 @@ El segundo modelo que abordaremos corresponde al modelo binomial, que puede vers
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución binomial**
+<div class="box2 with-label">
+<div class="label">Distribución binomial</div>
 	
 Una variable con distribución binomial es aquella que procede de un experimento binomial. 
 	
@@ -215,7 +223,7 @@ $$V[X]= np(1-p) $$
 </div> 
 
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 library(ggplot2)
 # modelo binomial  ok
 x=0:9
@@ -223,7 +231,7 @@ fx=dbinom(x,9,0.90)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
+ggplot(dat) + geom_point(aes(x, fx),colour = c2, size = 2) +
   scale_x_continuous(limits = c(0, 10),
                      breaks = c(0,1,2,3,4,5,6,7,8,9), 
                      labels = c('0','1','2','3','4','5','6','7','8','9'))
@@ -232,13 +240,16 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
 <br/><br/>
 
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej2.png)| Un sistema de seguridad para casas está diseñado para tener una confiabilidad del 90% . Suponga que nueve casas equipadas con este dispositivo sufrieron tentativa de robo. Se requiere calcular la probabilidad de que en siete de las nueve, la alarma se activará. |
+<div class="box1 with-label">
+<div class="label">Ejemplo 2</div>
+
+Un sistema de seguridad para casas está diseñado para tener una confiabilidad del 90% . Suponga que nueve casas equipadas con este dispositivo sufrieron tentativa de robo. Se requiere calcular la probabilidad de que en siete de las nueve, la alarma se activará. 
+
+</div>
 
 <br/><br/>
 
-**Solución**
+### **Solución**
 
 En este caso la variable $X$ se define como el número de casas de las nueve en las que se activa el sistema de alarma. Observe que en cada caso se puede presentar dos posibles resultados frente a la tentativa de robo : 
 
@@ -291,9 +302,8 @@ El siguiente modelo fue plantea por el físico y matemático francés Siméon-De
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px;color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución Poisson**
+<div class="box2 with-label">
+<div class="label">Distribución Poisson</div>
 	
 La función de distribución de probabilidad de una variable con distribución Poisson esta dada por siguiente la expresión:
 	
@@ -319,7 +329,7 @@ La siguiente gráfica representa la distribución de masa de una variable de Poi
 
 **Distribución Poisson ($\lambda=2$)**
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # poiss ok
 library(ggplot2)
 x=0:10
@@ -327,7 +337,7 @@ fx=dpois(x,2)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
+ggplot(dat) + geom_point(aes(x, fx),colour = c3, size = 2) +
   scale_x_continuous(limits = c(0, 10),
                      breaks = c(0,1,2,3,4,5,6,7,8,9,10), 
                      labels = c('0','1','2','3','4','5','6','7','8','9','10'))
@@ -336,13 +346,16 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
 <br/><br/>
 
 	
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej3.png)| Se estima que en el cruce más importante de la cuidad, ocurren 2 accidentes por día y se desea valorar la probabilidad de que en un día cualquiera no ocurra ningún accidente en dicho cruce. |
+<div class="box1 with-label">
+<div class="label">Ejemplo 3</div>
+
+ Se estima que en el cruce más importante de la cuidad, ocurren 2 accidentes por día y se desea valorar la probabilidad de que en un día cualquiera no ocurra ningún accidente en dicho cruce.
+
+</div>
 
 <br/><br/>
 
-**Solución**
+### **Solución**
 
 El número de accidentes que pueden ocurrir en este cruce, para un dia cualquiera, se puede considerar como una variable aleatoria con distribución Poisson, pues la variable hace referencia al número de eventos que se pueden presentar en un determinado espacio de tiempo. 
 Para calcular la probabilidad de que no ocurra ningún evento, utilizamos el modelo Poisson:
@@ -362,9 +375,8 @@ Este modelo nace de la necesidad de modelar eventos Bernoulli con probabilidad n
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución hipergeometrica** 
+<div class="box2 with-label">
+<div class="label">Distribución hipergeometrica</div> 
 	
 Se tiene un conjunto de $N$ objetos que contiene $K$ objetos clasificados como éxitos y $N-K$ objetos clasificados como fracasos. Una muestra de tamaño $n$ objetos es seleccionada al azar (sin reemplazo) de la población de $N$ objetos, donde $K \leq N$ y $n \leq N $. La variable de interés $X$ corresponde al **número de éxitos obtenidos en la muestra**. 
 	
@@ -388,7 +400,7 @@ $$V[X]=n\Bigg(\frac{K}{N}\Bigg) \Bigg(1-\dfrac{K}{N}\Bigg)\Bigg(\dfrac{N-n}{N-1}
 
 **Distribución binomial hipergeometrica ($m=95, n=5, k=10$)**
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # hyper ok
 library(ggplot2)
 x=5:10
@@ -396,7 +408,7 @@ fx=dhyper(x,95,5,10)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
+ggplot(dat) + geom_point(aes(x, fx),colour = c3, size = 2) +
   scale_x_continuous(limits = c(5, 10),
                      breaks = c(5,6,7,8,9,10), 
                      labels = c('5','6','7','8','9','10'))
@@ -407,11 +419,15 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
 
 <br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej4.png)| Las tarjetas de circuito impreso se someten a una prueba de funcionamiento antes de ser ensambladas en un dispositivo de seguridad, después de ser rellenado con chips semiconductores. Un lote de estas tarjetas contiene 140 unidades y se seleccionan aleatoriamente 20 sin reemplazo para realizar una prueba de control de calidad internacional. Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad de que al menos 1 tarjeta defectuosa aparezca en la muestra? (3-92.  Mongomery) |
 
-**Solución** 
+<div class="box1 with-label">
+<div class="label">Ejemplo 4</div>
+
+Las tarjetas de circuito impreso se someten a una prueba de funcionamiento antes de ser ensambladas en un dispositivo de seguridad, después de ser rellenado con chips semiconductores. Un lote de estas tarjetas contiene 140 unidades y se seleccionan aleatoriamente 20 sin reemplazo para realizar una prueba de control de calidad internacional. Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad de que al menos 1 tarjeta defectuosa aparezca en la muestra? (3-92.  Mongomery) 
+
+</div>
+
+### **Solución** 
 
 $\begin{eqnarray*}
 	P(X\geq 1)=1-P(X=0)
@@ -450,9 +466,8 @@ La variable $X$ toma el valor de $1$ cuando el éxito ocurre en el primer intent
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución geométrica**
+<div class="box2 with-label">
+<div class="label">Distribución geométrica</div>
 
 $$\begin{equation*}
 		f(x)=\left\lbrace
@@ -478,7 +493,7 @@ Nota: En R la variable corresponde al **número de fracasos necesarios para obte
 
 **Distribución geométrica o de Pascal ($p=0.5$)**
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # geom 
 library(ggplot2)
 x=1:10
@@ -486,7 +501,7 @@ fx=dgeom(x,0.5)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
+ggplot(dat) + geom_point(aes(x, fx),colour = c3, size = 2) +
   scale_x_continuous(limits = c(1, 10),
                      breaks = c(1,2,3,4,5,6,7,8,9,10), 
                      labels = c('1','2','3','4','5','6','7','8','9','10'))
@@ -495,13 +510,16 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
  
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej5.png)| En un estudio realizado en peces, los animales son sometidos a pruebas para determinar si poseen o no un gen que aumenta el riesgo de una enfermedad mortal. la probabilidad de que una animal de la especie en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3 o más animales deban ser sometidos a pruebas antes de detectar el primer pez con el gen objeto de estudio? |
+<div class="box1 with-label">
+<div class="label">Ejemplo 5</div>
+
+En un estudio realizado en peces, los animales son sometidos a pruebas para determinar si poseen o no un gen que aumenta el riesgo de una enfermedad mortal. la probabilidad de que una animal de la especie en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3 o más animales deban ser sometidos a pruebas antes de detectar el primer pez con el gen objeto de estudio? 
+
+</div>
 
 <br/><br/>
 
-**Solución** 
+### **Solución** 
 
 $$\begin{eqnarray*}
 	P(X\geq 3)&=& 1-P(X\leq 2)\\
@@ -525,8 +543,9 @@ La distribución binomial negativa esta relacionada con la distribución geomét
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-**Distribución binomial negativa**
+
+<div class="box2 with-label">
+<div class="label">Distribución binomial negativa</div>
 	
 Se considera una generalización de la distribución Geométrica. En este caso la variable objeto de estudio corresponde a $X$: **número de ensayos requeridos para obtener $r$ éxitos**. Esta variable se obtiene al sumar $r$ variables con distribución Geométrica con igual parámetro $p$.
 	
@@ -555,7 +574,7 @@ $$V[X]=\dfrac{r(1-p)}{p^{2}}$$
 **Distribución binomial negativa ($k=2, p=0.50$)**
 
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # nbiom
 library(ggplot2)
 x=2:10
@@ -563,7 +582,7 @@ fx=dnbinom(x,2,0.50)
 dat=data.frame(x,fx)
 
 
-ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
+ggplot(dat) + geom_point(aes(x, fx),colour = c3, size = 2) +
   scale_x_continuous(limits = c(2, 10),
                      breaks = c(2,3,4,5,6,7,8,9,10), 
                      labels = c('2','3','4','5','6','7','8','9','10'))
@@ -572,13 +591,17 @@ ggplot(dat) + geom_point(aes(x, fx),colour = "#BC2B6A", size = 2) +
 	
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej6.png)| Un sitio Web está soportado por tres servidores idénticos. Sólo uno de ellos se utiliza para operar el sitio, y los otros dos son de repuesto, los  cuales se activan en caso de que el sistema principal falle. La probabilidad de falla en el sistema principal (o cualquier otro sistema de repuesto activado) ante una solicitud de servicio es 0,0005. Suponiendo que cada solicitud representa un juicio independiente, cuál es el número medio de solicitudes que se espera hasta el fracaso de los tres servidores? |
+<div class="box1 with-label">
+<div class="label">Ejemplo 6</div>
+
+Un sitio Web está soportado por tres servidores idénticos. Sólo uno de ellos se utiliza para operar el sitio, y los otros dos son de repuesto, los  cuales se activan en caso de que el sistema principal falle. La probabilidad de falla en el sistema principal (o cualquier otro sistema de repuesto activado) ante una solicitud de servicio es 0,0005. Suponiendo que cada solicitud representa un juicio independiente, cuál es el número medio de solicitudes que se espera hasta el fracaso de los tres servidores? 
+
+
+</div>
  
 <br/><br/>
 
-**Solución**
+### **Solución**
 
 $$E[X]=\dfrac{3}{0.0005}= 6000 $$
 <br/><br/>
@@ -607,9 +630,8 @@ Las variables continuas proceden en su mayoría de la medición y se clasifican 
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución uniforme**
+<div class="box2 with-label">
+<div class="label">Distribución uniforme</div>
 	
 Se caracteriza porque su función de densidad es constante en su recorrido o dominio de definición (intervalo [a,b])
 
@@ -629,7 +651,7 @@ $$\begin{equation*}
 
 **Distribución uniforme ($0,1$)**
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # uniforme
 library(ggplot2)
 x= c(0,1) 
@@ -637,17 +659,18 @@ fx=c(1,1)
 dat=data.frame(x,fx)
 ggplot(data=dat,aes(x=x, y=fx))+ 
   scale_y_continuous(limits=c(0,1.2))+
-  geom_line(size = 1, color="#BC2B6A") 
+  geom_line(size = 1, color=c3) 
 ```
 
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej7.png)| En la fabricación de portaobjetos, que son láminas rectangulares de vidrio muy delgada (76x26 mm y 1 mm de espesor), utilizados para  la observación de sustancias en el microscopio. Una de sus principales características está relacionada con su espesor ($X$), el cual tiene una distribución uniforme entre 0.95 mm y 1.05 mm. Determine la probabilidad de que un portaobjeto determinado tenga un espesor superior a 1.03 mm.|          
+<div class="box1 with-label">
+<div class="label">Ejemplo 7</div>
+
+ En la fabricación de portaobjetos, que son láminas rectangulares de vidrio muy delgada (76x26 mm y 1 mm de espesor), utilizados para  la observación de sustancias en el microscopio. Una de sus principales características está relacionada con su espesor ($X$), el cual tiene una distribución uniforme entre 0.95 mm y 1.05 mm. Determine la probabilidad de que un portaobjeto determinado tenga un espesor superior a 1.03 mm.|          
 
 <br/><br/>
 
-**Solución** 
+### **Solución** 
 
  $$P(X\geq 1.03)= (1.05-1.03) \times \frac{1}{0.10}=0.20 $$
 
@@ -679,9 +702,8 @@ Su función de densidad esta dada por:
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución normal**
+<div class="box2 with-label">
+<div class="label">Distribución normal</div>
 	
 $$f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}} \hspace{.1cm} e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}	 \hspace{.5cm}  -\infty \leq  x \leq \infty $$  
 	
@@ -695,15 +717,15 @@ $$V[X]=\sigma^{2}$$
 
 En la siguente gráfica se muestra el efecto en la curva normal, producto de cambios en la media o en la varianza. A mayor valor de la media la curva se desplaza a la derecha, mientras que a menor varianza la curva se vuelve mas angosta o puntiaguda 
 
-Distribuciones normales : <span style="color:blue">$N(0,1)$</span>, <span style="color:red"> $N(0,1.5)$</span> y <span style="color:orange"> $N(2,1.5)$</span>
+Distribuciones normales : <span style="color:#4983F6">$N(0,1)$</span>, <span style="color:#E1286F"> $N(0,1.5)$</span> y <span style="color:#FFAD42"> $N(2,1.5)$</span>
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # Distribucion normal
 library(ggfortify)
 
-p=ggdistribution(dnorm, seq(-4, 8, 0.1), mean = 0, sd = 1,colour = 'blue')
-p=ggdistribution(dnorm, seq(-4, 8, 0.1), mean = 0, sd = 1.5,colour = 'red', p=p)
-ggdistribution(dnorm, seq(-4, 8, 0.1),   mean = 2, sd = 1.5,colour = 'orange', p=p)
+p=ggdistribution(dnorm, seq(-4, 8, 0.1), mean = 0, sd = 1,colour = "#4983F6")
+p=ggdistribution(dnorm, seq(-4, 8, 0.1), mean = 0, sd = 1.5,colour = "#E1286F", p=p)
+ggdistribution(dnorm, seq(-4, 8, 0.1),   mean = 2, sd = 1.5,colour = "#FFAD42", p=p)
 ```
 
 
@@ -712,9 +734,8 @@ ggdistribution(dnorm, seq(-4, 8, 0.1),   mean = 2, sd = 1.5,colour = 'orange', p
 Dentro del sin número de posibles curvas que se pueden obtener con los parámetros $\mu$ y $\sigma^{2}$, existe una muy especial. Normal estándar ($N(0,1)$) con $\mu=0$ y $\sigma^{2}=1$.  La gran mayoría de libros de Estadística poseen tablas de la función de distribución acumulada de la normal estándar.\\
 
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución normal estandar N(0,1)**
+<div class="box2 with-label">
+<div class="label">Distribución normal estandar N(0,1)</div>
 
 Su función de distribución esta dada por :
 
@@ -729,9 +750,9 @@ a este proceso se le llama comúnmente estandarizar.
 
 **normal estándar**
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 library(ggfortify)
-ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = 'blue')
+ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = "#4983F6")
 ```
 
 <br/><br/>
@@ -740,21 +761,34 @@ ggdistribution(dnorm, seq(-4, 4, 0.1), mean = 0, sd = 1,fill = 'blue')
 
 La propiedad empírica de la distribución normal es de gran ayuda cuando una variable  de interés se  puede aproximar al modelo normal. Ella establece un intervalo formado por la media mas o menos una desviación estándar contiene el 68\% de los datos. Si el intervalo tiene un ancho de 4 desviaciones estándar contendrá el 95\% de los datos y si este intervalo corresponde a los valores de la media mas o menos 3 desviaciones estándar contendrá el 99\% de los datos que se representa en la siguiente gráfica.
 
+<div class="box2 with-label">
+<div class="label">Propiedad empírica de la distribución normal estandar</div>
 
-**Propiedad empírica de la distribución normal estandar**
+* $P(\mu - \sigma \leq X \mu + \sigma) = 0.68$
+* $P(\mu - 2\sigma \leq X \mu + 2\sigma) = 0.95$
+* $P(\mu - 3\sigma \leq X \mu + 3\sigma) = 0.99$
 
-![](img/norm01.png){width=600px} 
+
+
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+ knitr::include_graphics("img/norm01.png")
+```
+
+</div>
 
 <br/><br/>
 
+<div class="box1 with-label">
+<div class="label">Ejemplo 8</div>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej8.png)| La velocidad de transferencia de archivos desde un servidor en el campus de la universidad a un ordenador personal en casa de un estudiante en un día laborable, se distribuye normalmente con una media de 60 kilobits por segundo y una desviación estándar de 4 kilobits por segundo. ¿Cuál es la probabilidad de que el archivo se transfiera a una velocidad de 70 kilobits por segundo o más? |
+
+ La velocidad de transferencia de archivos desde un servidor en el campus de la universidad a un ordenador personal en casa de un estudiante en un día laborable, se distribuye normalmente con una media de 60 kilobits por segundo y una desviación estándar de 4 kilobits por segundo. ¿Cuál es la probabilidad de que el archivo se transfiera a una velocidad de 70 kilobits por segundo o más? 
+ 
+ </div>
 
 <br/><br/>
 
-**Solución** 
+### **Solución** 
 
 Para una variable $X$ con distribución $N(60,16)$, debemos calcular la probabilidad $P(X \geq 70)$ \\
 
@@ -782,9 +816,8 @@ Distribución utilizada para modelar el tiempo entre dos eventos consecutivos.
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución exponencial**
+<div class="box2 with-label">
+<div class="label">Distribución exponencial</div>
 	
 $$\begin{equation*}
 		f(x)=\left\lbrace
@@ -810,14 +843,14 @@ $$F(x)=P(X \leq x)=1-e^{-\lambda x} \hspace{1cm} x > 0$$
 <br/><br/>
 
 
-Distribuciones exponenciales : <span style="color:blue"> $exp(1)$</span>, <span style="color:red"> $exp(2)$</span> y <span style="color:orange"> $exp(5)$</span>
+Distribuciones exponenciales : <span style="color:#4983F6"> $exp(1)$</span>, <span style="color:#E1286F"> $exp(2)$</span> y <span style="color:#FFAD42"> $exp(5)$</span>
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 #exponencial
 library(ggfortify)
-p=ggdistribution(dexp, seq(0, 10, 0.1),rate=1 ,colour = 'blue')
-p=ggdistribution(dexp, seq(0, 10, 0.1),rate=2 ,colour = 'red', p=p)
-ggdistribution(dexp, seq(0, 10, 0.1),rate=0.5,colour = 'orange', p=p)
+p=ggdistribution(dexp, seq(0, 10, 0.1),rate=1 ,colour = "#4983F6")
+p=ggdistribution(dexp, seq(0, 10, 0.1),rate=2 ,colour = "#E1286F", p=p)
+ggdistribution(dexp, seq(0, 10, 0.1),rate=0.5,colour =  "#FFAD42", p=p)
 ```
  
 
@@ -826,18 +859,21 @@ ggdistribution(dexp, seq(0, 10, 0.1),rate=0.5,colour = 'orange', p=p)
 
 ```{r, echo=FALSE, fig.height=3.5}
 library(ggfortify)
-ggdistribution(pexp, seq(0, 10, 0.1),rate=1 ,colour = 'blue')
+ggdistribution(pexp, seq(0, 10, 0.1),rate=1 ,colour = "#4983F6")
 ```
 
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej9.png)| El tiempo entre llamadas de los clientes a una empresa de turismo ecológico tiene una distribución exponencial con un tiempo medio entre llamadas de 15 minutos. ¿Cuál es la probabilidad de que transcurra más de 20 minutos antes de que se realiza una nueva llamada? (Ejemplo 8 4-77 Mongomery) |
+<div class="box1 with-label">
+<div class="label">Ejemplo 9</div>
+
+ El tiempo entre llamadas de los clientes a una empresa de turismo ecológico tiene una distribución exponencial con un tiempo medio entre llamadas de 15 minutos. ¿Cuál es la probabilidad de que transcurra más de 20 minutos antes de que se realiza una nueva llamada? (Ejemplo 8 4-77 Mongomery) 
+ 
+ </div>
 
 <br/><br/>
 
-**Solución**
+### **Solución**
 
 $X$: el tiempo entre dos llamadas consecutivas $\lambda=\frac{1}{15}$ minutos. 
 
@@ -879,9 +915,8 @@ Esta distribución tiene su origen en la familia de curvas sesgadas propuestas p
 
 <br/><br/>
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución gamma**
+<div class="box2 with-label">
+<div class="label">Distribución gamma</div>
 
 La distribución Gamma se obtiene al sumar $r$ variables con distribución exponencial con parámetro $\lambda$. 
 
@@ -913,26 +948,29 @@ $$V[X]= \dfrac{r}{\lambda^{2}}$$
 
 <br/><br/>
 
-Distribuciones : <span style="color:blue"> $gamma(3,1)$</span>, <span style="color:red">$gamma(2,1)$</span> y <span style="color:orange"> $gamma(5,1)$</span>
+Distribuciones : <span style="color:#4983F6"> $gamma(3,1)$</span>, <span style="color:#E1286F">$gamma(2,1)$</span> y <span style="color:#FFAD42"> $gamma(5,1)$</span>
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # gamma
 library(ggfortify)
-p=ggdistribution(dgamma, seq(0, 15, 0.1),shape=3,rate=1 ,colour= 'blue')
-p=ggdistribution(dgamma, seq(0, 15, 0.1),shape=2,rate=1 ,colour = 'red', p=p)
-ggdistribution(dgamma, seq(0, 15, 0.1),shape=5,rate=1,colour = 'orange', p=p)
+p=ggdistribution(dgamma, seq(0, 15, 0.1),shape=3,rate=1 ,colour= "#4983F6")
+p=ggdistribution(dgamma, seq(0, 15, 0.1),shape=2,rate=1 ,colour = "#E1286F", p=p)
+ggdistribution(dgamma, seq(0, 15, 0.1),shape=5,rate=1,colour = "#FFAD42", p=p)
 
 ```
 
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej10.png)| En cierta ciudad el consumo diario de energía eléctrica, en millones de kilovatios por hora, puede considerarse como una variable aleatoria con distribución Gamma de parámetros $r= 3$ y $\lambda= 0.5$. La planta de energía de esta ciudad tiene una capacidad diaria de 10 millones de KW/hora. ¿Cuál es la probabilidad de que este abastecimientos sea insuficiente en un día cualquiera?.|
+<div class="box1 with-label">
+<div class="label">Ejemplo 10</div>
+
+ En cierta ciudad el consumo diario de energía eléctrica, en millones de kilovatios por hora, puede considerarse como una variable aleatoria con distribución Gamma de parámetros $r= 3$ y $\lambda= 0.5$. La planta de energía de esta ciudad tiene una capacidad diaria de 10 millones de KW/hora. ¿Cuál es la probabilidad de que este abastecimientos sea insuficiente en un día cualquiera?.
+ 
+ </div>
 
 
 <br/><br/>
 
-**Solución**
+### **Solución**
 
 $X$: consumo diario de energia
 
@@ -954,9 +992,8 @@ pgamma(10,3,0.5, lower.tail = FALSE)
 Esta distribución fue descubierta Maurice Frechet matemático francés y luego trabajada por  Rosin y Rammler quienes en 1933 estudiaron el tamaño de una partícula y posteriormente recibe su nombre del  ingeniero y matemático Waloddi Weibull . Esta distribución se utiliza para modelar el tiempo de vida de algunos componentes. La Weibull tiene dos parámetros $\alpha$ y $\beta$. Su función de distribución y sus principales características son:
 
 
-<div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-
-**Distribución Weibull** 
+<div class="box2 with-label">
+<div class="label">Distribución Weibull</div> 
 
 $$\begin{equation*}
 		f(x)=\left\lbrace
@@ -976,14 +1013,14 @@ $$F(x)=1-\exp{\Big\{-\Big(\dfrac{x}{\beta}\Big)^{\alpha}\Big\}} $$
 	
 </div> 
 
-Distribuciones : <span style="color:blue"> $Weibull(0.8, 1)$</span>, <span style="color:red"> $Weibul(2,1)$</span> y <span style="color:orange"> $Weibull(2,2)$</span>
+Distribuciones : <span style="color:#4983F6"> $Weibull(0.8, 1)$</span>, <span style="color:#E1286F"> $Weibul(2,1)$</span> y <span style="color:#FFAD42"> $Weibull(2,2)$</span>
 
-```{r, echo=FALSE, fig.height=3.5}
+```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
 # weibull
 library(ggfortify)
-p=ggdistribution(dweibull, seq(0, 5, 0.01),shape=0.8,scale=1 ,colour = 'blue')
-p=ggdistribution(dweibull, seq(0, 5, 0.01),shape=2,scale=1 ,colour = 'red', p=p)
-ggdistribution(dweibull, seq(0, 5, 0.01),shape=2,scale=2,colour = 'orange', p=p)
+p=ggdistribution(dweibull, seq(0, 5, 0.01),shape=0.8,scale=1 ,colour = "#4983F6")
+p=ggdistribution(dweibull, seq(0, 5, 0.01),shape=2,scale=1 ,colour = "#E1286F", p=p)
+ggdistribution(dweibull, seq(0, 5, 0.01),shape=2,scale=2,colour = "#FFAD42", p=p)
 ```
 
 
@@ -1006,14 +1043,17 @@ Se llama así a la tasa de fallas por unidad de tiempo, expresada como la propor
 $$h(t)=\dfrac{f(t)}{1-F(t)} $$
 <br/><br/>
 
-|    |                                     |
-|:--:|:------------------------------------|
-| ![](img/ej11.png)| La duración de una batería se modela mediante una distribución Weibull con parámetros: $\alpha=0.1$ y $\beta=2$. Determine la probabilidad de que una batería dure más de 10 horas. Determine la proporción de baterías que durarán más de 10 horas. |
+<div class="box1 with-label">
+<div class="label">Ejemplo 11</div>
+
+ La duración de una batería se modela mediante una distribución Weibull con parámetros: $\alpha=0.1$ y $\beta=2$. Determine la probabilidad de que una batería dure más de 10 horas. Determine la proporción de baterías que durarán más de 10 horas. 
+ 
+ </div>
 
 
 <br/>
 
-**Solución**
+### **Solución**
 
 $$\begin{eqnarray*}
 	P(X > 10) &=& 1- F(10)\\
@@ -1033,42 +1073,42 @@ $$\begin{eqnarray*}
 	&=& 0.01174619
 \end{eqnarray*}$$
 
-<br/><br/>
+<br/><br/><br/><br/>
 
 ## **Posters Discretas**
 
-+ [binomial](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Binomial%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf)
-+ [binomial negativa](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20binomial%20negativa.pdf)
-+ [Poisson](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Discreto%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez%20(1).pdf)
-+ [Poisson](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/%C2%BFConoces%20algun%20MODELO%20ESTADISTICO%20aQUI%20TE%20PRESENTAMOS%20EL%20METODO%20(1).pdf)
-+ [binomial negativa](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuciones%20estad%C3%ADsticas%20(1).pdf)
-+ [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Geom%C3%A9trica.pdf)
-+ [geometrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf)
-+ [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf)
-+ [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Modelo%20de%20probabilidad%20geometrica.pdf)
-+ [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20fisher.pdf)
-+ [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica%20(2).pdf)
-+ [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Hipergeom%C3%A9trica%20y%20gamma.pdf)
-+ [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica.pdf)
-+ [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Hipergeometrica.pdf)
+<!-- + [binomial](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Binomial%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf) -->
+<!-- + [binomial negativa](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20binomial%20negativa.pdf) -->
+<!-- + [Poisson](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Discreto%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez%20(1).pdf) -->
+<!-- + [Poisson](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/%C2%BFConoces%20algun%20MODELO%20ESTADISTICO%20aQUI%20TE%20PRESENTAMOS%20EL%20METODO%20(1).pdf) -->
+<!-- + [binomial negativa](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuciones%20estad%C3%ADsticas%20(1).pdf) -->
+<!-- + [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Geom%C3%A9trica.pdf) -->
+<!-- + [geometrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf) -->
+<!-- + [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf) -->
+<!-- + [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Modelo%20de%20probabilidad%20geometrica.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20fisher.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica%20(2).pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Hipergeom%C3%A9trica%20y%20gamma.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Hipergeometrica.pdf) -->
 
-<br/><br/>
+<!-- <br/><br/> -->
 
-## **Posters Continuas**
+<!-- ## **Posters Continuas** -->
 
-+ [normal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/PROBABILIDAD%20Y%20ESTADISTICA.pdf)
-+ [normal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20normal%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf)
-+ [lognormal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Poster%20continua%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez.pdf)
-+ [beta](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Beta.pdf)
-+ [beta](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20Beta%20(1).pdf)
-+ [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20gamma.pdf)
-+ [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Modelo%20de%20probabilidad%20gamma.pdf)
-+ [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20gamma.pdf)
-+ [Gumbel](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20de%20gumbel.pdf)
-+ [Caychy](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20de%20Cauchy.pdf)
-+ [ji-cuadrado](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Ji-cuadrado.pdf)
-+ [t-Student](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/1.png)
-+ [F-Fisher](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20fisher%20(1).pdf)
+<!-- + [normal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/PROBABILIDAD%20Y%20ESTADISTICA.pdf) -->
+<!-- + [normal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20normal%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf) -->
+<!-- + [lognormal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Poster%20continua%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez.pdf) -->
+<!-- + [beta](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Beta.pdf) -->
+<!-- + [beta](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20Beta%20(1).pdf) -->
+<!-- + [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20gamma.pdf) -->
+<!-- + [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Modelo%20de%20probabilidad%20gamma.pdf) -->
+<!-- + [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20gamma.pdf) -->
+<!-- + [Gumbel](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20de%20gumbel.pdf) -->
+<!-- + [Caychy](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20de%20Cauchy.pdf) -->
+<!-- + [ji-cuadrado](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Ji-cuadrado.pdf) -->
+<!-- + [t-Student](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/1.png) -->
+<!-- + [F-Fisher](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20fisher%20(1).pdf) -->
 
 <br/><br/>
 

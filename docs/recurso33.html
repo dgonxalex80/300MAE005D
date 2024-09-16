@@ -14,13 +14,13 @@
 
 <title> </title>
 
-<script src="site_libs/header-attrs/header-attrs.js"></script>
-<script src="site_libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap/shim/respond.min.js"></script>
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -30,12 +30,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation/tabsets.js"></script>
-<script src="site_libs/navigation/codefolding.js"></script>
-<link href="site_libs/highlightjs/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs/highlight.js"></script>
-<link href="site_libs/font-awesome/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -542,8 +542,9 @@ simulación.</p>
 <p>El siguiente diagrama presenta los principales modelo de probabilidad
 y sus diferentes relaciones</p>
 <p><br/><br/></p>
-<p><img src="img/poster.png" /> Fuente: construcción propia. basado en
-Univariate Distribution Relationships (<a
+<p><img src="img/poster.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>Fuente: construcción propia. basado en Univariate Distribution
+Relationships (<a
 href="http://www.math.wm.edu/~leemis/2008amstat.pdf">Lawrence M. LEEMIS
 and Jacquelyn T. MCQUESTON</a>)</p>
 <p><br/><br/></p>
@@ -601,9 +602,10 @@ contienen la palabras <strong>número de…</strong></p>
 lo reconocen como modelo, ayuda en la compresión de los modelos
 siguientes. Toma su nombre del matemático Jacob Bernoulli.</p>
 <p><br/><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución Bernoulli</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución Bernoulli
+</div>
 <p>Una variable que se distribuye Bernoulli, procede de un experimento
 Bernoulli, descrito por las siguientes características:</p>
 <ul>
@@ -631,24 +633,18 @@ de distribución de probabilidad $</p>
 <p><span class="math display">\[V[X]= pq\]</span></p>
 </div>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej1.png" /></td>
-<td align="left">Un biólogo realiza una salida de campo para estudiar el
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 1
+</div>
+<p>Un biólogo realiza una salida de campo para estudiar el
 comportamiento del cucarachero común. Se considera éxito si puede filmar
 al animal y fracaso si no puede hacerlo. Por información suministrada en
-artículos científicos la probabilidad de lograrlo se estima en
-0.20.</td>
-</tr>
-</tbody>
-</table>
+artículos científicos la probabilidad de lograrlo se estima en 0.20.</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p>Se requiere examinar si dentro de este contexto existe una variable
 que proceda de un experimento Bernoulli y ese caso como se podría
 caracterizar.</p>
@@ -677,6 +673,7 @@ x=0,1.\]</span> <span class="math display">\[E[X]=p =0.20\]</span></p>
 <p><span class="math display">\[V[X] =p(1-p)= 0.16\]</span>
 <br/><br/></p>
 </div>
+</div>
 <div id="binomial" class="section level2">
 <h2><strong>binomial</strong></h2>
 <p><br/></p>
@@ -687,9 +684,10 @@ y analizada por el físico y matemático suizo Jakob Bernoulli en relación
 con problemas presentados en los juegos de azar. Su trabajo fue
 presentado en 1713.</p>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución binomial</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución binomial
+</div>
 <p>Una variable con distribución binomial es aquella que procede de un
 experimento binomial.</p>
 <p>Ahora un experimento binomial tiene las siguientes
@@ -728,25 +726,20 @@ x=0,1,2, \ldots, n   \\
 <p><span class="math display">\[E[X]=np\]</span></p>
 <p><span class="math display">\[V[X]= np(1-p) \]</span></p>
 </div>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej2.png" /></td>
-<td align="left">Un sistema de seguridad para casas está diseñado para
-tener una confiabilidad del 90% . Suponga que nueve casas equipadas con
-este dispositivo sufrieron tentativa de robo. Se requiere calcular la
-probabilidad de que en siete de las nueve, la alarma se activará.</td>
-</tr>
-</tbody>
-</table>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 2
+</div>
+<p>Un sistema de seguridad para casas está diseñado para tener una
+confiabilidad del 90% . Suponga que nueve casas equipadas con este
+dispositivo sufrieron tentativa de robo. Se requiere calcular la
+probabilidad de que en siete de las nueve, la alarma se activará.</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-1" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p>En este caso la variable <span class="math inline">\(X\)</span> se
 define como el número de casas de las nueve en las que se activa el
 sistema de alarma. Observe que en cada caso se puede presentar dos
@@ -790,6 +783,7 @@ class="math inline">\(p=0.90\)</span></p>
 class="math inline">\(p=0.90\)</span> fig_binom.pdf</p>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="poisson" class="section level2">
 <h2><strong>Poisson</strong></h2>
 <p><br/></p>
@@ -808,9 +802,10 @@ class="math inline">\(mm^{3}\)</span> de sangre</p></li>
 class="math inline">\(m^{2}\)</span> de carretera</p></li>
 </ul>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px;color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución Poisson</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución Poisson
+</div>
 <p>La función de distribución de probabilidad de una variable con
 distribución Poisson esta dada por siguiente la expresión:</p>
 <p><span class="math inline">\(\begin{equation*}
@@ -835,24 +830,19 @@ superficie o volumen</strong></p>
 variable de Poisson con media 2.</p>
 <p><strong>Distribución Poisson (<span
 class="math inline">\(\lambda=2\)</span>)</strong></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej3.png" /></td>
-<td align="left">Se estima que en el cruce más importante de la cuidad,
-ocurren 2 accidentes por día y se desea valorar la probabilidad de que
-en un día cualquiera no ocurra ningún accidente en dicho cruce.</td>
-</tr>
-</tbody>
-</table>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 3
+</div>
+<p>Se estima que en el cruce más importante de la cuidad, ocurren 2
+accidentes por día y se desea valorar la probabilidad de que en un día
+cualquiera no ocurra ningún accidente en dicho cruce.</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-2" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p>El número de accidentes que pueden ocurrir en este cruce, para un dia
 cualquiera, se puede considerar como una variable aleatoria con
 distribución Poisson, pues la variable hace referencia al número de
@@ -865,14 +855,16 @@ el modelo Poisson:</p>
 <pre><code>[1] 0.1353353</code></pre>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="hipergeometrico" class="section level2">
 <h2><strong>hipergeometrico</strong></h2>
 <p>Este modelo nace de la necesidad de modelar eventos Bernoulli con
 probabilidad no constante generados en elecciones sin repetición.</p>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución hipergeometrica</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución hipergeometrica
+</div>
 <p>Se tiene un conjunto de <span class="math inline">\(N\)</span>
 objetos que contiene <span class="math inline">\(K\)</span> objetos
 clasificados como éxitos y <span class="math inline">\(N-K\)</span>
@@ -901,29 +893,23 @@ class="math display">\[V[X]=n\Bigg(\frac{K}{N}\Bigg)
 </div>
 <p><strong>Distribución binomial hipergeometrica (<span
 class="math inline">\(m=95, n=5, k=10\)</span>)</strong></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <p><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej4.png" /></td>
-<td align="left">Las tarjetas de circuito impreso se someten a una
-prueba de funcionamiento antes de ser ensambladas en un dispositivo de
-seguridad, después de ser rellenado con chips semiconductores. Un lote
-de estas tarjetas contiene 140 unidades y se seleccionan aleatoriamente
-20 sin reemplazo para realizar una prueba de control de calidad
-internacional. Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad
-de que al menos 1 tarjeta defectuosa aparezca en la muestra? (3-92.
-Mongomery)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Solución</strong></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 4
+</div>
+<p>Las tarjetas de circuito impreso se someten a una prueba de
+funcionamiento antes de ser ensambladas en un dispositivo de seguridad,
+después de ser rellenado con chips semiconductores. Un lote de estas
+tarjetas contiene 140 unidades y se seleccionan aleatoriamente 20 sin
+reemplazo para realizar una prueba de control de calidad internacional.
+Si 5 tarjetas son defectuosas, ¿cuál es la probabilidad de que al menos
+1 tarjeta defectuosa aparezca en la muestra? (3-92. Mongomery)</p>
+</div>
+<div id="solución-3" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p><span class="math inline">\(\begin{eqnarray*}
     P(X\geq 1)=1-P(X=0)
     &amp;=&amp; 1 -
@@ -934,6 +920,7 @@ Mongomery)</td>
 <pre class="r"><code>phyper(0,5,135,20, lower.tail = FALSE)</code></pre>
 <pre><code>[1] 0.5429406</code></pre>
 <p><br/><br/></p>
+</div>
 </div>
 <div id="geométrico-o-de-pascal" class="section level2">
 <h2><strong>geométrico o de Pascal</strong></h2>
@@ -998,9 +985,10 @@ class="math inline">\(2\)</span>, es decir que la variable con
 distribución geométrica corresponde al <strong>número del evento donde
 ocurre el primer éxito</strong>.</p>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución geométrica</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución geométrica
+</div>
 <p><span class="math display">\[\begin{equation*}
         f(x)=\left\lbrace
         \begin{array}{lll}
@@ -1017,27 +1005,22 @@ style="padding: 15px; border: 1px solid transparent; border-color: transparent; 
 necesarios para obtener el primer exito</strong> <br/><br/></p>
 <p><strong>Distribución geométrica o de Pascal (<span
 class="math inline">\(p=0.5\)</span>)</strong></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej5.png" /></td>
-<td align="left">En un estudio realizado en peces, los animales son
-sometidos a pruebas para determinar si poseen o no un gen que aumenta el
-riesgo de una enfermedad mortal. la probabilidad de que una animal de la
-especie en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3
-o más animales deban ser sometidos a pruebas antes de detectar el primer
-pez con el gen objeto de estudio?</td>
-</tr>
-</tbody>
-</table>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 5
+</div>
+<p>En un estudio realizado en peces, los animales son sometidos a
+pruebas para determinar si poseen o no un gen que aumenta el riesgo de
+una enfermedad mortal. la probabilidad de que una animal de la especie
+en estudio tenga el gen es 0,5. Cuál es la probabilidad de que 3 o más
+animales deban ser sometidos a pruebas antes de detectar el primer pez
+con el gen objeto de estudio?</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-4" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p><span class="math display">\[\begin{eqnarray*}
     P(X\geq 3)&amp;=&amp; 1-P(X\leq 2)\\
     &amp;=&amp; 1-[p(1)+p(2)] \\
@@ -1050,15 +1033,17 @@ pez con el gen objeto de estudio?</td>
 <pre><code>[1] 0.25</code></pre>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="binomial-negativo" class="section level2">
 <h2><strong>binomial negativo</strong></h2>
 <p><br/></p>
 <p>La distribución binomial negativa esta relacionada con la
 distribución geométrica</p>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución binomial negativa</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución binomial negativa
+</div>
 <p>Se considera una generalización de la distribución Geométrica. En
 este caso la variable objeto de estudio corresponde a <span
 class="math inline">\(X\)</span>: <strong>número de ensayos requeridos
@@ -1083,31 +1068,27 @@ class="math inline">\(p\)</span>.</p>
 <p><br/><br/></p>
 <p><strong>Distribución binomial negativa (<span
 class="math inline">\(k=2, p=0.50\)</span>)</strong></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej6.png" /></td>
-<td align="left">Un sitio Web está soportado por tres servidores
-idénticos. Sólo uno de ellos se utiliza para operar el sitio, y los
-otros dos son de repuesto, los cuales se activan en caso de que el
-sistema principal falle. La probabilidad de falla en el sistema
-principal (o cualquier otro sistema de repuesto activado) ante una
-solicitud de servicio es 0,0005. Suponiendo que cada solicitud
-representa un juicio independiente, cuál es el número medio de
-solicitudes que se espera hasta el fracaso de los tres servidores?</td>
-</tr>
-</tbody>
-</table>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 6
+</div>
+<p>Un sitio Web está soportado por tres servidores idénticos. Sólo uno
+de ellos se utiliza para operar el sitio, y los otros dos son de
+repuesto, los cuales se activan en caso de que el sistema principal
+falle. La probabilidad de falla en el sistema principal (o cualquier
+otro sistema de repuesto activado) ante una solicitud de servicio es
+0,0005. Suponiendo que cada solicitud representa un juicio
+independiente, cuál es el número medio de solicitudes que se espera
+hasta el fracaso de los tres servidores?</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-5" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p><span class="math display">\[E[X]=\dfrac{3}{0.0005}= 6000 \]</span>
 <br/><br/></p>
+</div>
 </div>
 </div>
 <div id="modelos-continuos" class="section level1">
@@ -1161,9 +1142,10 @@ modelos continuos.</p>
 <div id="uniforme" class="section level2">
 <h2><strong>uniforme</strong></h2>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución uniforme</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución uniforme
+</div>
 <p>Se caracteriza porque su función de densidad es constante en su
 recorrido o dominio de definición (intervalo [a,b])</p>
 <p><span class="math display">\[\begin{equation*}
@@ -1179,30 +1161,30 @@ recorrido o dominio de definición (intervalo [a,b])</p>
 <p><br/><br/></p>
 <p><strong>Distribución uniforme (<span
 class="math inline">\(0,1\)</span>)</strong></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej7.png" /></td>
-<td align="left">En la fabricación de portaobjetos, que son láminas
-rectangulares de vidrio muy delgada (76x26 mm y 1 mm de espesor),
-utilizados para la observación de sustancias en el microscopio. Una de
-sus principales características está relacionada con su espesor (<span
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.
+This warning is displayed once every 8 hours.
+Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+generated.</code></pre>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 7
+</div>
+<p>En la fabricación de portaobjetos, que son láminas rectangulares de
+vidrio muy delgada (76x26 mm y 1 mm de espesor), utilizados para la
+observación de sustancias en el microscopio. Una de sus principales
+características está relacionada con su espesor (<span
 class="math inline">\(X\)</span>), el cual tiene una distribución
 uniforme entre 0.95 mm y 1.05 mm. Determine la probabilidad de que un
-portaobjeto determinado tenga un espesor superior a 1.03 mm.</td>
-</tr>
-</tbody>
-</table>
+portaobjeto determinado tenga un espesor superior a 1.03 mm.|</p>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-6" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p><span class="math display">\[P(X\geq 1.03)= (1.05-1.03) \times
 \frac{1}{0.10}=0.20 \]</span></p>
 <p><br/><br/></p>
+</div>
 </div>
 <div id="normal" class="section level2">
 <h2><strong>normal</strong></h2>
@@ -1248,9 +1230,10 @@ cientificos Robert Adrain y Carl Friedrich Gauss, quien finalmente le
 dió el nombre.</p>
 <p>Su función de densidad esta dada por:</p>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución normal</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución normal
+</div>
 <p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi \sigma^{2}}}
 \hspace{.1cm}
 e^{-\big(\frac{1}{2\sigma^{2}}(x-\mu)^{2}\big)}  \hspace{.5cm}  -\infty
@@ -1263,12 +1246,13 @@ class="math display">\[V[X]=\sigma^{2}\]</span></p>
 producto de cambios en la media o en la varianza. A mayor valor de la
 media la curva se desplaza a la derecha, mientras que a menor varianza
 la curva se vuelve mas angosta o puntiaguda</p>
-<p>Distribuciones normales : <span style="color:blue"><span
-class="math inline">\(N(0,1)\)</span></span>, <span style="color:red">
-<span class="math inline">\(N(0,1.5)\)</span></span> y <span
-style="color:orange"> <span
+<p>Distribuciones normales : <span style="color:#4983F6"><span
+class="math inline">\(N(0,1)\)</span></span>, <span
+style="color:#E1286F"> <span
+class="math inline">\(N(0,1.5)\)</span></span> y <span
+style="color:#FFAD42"> <span
 class="math inline">\(N(2,1.5)\)</span></span></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Dentro del sin número de posibles curvas que se pueden obtener con
 los parámetros <span class="math inline">\(\mu\)</span> y <span
 class="math inline">\(\sigma^{2}\)</span>, existe una muy especial.
@@ -1277,9 +1261,10 @@ class="math inline">\(\mu=0\)</span> y <span
 class="math inline">\(\sigma^{2}=1\)</span>. La gran mayoría de libros
 de Estadística poseen tablas de la función de distribución acumulada de
 la normal estándar.\</p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000; background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución normal estandar N(0,1)</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución normal estandar N(0,1)
+</div>
 <p>Su función de distribución esta dada por :</p>
 <p><span class="math display">\[f(x)= \dfrac{1}{\sqrt{2\pi}}
 \hspace{.1cm} e^{-\big(\frac{1}{2}(x)^{2}\big)}   \hspace{.5cm}  -\infty
@@ -1290,7 +1275,7 @@ N(0,1)\)</span></p>
 <p>a este proceso se le llama comúnmente estandarizar.</p>
 </div>
 <p><strong>normal estándar</strong></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <p>La propiedad empírica de la distribución normal es de gran ayuda
 cuando una variable de interés se puede aproximar al modelo normal. Ella
@@ -1300,29 +1285,35 @@ estándar contiene el 68% de los datos. Si el intervalo tiene un ancho de
 intervalo corresponde a los valores de la media mas o menos 3
 desviaciones estándar contendrá el 99% de los datos que se representa en
 la siguiente gráfica.</p>
-<p><strong>Propiedad empírica de la distribución normal
-estandar</strong></p>
-<p><img src="img/norm01.png" width="600" /></p>
+<div class="box2 with-label">
+<div class="label">
+Propiedad empírica de la distribución normal estandar
+</div>
+<ul>
+<li><span class="math inline">\(P(\mu - \sigma \leq X \mu + \sigma) =
+0.68\)</span></li>
+<li><span class="math inline">\(P(\mu - 2\sigma \leq X \mu + 2\sigma) =
+0.95\)</span></li>
+<li><span class="math inline">\(P(\mu - 3\sigma \leq X \mu + 3\sigma) =
+0.99\)</span></li>
+</ul>
+<p><img src="img/norm01.png" width="60%" style="display: block; margin: auto;" /></p>
+</div>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej8.png" /></td>
-<td align="left">La velocidad de transferencia de archivos desde un
-servidor en el campus de la universidad a un ordenador personal en casa
-de un estudiante en un día laborable, se distribuye normalmente con una
-media de 60 kilobits por segundo y una desviación estándar de 4 kilobits
-por segundo. ¿Cuál es la probabilidad de que el archivo se transfiera a
-una velocidad de 70 kilobits por segundo o más?</td>
-</tr>
-</tbody>
-</table>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 8
+</div>
+<p>La velocidad de transferencia de archivos desde un servidor en el
+campus de la universidad a un ordenador personal en casa de un
+estudiante en un día laborable, se distribuye normalmente con una media
+de 60 kilobits por segundo y una desviación estándar de 4 kilobits por
+segundo. ¿Cuál es la probabilidad de que el archivo se transfiera a una
+velocidad de 70 kilobits por segundo o más?</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-7" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p>Para una variable <span class="math inline">\(X\)</span> con
 distribución <span class="math inline">\(N(60,16)\)</span>, debemos
 calcular la probabilidad <span class="math inline">\(P(X \geq
@@ -1339,6 +1330,7 @@ calcular la probabilidad <span class="math inline">\(P(X \geq
 <pre><code>[1] 0.006209665</code></pre>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="exponencial" class="section level2">
 <h2><strong>exponencial</strong></h2>
 <p>Este modelo fue planteado por el matemático estadístico e ingeniero
@@ -1346,9 +1338,10 @@ Agner Kraru Erlang, experto en el trafico de las comunicaciones y la
 teoría de colas. Distribución utilizada para modelar el tiempo entre dos
 eventos consecutivos.</p>
 <p><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución exponencial</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución exponencial
+</div>
 <p><span class="math display">\[\begin{equation*}
         f(x)=\left\lbrace
         \begin{array}{lll}
@@ -1367,33 +1360,29 @@ class="math inline">\(\lambda\)</span></p>
 \hspace{1cm} x &gt; 0\]</span></p>
 </div>
 <p><br/><br/></p>
-<p>Distribuciones exponenciales : <span style="color:blue"> <span
-class="math inline">\(exp(1)\)</span></span>, <span style="color:red">
-<span class="math inline">\(exp(2)\)</span></span> y <span
-style="color:orange"> <span
+<p>Distribuciones exponenciales : <span style="color:#4983F6"> <span
+class="math inline">\(exp(1)\)</span></span>, <span
+style="color:#E1286F"> <span
+class="math inline">\(exp(2)\)</span></span> y <span
+style="color:#FFAD42"> <span
 class="math inline">\(exp(5)\)</span></span></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><strong>Distribuciones exponenciales acumuladas</strong></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <p><br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej9.png" /></td>
-<td align="left">El tiempo entre llamadas de los clientes a una empresa
-de turismo ecológico tiene una distribución exponencial con un tiempo
-medio entre llamadas de 15 minutos. ¿Cuál es la probabilidad de que
-transcurra más de 20 minutos antes de que se realiza una nueva llamada?
-(Ejemplo 8 4-77 Mongomery)</td>
-</tr>
-</tbody>
-</table>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 9
+</div>
+<p>El tiempo entre llamadas de los clientes a una empresa de turismo
+ecológico tiene una distribución exponencial con un tiempo medio entre
+llamadas de 15 minutos. ¿Cuál es la probabilidad de que transcurra más
+de 20 minutos antes de que se realiza una nueva llamada? (Ejemplo 8 4-77
+Mongomery)</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-8" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p><span class="math inline">\(X\)</span>: el tiempo entre dos llamadas
 consecutivas <span class="math inline">\(\lambda=\frac{1}{15}\)</span>
 minutos.</p>
@@ -1423,6 +1412,7 @@ class="math inline">\(\Gamma(1/2)=\sqrt{\pi}\)</span></p></li>
 </ul>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="gamma" class="section level2">
 <h2><strong>gamma</strong></h2>
 <p>Esta distribución tiene su origen en la familia de curvas sesgadas
@@ -1431,9 +1421,10 @@ modelar los tiempos de espera de ocurrencia de sucesos o eventos. En
 ocasiones puede relacionarse con la suma de los tiempos de variables
 exponenciales sucesivas con igual media.</p>
 <p><br/><br/></p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución gamma</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución gamma
+</div>
 <p>La distribución Gamma se obtiene al sumar <span
 class="math inline">\(r\)</span> variables con distribución exponencial
 con parámetro <span class="math inline">\(\lambda\)</span>.</p>
@@ -1462,33 +1453,28 @@ class="math inline">\(r\)</span></p>
 class="math display">\[V[X]= \dfrac{r}{\lambda^{2}}\]</span></p>
 </div>
 <p><br/><br/></p>
-<p>Distribuciones : <span style="color:blue"> <span
+<p>Distribuciones : <span style="color:#4983F6"> <span
 class="math inline">\(gamma(3,1)\)</span></span>, <span
-style="color:red"><span class="math inline">\(gamma(2,1)\)</span></span>
-y <span style="color:orange"> <span
+style="color:#E1286F"><span
+class="math inline">\(gamma(2,1)\)</span></span> y <span
+style="color:#FFAD42"> <span
 class="math inline">\(gamma(5,1)\)</span></span></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej10.png" /></td>
-<td align="left">En cierta ciudad el consumo diario de energía
-eléctrica, en millones de kilovatios por hora, puede considerarse como
-una variable aleatoria con distribución Gamma de parámetros <span
-class="math inline">\(r= 3\)</span> y <span
-class="math inline">\(\lambda= 0.5\)</span>. La planta de energía de
-esta ciudad tiene una capacidad diaria de 10 millones de KW/hora. ¿Cuál
-es la probabilidad de que este abastecimientos sea insuficiente en un
-día cualquiera?.</td>
-</tr>
-</tbody>
-</table>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-20-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 10
+</div>
+<p>En cierta ciudad el consumo diario de energía eléctrica, en millones
+de kilovatios por hora, puede considerarse como una variable aleatoria
+con distribución Gamma de parámetros <span class="math inline">\(r=
+3\)</span> y <span class="math inline">\(\lambda= 0.5\)</span>. La
+planta de energía de esta ciudad tiene una capacidad diaria de 10
+millones de KW/hora. ¿Cuál es la probabilidad de que este
+abastecimientos sea insuficiente en un día cualquiera?.</p>
+</div>
 <p><br/><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-9" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p><span class="math inline">\(X\)</span>: consumo diario de energia</p>
 <p><span class="math display">\[\begin{eqnarray*}
     P(X &gt; 10)&amp;=&amp; 1-P(X \leq 10) \\
@@ -1500,6 +1486,7 @@ día cualquiera?.</td>
 <pre><code>[1] 0.124652</code></pre>
 <p><br/><br/></p>
 </div>
+</div>
 <div id="weibull" class="section level2">
 <h2><strong>Weibull</strong></h2>
 <p>Esta distribución fue descubierta Maurice Frechet matemático francés
@@ -1510,9 +1497,10 @@ el tiempo de vida de algunos componentes. La Weibull tiene dos
 parámetros <span class="math inline">\(\alpha\)</span> y <span
 class="math inline">\(\beta\)</span>. Su función de distribución y sus
 principales características son:</p>
-<div
-style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #000000;background-color: #FFFFFF ; border-color: #000000;">
-<p><strong>Distribución Weibull</strong></p>
+<div class="box2 with-label">
+<div class="label">
+Distribución Weibull
+</div>
 <p><span class="math display">\[\begin{equation*}
         f(x)=\left\lbrace
         \begin{array}{lll}
@@ -1532,13 +1520,13 @@ x &gt; 0\\
 class="math display">\[F(x)=1-\exp{\Big\{-\Big(\dfrac{x}{\beta}\Big)^{\alpha}\Big\}}
 \]</span></p>
 </div>
-<p>Distribuciones : <span style="color:blue"> <span
+<p>Distribuciones : <span style="color:#4983F6"> <span
 class="math inline">\(Weibull(0.8, 1)\)</span></span>, <span
-style="color:red"> <span
+style="color:#E1286F"> <span
 class="math inline">\(Weibul(2,1)\)</span></span> y <span
-style="color:orange"> <span
+style="color:#FFAD42"> <span
 class="math inline">\(Weibull(2,2)\)</span></span></p>
-<p><img src="recurso33_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-22-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <p>La siguiente gráfica corresponde a varias conformaciones de los
 parámetros de esta distribución.</p>
@@ -1548,25 +1536,19 @@ parámetros de esta distribución.</p>
 la proporción de elementos que no han fallado</p>
 <p><span class="math display">\[h(t)=\dfrac{f(t)}{1-F(t)} \]</span>
 <br/><br/></p>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="90%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="center"><img src="img/ej11.png" /></td>
-<td align="left">La duración de una batería se modela mediante una
-distribución Weibull con parámetros: <span
-class="math inline">\(\alpha=0.1\)</span> y <span
-class="math inline">\(\beta=2\)</span>. Determine la probabilidad de que
-una batería dure más de 10 horas. Determine la proporción de baterías
-que durarán más de 10 horas.</td>
-</tr>
-</tbody>
-</table>
+<div class="box1 with-label">
+<div class="label">
+Ejemplo 11
+</div>
+<p>La duración de una batería se modela mediante una distribución
+Weibull con parámetros: <span class="math inline">\(\alpha=0.1\)</span>
+y <span class="math inline">\(\beta=2\)</span>. Determine la
+probabilidad de que una batería dure más de 10 horas. Determine la
+proporción de baterías que durarán más de 10 horas.</p>
+</div>
 <p><br/></p>
-<p><strong>Solución</strong></p>
+<div id="solución-10" class="section level3">
+<h3><strong>Solución</strong></h3>
 <p><span class="math display">\[\begin{eqnarray*}
     P(X &gt; 10) &amp;=&amp; 1- F(10)\\
     &amp;=&amp; 1-\Big(1-e^{-[10/2]^{0.1}}\Big)\\
@@ -1582,74 +1564,40 @@ determinada por: <span class="math display">\[\begin{eqnarray*}
     &amp;&amp;\\
     &amp;=&amp; 0.01174619
 \end{eqnarray*}\]</span></p>
-<p><br/><br/></p>
+<p><br/><br/><br/><br/></p>
+</div>
 </div>
 <div id="posters-discretas" class="section level2">
 <h2><strong>Posters Discretas</strong></h2>
-<ul>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Binomial%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf">binomial</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20binomial%20negativa.pdf">binomial
-negativa</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Discreto%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez%20(1).pdf">Poisson</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/%C2%BFConoces%20algun%20MODELO%20ESTADISTICO%20aQUI%20TE%20PRESENTAMOS%20EL%20METODO%20(1).pdf">Poisson</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuciones%20estad%C3%ADsticas%20(1).pdf">binomial
-negativa</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Geom%C3%A9trica.pdf">geométrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf">geometrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf">geométrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Modelo%20de%20probabilidad%20geometrica.pdf">geométrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20fisher.pdf">hipergeométrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica%20(2).pdf">hipergeométrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Hipergeom%C3%A9trica%20y%20gamma.pdf">hipergeométrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica.pdf">hipergeométrica</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Hipergeometrica.pdf">hipergeométrica</a></li>
-</ul>
-<p><br/><br/></p>
-</div>
-<div id="posters-continuas" class="section level2">
-<h2><strong>Posters Continuas</strong></h2>
-<ul>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/PROBABILIDAD%20Y%20ESTADISTICA.pdf">normal</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20normal%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf">normal</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Poster%20continua%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez.pdf">lognormal</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Beta.pdf">beta</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20Beta%20(1).pdf">beta</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20gamma.pdf">gamma</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Modelo%20de%20probabilidad%20gamma.pdf">gamma</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20gamma.pdf">gamma</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20de%20gumbel.pdf">Gumbel</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20de%20Cauchy.pdf">Caychy</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Ji-cuadrado.pdf">ji-cuadrado</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/1.png">t-Student</a></li>
-<li><a
-href="https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20fisher%20(1).pdf">F-Fisher</a></li>
-</ul>
+<!-- + [binomial](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Binomial%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf) -->
+<!-- + [binomial negativa](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20binomial%20negativa.pdf) -->
+<!-- + [Poisson](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Discreto%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez%20(1).pdf) -->
+<!-- + [Poisson](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/%C2%BFConoces%20algun%20MODELO%20ESTADISTICO%20aQUI%20TE%20PRESENTAMOS%20EL%20METODO%20(1).pdf) -->
+<!-- + [binomial negativa](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuciones%20estad%C3%ADsticas%20(1).pdf) -->
+<!-- + [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Geom%C3%A9trica.pdf) -->
+<!-- + [geometrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf) -->
+<!-- + [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20geom%C3%A9trica.pdf) -->
+<!-- + [geométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Modelo%20de%20probabilidad%20geometrica.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20fisher.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica%20(2).pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Poster%20Hipergeom%C3%A9trica%20y%20gamma.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20Hipergeom%C3%A9trica.pdf) -->
+<!-- + [hipergeométrica](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Hipergeometrica.pdf) -->
+<!-- <br/><br/> -->
+<!-- ## **Posters Continuas** -->
+<!-- + [normal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/PROBABILIDAD%20Y%20ESTADISTICA.pdf) -->
+<!-- + [normal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20normal%20-%20Juan%20Jose%20Solano%20e%20Isaac%20Grun.pdf) -->
+<!-- + [lognormal](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Poster%20continua%20D.%20Velasco%2C%20M.%20Ram%C3%ADrez%2C%20V.%20S%C3%A1nchez.pdf) -->
+<!-- + [beta](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribucion%20Beta.pdf) -->
+<!-- + [beta](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20Beta%20(1).pdf) -->
+<!-- + [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Distribuci%C3%B3n%20gamma.pdf) -->
+<!-- + [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Modelo%20de%20probabilidad%20gamma.pdf) -->
+<!-- + [gamma](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20gamma.pdf) -->
+<!-- + [Gumbel](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20de%20gumbel.pdf) -->
+<!-- + [Caychy](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribuci%C3%B3n%20de%20Cauchy.pdf) -->
+<!-- + [ji-cuadrado](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Discretas/Ji-cuadrado.pdf) -->
+<!-- + [t-Student](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/1.png) -->
+<!-- + [F-Fisher](https://github.com/dgonxalex80/probabilidad20212.io/blob/main/pdf/P-Distribuciones%20Continuas/Distribucion%20fisher%20(1).pdf) -->
 <p><br/><br/></p>
 </div>
 <div id="tabla" class="section level2">
