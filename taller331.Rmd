@@ -116,7 +116,7 @@ Determine:
 <div class="box2 with-label">
 <div class="label">Problema 4</div>
 
-Suponga que X tiene una distribución Poisson con media $ lambda=4$ ($X  \sim pois(x, lambda=4)$). 
+Suponga que X tiene una distribución Poisson con media $\lambda=4$ ($X  \sim pois(x,\lambda=4)$). 
 
 Determine:	
   
