@@ -153,7 +153,7 @@ Determine:
 <div class="box2 with-label">
 <div class="label">Problema 6</div>
 
-En un cargamento grande de llantas para automóviles, el 5   tiene imperfecciones. Se eligen de manera aleatoria 4 llantas para ser instalada en un automóvil.  (Sea X el número de llantas con imperfecciones. $X  \sim binom(n=4, p=0.05$ )
+En un cargamento grande de llantas para automóviles, del cual el 5% tiene imperfecciones. Se eligen de manera aleatoria 4 llantas para ser instalada en un automóvil.  (Sea X el número de llantas con imperfecciones. $X  \sim binom(n=4, p=0.05$ )
 
 * ¿ Cuál es la probabilidad de que ninguna de las llantas tenga imperfecciones?
 * ¿ Cuál es la probabilidad de que sólo una de las llantas tenga imperfecciones?
