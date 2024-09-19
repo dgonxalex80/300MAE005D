@@ -802,117 +802,249 @@ tabla=data.frame(x, fx, Fx)
 knitr::kable(tabla)</code></pre>
 <table>
 <thead>
-<tr class="header">
-<th align="right">x</th>
-<th align="right">fx</th>
-<th align="right">Fx</th>
+<tr>
+<th style="text-align:right;">
+x
+</th>
+<th style="text-align:right;">
+fx
+</th>
+<th style="text-align:right;">
+Fx
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td align="right">0</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
+<tr>
+<td style="text-align:right;">
+0
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
 </tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
 </tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
+<td style="text-align:right;">
+0.0000000
+</td>
 </tr>
-<tr class="even">
-<td align="right">3</td>
-<td align="right">0.0000005</td>
-<td align="right">0.0000005</td>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+0.0000005
+</td>
+<td style="text-align:right;">
+0.0000005
+</td>
 </tr>
-<tr class="odd">
-<td align="right">4</td>
-<td align="right">0.0000050</td>
-<td align="right">0.0000056</td>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+0.0000050
+</td>
+<td style="text-align:right;">
+0.0000056
+</td>
 </tr>
-<tr class="even">
-<td align="right">5</td>
-<td align="right">0.0000374</td>
-<td align="right">0.0000429</td>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+0.0000374
+</td>
+<td style="text-align:right;">
+0.0000429
+</td>
 </tr>
-<tr class="odd">
-<td align="right">6</td>
-<td align="right">0.0002181</td>
-<td align="right">0.0002610</td>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+0.0002181
+</td>
+<td style="text-align:right;">
+0.0002610
+</td>
 </tr>
-<tr class="even">
-<td align="right">7</td>
-<td align="right">0.0010178</td>
-<td align="right">0.0012789</td>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+0.0010178
+</td>
+<td style="text-align:right;">
+0.0012789
+</td>
 </tr>
-<tr class="odd">
-<td align="right">8</td>
-<td align="right">0.0038593</td>
-<td align="right">0.0051382</td>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+0.0038593
+</td>
+<td style="text-align:right;">
+0.0051382
+</td>
 </tr>
-<tr class="even">
-<td align="right">9</td>
-<td align="right">0.0120067</td>
-<td align="right">0.0171448</td>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+0.0120067
+</td>
+<td style="text-align:right;">
+0.0171448
+</td>
 </tr>
-<tr class="odd">
-<td align="right">10</td>
-<td align="right">0.0308171</td>
-<td align="right">0.0479619</td>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+0.0308171
+</td>
+<td style="text-align:right;">
+0.0479619
+</td>
 </tr>
-<tr class="even">
-<td align="right">11</td>
-<td align="right">0.0653696</td>
-<td align="right">0.1133315</td>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:right;">
+0.0653696
+</td>
+<td style="text-align:right;">
+0.1133315
+</td>
 </tr>
-<tr class="odd">
-<td align="right">12</td>
-<td align="right">0.1143967</td>
-<td align="right">0.2277282</td>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+0.1143967
+</td>
+<td style="text-align:right;">
+0.2277282
+</td>
 </tr>
-<tr class="even">
-<td align="right">13</td>
-<td align="right">0.1642620</td>
-<td align="right">0.3919902</td>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:right;">
+0.1642620
+</td>
+<td style="text-align:right;">
+0.3919902
+</td>
 </tr>
-<tr class="odd">
-<td align="right">14</td>
-<td align="right">0.1916390</td>
-<td align="right">0.5836292</td>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:right;">
+0.1916390
+</td>
+<td style="text-align:right;">
+0.5836292
+</td>
 </tr>
-<tr class="even">
-<td align="right">15</td>
-<td align="right">0.1788631</td>
-<td align="right">0.7624922</td>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+0.1788631
+</td>
+<td style="text-align:right;">
+0.7624922
+</td>
 </tr>
-<tr class="odd">
-<td align="right">16</td>
-<td align="right">0.1304210</td>
-<td align="right">0.8929132</td>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:right;">
+0.1304210
+</td>
+<td style="text-align:right;">
+0.8929132
+</td>
 </tr>
-<tr class="even">
-<td align="right">17</td>
-<td align="right">0.0716037</td>
-<td align="right">0.9645169</td>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:right;">
+0.0716037
+</td>
+<td style="text-align:right;">
+0.9645169
+</td>
 </tr>
-<tr class="odd">
-<td align="right">18</td>
-<td align="right">0.0278459</td>
-<td align="right">0.9923627</td>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:right;">
+0.0278459
+</td>
+<td style="text-align:right;">
+0.9923627
+</td>
 </tr>
-<tr class="even">
-<td align="right">19</td>
-<td align="right">0.0068393</td>
-<td align="right">0.9992021</td>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:right;">
+0.0068393
+</td>
+<td style="text-align:right;">
+0.9992021
+</td>
 </tr>
-<tr class="odd">
-<td align="right">20</td>
-<td align="right">0.0007979</td>
-<td align="right">1.0000000</td>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+0.0007979
+</td>
+<td style="text-align:right;">
+1.0000000
+</td>
 </tr>
 </tbody>
 </table>
