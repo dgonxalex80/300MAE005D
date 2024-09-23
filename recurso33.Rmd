@@ -989,8 +989,11 @@ pgamma(10,3,0.5, lower.tail = FALSE)
 
 ## **Weibull** 
 
+<br/>
+
 Esta distribución fue descubierta Maurice Frechet matemático francés y luego trabajada por  Rosin y Rammler quienes en 1933 estudiaron el tamaño de una partícula y posteriormente recibe su nombre del  ingeniero y matemático Waloddi Weibull . Esta distribución se utiliza para modelar el tiempo de vida de algunos componentes. La Weibull tiene dos parámetros $\alpha$ y $\beta$. Su función de distribución y sus principales características son:
 
+<br/>
 
 <div class="box2 with-label">
 <div class="label">Distribución Weibull</div> 
@@ -1013,6 +1016,8 @@ $$F(x)=1-\exp{\Big\{-\Big(\dfrac{x}{\beta}\Big)^{\alpha}\Big\}} $$
 	
 </div> 
 
+<br/>
+
 Distribuciones : <span style="color:#4983F6"> $Weibull(0.8, 1)$</span>, <span style="color:#E1286F"> $Weibul(2,1)$</span> y <span style="color:#FFAD42"> $Weibull(2,2)$</span>
 
 ```{r, echo=FALSE, fig.height=3.5, fig.align='center'}
@@ -1024,19 +1029,9 @@ ggdistribution(dweibull, seq(0, 5, 0.01),shape=2,scale=2,colour = "#FFAD42", p=p
 ```
 
 
-
 <br/><br/>
 
-
-
-La siguiente gráfica corresponde a varias conformaciones de los parámetros de esta distribución.
-
-Distribuciones exponenciales \textcolor{col4}{Weibull(0.8,1)}, \textcolor{col5}{Weibull(2,1)} y \textcolor{col3}{Weibull(2,2)}
-fig_weibulls.pdf
-
-
-
-Función de riesgo 
+### **Función de riesgo**
 	
 Se llama así a la tasa de fallas por unidad de tiempo, expresada como la proporción de elementos que no han fallado
 
@@ -1051,7 +1046,7 @@ $$h(t)=\dfrac{f(t)}{1-F(t)} $$
  </div>
 
 
-<br/>
+<br/><br/>
 
 ### **Solución**
 

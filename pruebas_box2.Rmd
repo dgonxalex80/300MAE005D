@@ -1,0 +1,42 @@
+---
+title: "Untitled"
+author: "Daniel Gonzalez"
+date: "2024-09-23"
+output: 
+  html_document:
+    css: cajas.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+## Cajas Estilizadas con Paleta de Colores
+
+<div class="container">
+    <div class="box20">
+        <div class="number">234,06</div>
+        <h2>Producción ($ MM)</h2>
+        <p>Aumento de la producción en los sectores de la economía del territorio.</p>
+    </div>
+    <div class="box20">
+        <div class="number">1.448</div>
+        <h2>Empleo (#)</h2>
+        <p>Aumento del número de ocupados en los sectores de la economía del territorio.</p>
+    </div>
+    <div class="box20">
+        <div class="number">0,153 %</div>
+        <h2>% PIB Economía del Territorio</h2>
+        <p>% que representa el incremento en la producción sobre el PIB del territorio.</p>
+    </div>
+    <div class="box20">
+        <div class="number">0,072 %</div>
+        <h2>% Empleo Total en la Economía del Territorio</h2>
+        <p>% que representa el incremento en el número de ocupados sobre el total de ocupados del territorio.</p>
+    </div>
+</div>
+
+
