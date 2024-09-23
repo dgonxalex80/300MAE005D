@@ -149,3 +149,7 @@ knitr::include_graphics("img/poster1.png")
 ```
 
 <br/><br/>
+
+### Video
+
+* [Crea posters con posterdown](https://www.youtube.com/watch?v=Znpsmbstu-A)
