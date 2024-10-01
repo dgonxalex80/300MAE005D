@@ -14,13 +14,13 @@
 
 <title> </title>
 
-<script src="site_libs/header-attrs/header-attrs.js"></script>
-<script src="site_libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap/shim/respond.min.js"></script>
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -30,12 +30,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation/tabsets.js"></script>
-<script src="site_libs/navigation/codefolding.js"></script>
-<link href="site_libs/highlightjs/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs/highlight.js"></script>
-<link href="site_libs/font-awesome/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -1224,11 +1224,11 @@ abline(h=5, col = &quot;red&quot;)</code></pre>
 <pre class="r"><code># Se calulan las medias
 apply(T123,2, mean)</code></pre>
 <pre><code>      T1       T2       T3 
-4.996786 4.989706 4.980977 </code></pre>
+5.231783 5.231094 5.233482 </code></pre>
 <pre class="r"><code># Se calculan las varianzas
 apply(T123,2, var)</code></pre>
 <pre><code>      T1       T2       T3 
-7.173587 7.717154 6.254271 </code></pre>
+7.837662 8.513362 7.012598 </code></pre>
 <p><br/></p>
 <p>El mojor estimador de acuerdo a los resultados es <span
 class="math inline">\(T_3\)</span>, que tiene un promedio más cercano a
@@ -1944,71 +1944,190 @@ comprender el alcance de este teorema.</p>
 class="section level3">
 <h3><strong>Verificación del Teorema central del límite </strong></h3>
 <p><br/></p>
-<pre class="r"><code>par(cex=0.5, cex.axis=.5, cex.lab=.5, cex.main=.5, cex.sub=.5,  mfrow=c(3,2), mai = c(.5, .5, .5, .5))
-# Teorema Central del Límite-----------------------------
-n=1000   #  numero de columnas (tamaño máximo de muestra)
-m=1000*n
-# Caso --------------------------------------------------
-# distribución exponencial-------------------------------
-X=matrix(rexp(m,1),ncol=n)
+</div>
+<div id="distribución-uniforme1050" class="section level3">
+<h3><strong>Distribución uniforme(10,50)</strong></h3>
+<pre class="r"><code># Librerías necesarias
+# install.packages(&quot;magick&quot;)
+library(magick)
 
-# generación de muestras-------------
-X1=X[ ,1]            # n=1
-X2=X[ ,1:2]          # n=2
-X20=X[ ,1:20]        # n=20
-X30=X[ ,1:30]        # n=30
-X50=X[ ,1:50]        # n=50
-X100=X[ ,1:100]      # n=100
-X1000=X[ ,1:1000]    # n=1000
+# Definir parámetros y datos
+n = 1000
+m = 1000
 
-# generacion de medias---------------
-Mx2=apply(X2,1,mean)        # medias de muestras de tamaño n=2
-Mx20=apply(X20,1,mean)      # medias de muestras de tamaño n=20
-Mx30=apply(X30,1,mean)      # medias de muestras de tamaño n=30
-Mx50=apply(X50,1,mean)      # medias de muestras de tamaño n=50
-Mx100=apply(X100,1,mean)    # medias de muestras de tamaño n=100
-Mx1000=apply(X1000,1,mean)  # medias de muestras de tamaño n=1000
+par(mfrow = c(1, 1))
+# Generar datos
+x = runif(n * m, 10, 50)
+m = matrix(x, nrow = m)
 
-# generación de densidad empírica --
-d=density(X1)
-d2=density(Mx2)
-#d20=density(Mx20)
-d30=density(Mx30)
-d50=density(Mx50)
-d100=density(Mx100)
-d1000=density(Mx1000)
+# Calcular las matrices y promedios
+M1 = m[, 1]
+M5 = m[, 1:5]
 
-# Gráficos de densidad -------------------------------
-# histogramas  de comparacion-------------------------
-plot(d, main=&quot; &quot;, xlab = &quot;n=1&quot;)
-plot(d2,main=&quot; &quot;, xlab = &quot;n=2&quot;)
-#plot(d20, main=&quot;&quot;, xlab = &quot;n=20&quot;)
-plot(d30, main=&quot; &quot;, xlab = &quot;n=30&quot;)
-plot(d50, main=&quot; &quot;, xlab = &quot;n=50&quot;)
-plot(d100, main=&quot; &quot;, xlab = &quot;n=100&quot;)
-plot(d1000,main=&quot; &quot;, xlab=&quot;n=1000&quot;)</code></pre>
-<p><img src="recurso41_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<pre class="r"><code># histogramas  de comparacion--------------------------
-hist(X1,  main = &quot;n=1&quot;, freq=FALSE)
-hist(Mx2, main =&quot;n=2&quot;, freq=FALSE) 
-# hist(Mx20, main = &quot;n=20&quot;,freq=FALSE)
-hist(Mx30, main = &quot;n=30&quot;,freq=FALSE) 
-hist(Mx50, main = &quot;n=50&quot;,freq=FALSE) 
-hist(Mx100, main = &quot;n=100&quot;, freq=FALSE) 
-hist(Mx1000, main = &quot;n=1000&quot;, freq = FALSE) </code></pre>
-<p><img src="recurso41_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
-<pre class="r"><code># histogramas  de comparacion--------------------------
-qqnorm(X1) ; qqline(X1, col=&quot;red&quot;)
-qqnorm(Mx2) ; qqline(Mx2, col=&quot;red&quot;)
-# qqnorm(Mx20) ; qqline(Mx20, col=&quot;red&quot;)
-qqnorm(Mx30) ; qqline(Mx30, col=&quot;red&quot;)
-qqnorm(Mx50) ; qqline(Mx50, col=&quot;red&quot;)
-qqnorm(Mx100) ; qqline(Mx100, col=&quot;red&quot;)
-qqnorm(Mx1000) ; qqline(Mx1000, col=&quot;red&quot;)</code></pre>
-<p><img src="recurso41_files/figure-html/unnamed-chunk-7-3.png" width="672" /></p>
+M10 = m[, 1:10]
+M20 = m[, 1:20]
+M30 = m[, 1:30]
+
+M50 = m[, 1:50]
+M100 = m[, 1:100]
+M500 = m[, 1:500]
+M1000 = m[, 1:1000]
+
+
+MX5 = apply(M5, 1, mean)
+
+MX10 = apply(M10, 1, mean)
+MX20 = apply(M20, 1, mean)
+MX30 = apply(M30, 1, mean)
+
+MX50 = apply(M50, 1, mean)
+MX100 = apply(M100, 1, mean)
+MX500 = apply(M500, 1, mean)
+MX1000 = apply(M1000, 1, mean)
+
+# Listar las variables que vamos a graficar
+matrices = list(M1, MX5, MX10, MX20, MX30, MX50, MX100, MX200, MX500, MX1000)
+labels = c(&quot;n=1&quot;, &quot;n=5&quot;, &quot;n=10&quot;, &quot;n=20&quot;, &quot;n =30&quot;, &quot;n=50&quot;, &quot;n=100&quot;, &quot;n=500&quot;, &quot;n=1000&quot;)
+
+# Ajustar parámetros gráficos para reducir los márgenes
+# Define una matriz de gráficos de 2x3 con márgenes ajustados
+
+# Crear histogramas con ajustes específicos para eliminar etiquetas del eje x
+hist(M1, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=1&quot;, xlab = &quot; &quot;, ylab = &quot;frecuencia&quot;, ylim = c(0, 150))
+hist(MX5, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=5&quot;, xlab = &quot; &quot;,ylab = &quot; &quot;, ylim = c(0, 150))
+
+hist(MX10, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=10&quot;, xlab = &quot; &quot;,ylab = &quot; &quot;, ylim = c(0, 150))
+hist(MX20, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=20&quot;, xlab = &quot; &quot;,ylab = &quot; &quot;, ylim = c(0, 150))
+hist(MX30, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=30&quot;, xlab = &quot; &quot;,ylab = &quot; &quot;, ylim = c(0, 150))
+
+hist(MX50, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=50&quot;, xlab = &quot;&quot;,ylab = &quot; &quot;, ylim = c(0, 150))
+hist(MX100, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=100&quot;, xlab = &quot; &quot;,ylab = &quot;frecuencia&quot;, ylim = c(0, 150))
+
+hist(MX500, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=500&quot;, xlab = &quot; &quot;,ylab = &quot; &quot;, ylim = c(0, 150))
+hist(MX1000, col = &quot;skyblue&quot;, border = &quot;white&quot;, main = &quot;Histograma de medias con n=1000&quot;, xlab = &quot; &quot;,ylab = &quot; &quot;, ylim = c(0, 150))
+
+
+# Generar gráficos individuales y guardarlos como imágenes
+for (i in 1:length(matrices)) {
+  # Crear el histograma
+  hist(matrices[[i]], main = paste(&quot;U(10,50) - medias con&quot;, labels[i]), xlab = &quot; &quot;, ylab=&quot;frecuencia&quot;, col = &quot;skyblue&quot;, border = &quot;white&quot;)
+  
+  # Guardar cada gráfico como una imagen PNG
+  filename &lt;- paste0(&quot;hist_&quot;, labels[i], &quot;.png&quot;)
+  dev.copy(png, filename = filename)
+  dev.off()
+}
+
+# Leer las imágenes generadas
+image_list &lt;- list()
+for (i in labels) {
+  image_list[[i]] &lt;- image_read(paste0(&quot;hist_&quot;, i, &quot;.png&quot;))
+}
+
+# Crear el GIF combinando las imágenes
+animation &lt;- image_animate(image_join(image_list), fps = 1)  # fps = cuadros por segundo
+image_write(animation, &quot;/home/deg/Documentos/JAVERIANA/300MAE005D/repository/300MAE005D/img/animation_hist.gif&quot;)
+
+# El GIF se guarda en el directorio de trabajo
+animation</code></pre>
+<pre class="r"><code># Librerías necesarias
+# install.packages(&quot;magick&quot;)
+library(magick)
+
+# Definir parámetros y datos
+n = 1000
+m = 1000
+
+# Generar datos
+x = runif(n * m, 10, 50)
+m = matrix(x, nrow = m)
+
+# Calcular las matrices y promedios para los tamaños de muestra requeridos
+M1 = m[, 1]
+M5 = m[, 1:5]
+M10 = m[, 1:10]
+M20 = m[, 1:20]
+M30 = m[, 1:30]
+M50 = m[, 1:50]
+M100 = m[, 1:100]
+M200 = m[, 1:200]
+M500 = m[, 1:500]
+M1000 = m[, 1:1000]
+
+# Calcular las medias de cada fila de la matriz para los tamaños especificados
+MX1 = M1  # No es promedio
+MX5 = apply(M5, 1, mean)
+MX10 = apply(M10, 1, mean)
+MX20 = apply(M20, 1, mean)
+MX30 = apply(M30, 1, mean)
+MX50 = apply(M50, 1, mean)
+MX100 = apply(M100, 1, mean)
+MX200 = apply(M200, 1, mean)
+MX500 = apply(M500, 1, mean)
+MX1000 = apply(M1000, 1, mean)
+
+# Listar las variables que vamos a graficar
+matrices = list(MX1, MX5, MX10, MX20, MX30, MX50, MX100, MX200, MX500, MX1000)
+labels = c(&quot;n=1&quot;, &quot;n=5&quot;, &quot;n=10&quot;, &quot;n=20&quot;, &quot;n=30&quot;, &quot;n=50&quot;, &quot;n=100&quot;, &quot;n=200&quot;, &quot;n=500&quot;, &quot;n=1000&quot;)
+
+# Generar gráficos Q-Q y guardarlos como imágenes
+for (i in 1:length(matrices)) {
+  # Crear el gráfico Q-Q
+  png(filename = paste0(&quot;qqplot_&quot;, labels[i], &quot;.png&quot;))  # Guardar el gráfico como PNG
+  qqnorm(matrices[[i]], main = paste(&quot;Q-Q Plot para tamaño de muestra =&quot;, labels[i]), col = &quot;blue&quot;, pch = 16)
+  qqline(matrices[[i]], col = &quot;red&quot;, lwd = 2)  # Agregar línea de referencia
+  dev.off()
+}
+
+# Leer las imágenes generadas
+image_list &lt;- list()
+for (i in labels) {
+  image_list[[i]] &lt;- image_read(paste0(&quot;qqplot_&quot;, i, &quot;.png&quot;))
+}
+
+# Crear el GIF combinando las imágenes
+animation &lt;- image_animate(image_join(image_list), fps = 1)  # fps = cuadros por segundo
+image_write(animation, &quot;/home/deg/Documentos/JAVERIANA/300MAE005D/repository/300MAE005D/img/animation_qqnorm.gif&quot;)
+
+# Mostrar la ubicación del GIF generado
+cat(&quot;El GIF se ha guardado como &#39;animation_qqplot.gif&#39;\n&quot;)
+
+# Mostrar la animación en la consola de R
+animation</code></pre>
+<table>
+<colgroup>
+<col width="48%" />
+<col width="51%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"><img src="img/animation_hist.gif"
+style="width:100.0%" /></td>
+<td align="center"><img src="img/animation_qqnorm.gif"
+style="width:100.0%" /></td>
+</tr>
+</tbody>
+</table>
 <p>Se puede notar la transformación de la distribución de la media a una
 distribución normal a medida que el tamaño de muestra aumenta</p>
 <p><br/><br/><br/><br/></p>
+</div>
+<div id="distribución-exponencial120" class="section level3">
+<h3><strong>Distribución exponencial(1/20)</strong></h3>
+<table>
+<colgroup>
+<col width="48%" />
+<col width="51%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="center"><img src="img/animation2_hist.gif"
+style="width:100.0%" /></td>
+<td align="center"><img src="img/animation2_qqnorm.gif"
+style="width:100.0%" /></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="video" class="section level2">
