@@ -450,6 +450,21 @@ $(document).ready(function () {
       <a href="Modulo4.html">Módulo 4</a>
     </li>
     <li class="divider"></li>
+    <li>
+      <a href="guia41.html">Guía 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso41.html">Recurso 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="codigo41.html">Código 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="monitoria4.html">Monitoria 4</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -620,7 +635,20 @@ fxy</code></pre>
 <pre><code>[1] 1</code></pre>
 <p>El gráfico de la función de distribución conjunta se puede realizar
 de la siguiente forma:</p>
-<p><img src="recurso32_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code>x=c(0,0,0,1,1,1,2,2,2)
+y=c(0,1,2,0,1,2,0,1,2)
+fxy=c(0.05,0.05,0, 0.05,0.10,0.20, 0.10,0.35,0.10)
+
+plot3D::scatter3D(x, y, fxy,
+          colvar = NULL, 
+          col = c6,
+          pch = 19, cex = 1.5,
+          phi = 20, theta = 60,  
+          zlab=&quot;f(xy)&quot;, xlab=&quot;x&quot;, ylab=&quot;y&quot;,
+          bty = &quot;b2&quot;,
+          col.panel =&quot;steelblue&quot;,
+          col.grid = &quot;darkblue&quot;,
+          add_lines=TRUE)</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="probabilidad-marginales" class="section level3">

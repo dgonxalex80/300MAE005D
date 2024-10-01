@@ -32,9 +32,6 @@ c5= "#783AC7"
 c6= "#2C5697" # AZZUL INSTITUCIONAL
 c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
-
-
-
 ```
 
 
@@ -898,9 +895,9 @@ x=0:10
 fx=dbinom(x,10,0.2)
 plot(x,fx,
      main = " Distribución binomial(n=10, p=0.20)",
-     pch=19)
+     pch=19, col = c3)
 grid()
-abline(v = 1:10,  lty = 2, col = "grey")
+abline(v = 1:10,  lty = 2, col = c4)
 ```
 
 <br/><br/>
@@ -1066,15 +1063,15 @@ c. Se presenten menos de 2 grietas en 500 m
 
 
 ```{r, echo=FALSE}
-library(downloadthis)
-download_link(
-  link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_%20307.pdf",
-  button_label = "Descarga: solución pdf ",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
+# library(downloadthis)
+# download_link(
+#   link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_%20307.pdf",
+#   button_label = "Descarga: solución pdf ",
+#   button_type = "primary",
+#   has_icon = TRUE,
+#   icon = "fa fa-save",
+#   self_contained = FALSE
+# )
 ```
 
 
@@ -1269,15 +1266,15 @@ Suponiendo que la pruducción en la empresa se mantiene con las características
 <br/><br/>
 
 ```{r, echo=FALSE}
-library(downloadthis)
-download_link(
-  link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_%20308.pdf",
-  button_label = "Descarga: solución pdf ",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
+# library(downloadthis)
+# download_link(
+#   link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_%20308.pdf",
+#   button_label = "Descarga: solución pdf ",
+#   button_type = "primary",
+#   has_icon = TRUE,
+#   icon = "fa fa-save",
+#   self_contained = FALSE
+# )
 ```
 
 <br/><br/><br/>
@@ -1766,15 +1763,15 @@ $$Z(t)= \dfrac{f(t)}{1-F(t)} $$
 # **Examen Parcial 2016**
 
 ```{r, echo=FALSE}
-library(downloadthis)
-download_link(
-  link = "https://github.com/dgonxalex80/pye20222/blob/main/pdf/FORMULARIO%20SEGUNDO_PARCIAL_300MAE004_20162c.pdf",
-  button_label = "Descarga: segundo parcial 2016 pdf ",
-  button_type = "primary",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
+# library(downloadthis)
+# download_link(
+#   link = "https://github.com/dgonxalex80/pye20222/blob/main/pdf/FORMULARIO%20SEGUNDO_PARCIAL_300MAE004_20162c.pdf",
+#   button_label = "Descarga: segundo parcial 2016 pdf ",
+#   button_type = "primary",
+#   has_icon = TRUE,
+#   icon = "fa fa-save",
+#   self_contained = FALSE
+# )
 ```
 
 <br/><br/>

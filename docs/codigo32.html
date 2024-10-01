@@ -450,6 +450,21 @@ $(document).ready(function () {
       <a href="Modulo4.html">Módulo 4</a>
     </li>
     <li class="divider"></li>
+    <li>
+      <a href="guia41.html">Guía 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso41.html">Recurso 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="codigo41.html">Código 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="monitoria4.html">Monitoria 4</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -645,7 +660,6 @@ plot3D::scatter3D(x, y, fxy,
           col.panel =&quot;steelblue&quot;,
           col.grid = &quot;darkblue&quot;,
           add_lines=TRUE)</code></pre>
-<p><img src="codigo32_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 <div id="funciones-de-distribución-marginal" class="section level3">
@@ -789,7 +803,6 @@ x1=c(0,1,1,0)
 y1=c(0,0,1,1)
 z1=c(0,1,2,1)
 polygon(s$xyz.convert(x1,y1,z1),col=&quot;#4983f6&quot;) # morado </code></pre>
-<p><img src="codigo32_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <pre class="r"><code># Cargar la librería rgl
 library(rgl)
@@ -847,7 +860,6 @@ x7=c(.5,.5,.5,.5)
 y7=c(.5,1,1,.5)
 z7=c(0,0,1.5,1)
 polygon(s$xyz.convert(x7,y7,z7)) # </code></pre>
-<p><img src="codigo32_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <p><span class="math display">\[f_{XY}(x,y)=\left\{\begin{matrix}\
 \dfrac{48}{49} xy^{2} &amp; 3\leq x \leq 4, \hspace{.5cm} 0.5 \leq y
@@ -859,7 +871,6 @@ y=seq(0.5,1,by=0.03)
 fun=function(x,y){48*x*y^2/49}
 z=outer(x,y,fun)
 wireframe(z,xlab=&quot;x&quot;,ylab=&quot;y&quot;,zlab=&quot;f(x,y)&quot;,col=c6)</code></pre>
-<p><img src="codigo32_files/figure-html/unnamed-chunk-12-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>x=seq(3,4,by=0.03)
 y=seq(0.5,1,by=0.03)
 fxy=function(x,y){48*x*y^2/49}
@@ -888,7 +899,6 @@ persp(x,y,z,theta=20, phi=15,
       expand=.4,
       axes=TRUE,
       col=c6)</code></pre>
-<p><img src="codigo32_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 

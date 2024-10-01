@@ -459,6 +459,21 @@ $(document).ready(function () {
       <a href="Modulo4.html">Módulo 4</a>
     </li>
     <li class="divider"></li>
+    <li>
+      <a href="guia41.html">Guía 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso41.html">Recurso 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="codigo41.html">Código 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="monitoria4.html">Monitoria 4</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -573,18 +588,20 @@ table(futbol$confed)</code></pre>
 <pre class="r"><code>#utilizando summarytools
 confederacion=as.factor(futbol$confed)
 summarytools::freq(confederacion, cumul = FALSE)</code></pre>
-<pre><code>Frequencies  
+<pre><code>Frequencies   
+confederacion     
+**Type:** Factor (unordered)   
 
-                 Freq   % Valid   % Total
--------------- ------ --------- ---------
-           AFC     46     21.10     21.10
-           CAF     55     25.23     25.23
-      CONCACAF     41     18.81     18.81
-      CONMEBOL     10      4.59      4.59
-           OFC     10      4.59      4.59
-          UEFA     56     25.69     25.69
-          &lt;NA&gt;      0                0.00
-         Total    218    100.00    100.00</code></pre>
+                 Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+-------------- ------ --------- -------------- --------- --------------
+           AFC     46     21.10          21.10     21.10          21.10
+           CAF     55     25.23          46.33     25.23          46.33
+      CONCACAF     41     18.81          65.14     18.81          65.14
+      CONMEBOL     10      4.59          69.72      4.59          69.72
+           OFC     10      4.59          74.31      4.59          74.31
+          UEFA     56     25.69         100.00     25.69         100.00
+          &lt;NA&gt;      0                               0.00         100.00
+         Total    218    100.00         100.00    100.00         100.00</code></pre>
 <p>Nota: paquete <a
 href="https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html">summarytools</a></p>
 <p><br/> <br/></p>
@@ -672,13 +689,13 @@ table(c)</code></pre>
 <pre class="r"><code>data(&quot;iris&quot;)
 summarytools::freq(iris$Species, cumul = FALSE, headings = FALSE)</code></pre>
 <pre><code>
-                   Freq   % Valid   % Total
----------------- ------ --------- ---------
-          setosa     50     33.33     33.33
-      versicolor     50     33.33     33.33
-       virginica     50     33.33     33.33
-            &lt;NA&gt;      0                0.00
-           Total    150    100.00    100.00</code></pre>
+                   Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+---------------- ------ --------- -------------- --------- --------------
+          setosa     50     33.33          33.33     33.33          33.33
+      versicolor     50     33.33          66.67     33.33          66.67
+       virginica     50     33.33         100.00     33.33         100.00
+            &lt;NA&gt;      0                               0.00         100.00
+           Total    150    100.00         100.00    100.00         100.00</code></pre>
 <p><br/> <br/> <br/></p>
 </div>
 </div>
@@ -985,16 +1002,16 @@ puede distinguir fácilmente.</p>
 <pre class="r"><code>#utilizando summarytools
 summarytools::freq(futbol$confed, cumul = FALSE, headings = FALSE)</code></pre>
 <pre><code>
-                 Freq   % Valid   % Total
--------------- ------ --------- ---------
-           AFC     46     21.10     21.10
-           CAF     55     25.23     25.23
-      CONCACAF     41     18.81     18.81
-      CONMEBOL     10      4.59      4.59
-           OFC     10      4.59      4.59
-          UEFA     56     25.69     25.69
-          &lt;NA&gt;      0                0.00
-         Total    218    100.00    100.00</code></pre>
+                 Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+-------------- ------ --------- -------------- --------- --------------
+           AFC     46     21.10          21.10     21.10          21.10
+           CAF     55     25.23          46.33     25.23          46.33
+      CONCACAF     41     18.81          65.14     18.81          65.14
+      CONMEBOL     10      4.59          69.72      4.59          69.72
+           OFC     10      4.59          74.31      4.59          74.31
+          UEFA     56     25.69         100.00     25.69         100.00
+          &lt;NA&gt;      0                               0.00         100.00
+         Total    218    100.00         100.00    100.00         100.00</code></pre>
 <p>moda : <strong>UEFA</strong>, es la confederación con más selecciones
 nacionales de futbol ascritas</p>
 <p><br/> <br/></p>
@@ -1259,11 +1276,11 @@ resultado nos indica que muchos equipos tienen bajo nivel ofencivo y
 unos pocos son los que tienen un alto poder ofencivo.</p>
 <p><br/></p>
 <pre class="r"><code>summarytools::descr(futbol$off)</code></pre>
-<pre><code>Descriptive Statistics  
-value  
-N: 218  
+<pre><code>Descriptive Statistics   
+futbol$off     
+**N:** 218   
 
-                     value
+                       off
 ----------------- --------
              Mean     1.17
           Std.Dev     0.66
@@ -1282,11 +1299,11 @@ N: 218
         Pct.Valid   100.00</code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>summarytools::descr(mtcars$mpg)</code></pre>
-<pre><code>Descriptive Statistics  
-value  
-N: 32  
+<pre><code>Descriptive Statistics   
+mpg     
+**N:** 32   
 
-                     value
+                       mpg
 ----------------- --------
              Mean    20.09
           Std.Dev     6.03
@@ -1562,11 +1579,11 @@ t2</code></pre>
 describa los resultados en un párrafo</li>
 </ul>
 <pre class="r"><code>summarytools::descr(data$nivans)</code></pre>
-<pre><code>Descriptive Statistics  
-value  
-N: 150  
+<pre><code>Descriptive Statistics   
+nivans     
+**N:** 150   
 
-                     value
+                    nivans
 ----------------- --------
              Mean    59.51
           Std.Dev    14.13
@@ -1597,16 +1614,18 @@ data$fac[data$fac==2]=&quot;Facultad de Ciencias Económicas y Administrativas&q
 data$fac[data$fac==3]=&quot;Facultad de Humanidades&quot;
 data$fac[data$fac==4]=&quot;Facultad de Salud&quot;
 summarytools::freq(data$fac, cumul = FALSE)</code></pre>
-<pre><code>Frequencies  
+<pre><code>Frequencies   
+fac     
+**Type:** Character   
 
-                                                          Freq   % Valid   % Total
-------------------------------------------------------- ------ --------- ---------
-      Facultad de Ciencias Económicas y Administrativas     48     32.00     32.00
-                                Facultad de Humanidades     34     22.67     22.67
-                      Facultad de Ingeniería y Ciencias     51     34.00     34.00
-                                      Facultad de Salud     17     11.33     11.33
-                                                   &lt;NA&gt;      0                0.00
-                                                  Total    150    100.00    100.00</code></pre>
+                                                          Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+------------------------------------------------------- ------ --------- -------------- --------- --------------
+      Facultad de Ciencias Económicas y Administrativas     48     32.00          32.00     32.00          32.00
+                                Facultad de Humanidades     34     22.67          54.67     22.67          54.67
+                      Facultad de Ingeniería y Ciencias     51     34.00          88.67     34.00          88.67
+                                      Facultad de Salud     17     11.33         100.00     11.33         100.00
+                                                   &lt;NA&gt;      0                               0.00         100.00
+                                                  Total    150    100.00         100.00    100.00         100.00</code></pre>
 <p>Los reultados indican una mayor proporción de estudiantes de la
 Facultad de Ingenieria y Ciencias (34%), mientras que la Facultad de
 Salud la menor (11.3%)</p>

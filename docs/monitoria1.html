@@ -450,6 +450,21 @@ $(document).ready(function () {
       <a href="Modulo4.html">Módulo 4</a>
     </li>
     <li class="divider"></li>
+    <li>
+      <a href="guia41.html">Guía 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="recurso41.html">Recurso 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="codigo41.html">Código 4.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="monitoria4.html">Monitoria 4</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -1067,11 +1082,11 @@ etiquetadas por día. A partir de los resultados procesados en R presente
 un análisis estadístico para el número de botellas etiquetadas por
 día</p>
 <pre class="r"><code>summarytools::descr(x)  </code></pre>
-<pre><code>Descriptive Statistics  
-value  
-N: 40  
+<pre><code>Descriptive Statistics   
+x     
+**N:** 40   
 
-                     value
+                         x
 ----------------- --------
              Mean    76.08
           Std.Dev     7.82
@@ -1110,23 +1125,25 @@ Jun = c(12.0, 12.0, 12.0, 12.7, 12.8, 12.9, 8.0, 8.0, 13.2, 13.3, 13.5, 13.6, 11
 comportamiento tomados en el estudio</p>
 <p><img src="monitoria1_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p><br/><br/></p>
-<pre><code>Descriptive Statistics  
+<pre><code>Descriptive Statistics     
+**Data Frame:** datos     
+**N:** 30   
 
-                       Jun      May
+                       May      Jun
 ----------------- -------- --------
-             Mean    11.34    10.84
-          Std.Dev     2.65     2.22
-              Min     5.90     6.20
+             Mean    10.84    11.34
+          Std.Dev     2.22     2.65
+              Min     6.20     5.90
                Q1     9.20     9.20
-           Median    11.95    10.90
-               Q3    13.30    12.30
-              Max    15.20    15.00
-              MAD     2.37     2.30
-              IQR     3.80     3.03
-               CV     0.23     0.20
-         Skewness    -0.48    -0.07
+           Median    10.90    11.95
+               Q3    12.30    13.30
+              Max    15.00    15.20
+              MAD     2.30     2.37
+              IQR     3.03     3.80
+               CV     0.20     0.23
+         Skewness    -0.07    -0.48
       SE.Skewness     0.43     0.43
-         Kurtosis    -0.87    -0.66
+         Kurtosis    -0.66    -0.87
           N.Valid    30.00    30.00
         Pct.Valid   100.00   100.00</code></pre>
 <p><br/><br/></p>
@@ -1511,26 +1528,50 @@ y = c(28.6, 25.1, 26.4, 34.9, 29.3, 28.4, 38.5, 30.2, 30.6, 31.8, 41.6, 21.1, 36
 cat(&quot;y = &quot;,y, &quot;\n&quot;)</code></pre>
 <pre><code>y =  28.6 25.1 26.4 34.9 29.3 28.4 38.5 30.2 30.6 31.8 41.6 21.1 36 37.9 13.9 </code></pre>
 <pre class="r"><code>cat(&quot;\n&quot;)</code></pre>
-<pre class="r"><code>summarytools::descr(data.frame(x,y))</code></pre>
-<pre><code>Descriptive Statistics  
+<pre class="r"><code>summarytools::descr(x)</code></pre>
+<pre><code>Descriptive Statistics   
+x     
+**N:** 15   
 
-                         x        y
------------------ -------- --------
-             Mean    46.22    30.29
-          Std.Dev    13.14     7.13
-              Min    22.10    13.90
-               Q1    34.40    26.40
-           Median    48.10    30.20
-               Q3    55.20    36.00
-              Max    69.30    41.60
-              MAD    10.53     6.97
-              IQR    15.10     8.05
-               CV     0.28     0.24
-         Skewness    -0.37    -0.49
-      SE.Skewness     0.58     0.58
-         Kurtosis    -0.75    -0.27
-          N.Valid    15.00    15.00
-        Pct.Valid   100.00   100.00</code></pre>
+                         x
+----------------- --------
+             Mean    46.22
+          Std.Dev    13.14
+              Min    22.10
+               Q1    34.40
+           Median    48.10
+               Q3    55.20
+              Max    69.30
+              MAD    10.53
+              IQR    15.10
+               CV     0.28
+         Skewness    -0.37
+      SE.Skewness     0.58
+         Kurtosis    -0.75
+          N.Valid    15.00
+        Pct.Valid   100.00</code></pre>
+<pre class="r"><code>summarytools::descr(y)</code></pre>
+<pre><code>Descriptive Statistics   
+y     
+**N:** 15   
+
+                         y
+----------------- --------
+             Mean    30.29
+          Std.Dev     7.13
+              Min    13.90
+               Q1    26.40
+           Median    30.20
+               Q3    36.00
+              Max    41.60
+              MAD     6.97
+              IQR     8.05
+               CV     0.24
+         Skewness    -0.49
+      SE.Skewness     0.58
+         Kurtosis    -0.27
+          N.Valid    15.00
+        Pct.Valid   100.00</code></pre>
 <p>De a cuerdo con los valoresa obtenidos es posible afirmar que existen
 diferencias en los dos grupos observados con referencia al tiempo que se
 requiere para quedarse dormido?</p>

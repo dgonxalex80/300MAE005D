@@ -83,6 +83,8 @@ ggplot(data, aes(x = Carrera, y = Promedio, fill = Carrera)) +
 
 
 ```
+
+
 ```{r}
 non =data.frame(id<- 1:30,
            data$Nombre)
