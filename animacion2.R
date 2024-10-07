@@ -8,7 +8,7 @@ m = 1000
 
 par(mfrow = c(1, 1))
 # Generar datos
-x = runif(n * m, 10, 50)
+x = rexp(n * m, 1/20)
 m = matrix(x, nrow = m)
 
 # Calcular las matrices y promedios
@@ -65,7 +65,7 @@ hist(MX1000, col = "skyblue", border = "white", main = "Histograma de medias con
 # Generar gráficos individuales y guardarlos como imágenes
 for (i in 1:length(matrices)) {
   # Crear el histograma
-  hist(matrices[[i]], main = paste("U(10,50) - medias con", labels[i]), xlab = " ", ylab="frecuencia", col = "skyblue", border = "white")
+  hist(matrices[[i]], main = paste("exp(1/20) - medias con", labels[i]), xlab = " ", ylab="frecuencia", col = "skyblue", border = "white")
   
   # Guardar cada gráfico como una imagen PNG
   filename <- paste0("hist_", labels[i], ".png")
@@ -81,7 +81,7 @@ for (i in labels) {
 
 # Crear el GIF combinando las imágenes
 animation <- image_animate(image_join(image_list), fps = 1)  # fps = cuadros por segundo
-image_write(animation, "/home/deg/Documentos/JAVERIANA/300MAE005D/repository/300MAE005D/img/animation_hist.gif")
+image_write(animation, "/home/deg/Documentos/JAVERIANA/300MAE005D/repository/300MAE005D/img/animation2_hist.gif")
 
 # El GIF se guarda en el directorio de trabajo
 animation
@@ -145,7 +145,7 @@ for (i in labels) {
 
 # Crear el GIF combinando las imágenes
 animation <- image_animate(image_join(image_list), fps = 1)  # fps = cuadros por segundo
-image_write(animation, "/home/deg/Documentos/JAVERIANA/300MAE005D/repository/300MAE005D/img/animation_qqnorm.gif")
+image_write(animation, "/home/deg/Documentos/JAVERIANA/300MAE005D/repository/300MAE005D/img/animation2_qqnorm.gif")
 
 # Mostrar la ubicación del GIF generado
 cat("El GIF se ha guardado como 'animation_qqplot.gif'\n")

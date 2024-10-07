@@ -4,7 +4,7 @@ subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
 author: "dgonzalez "
 output:
   html_document:
-    toc: no
+    toc: yes
     toc_depth: 2
     toc_float: yes
     code_folding: hide
@@ -461,7 +461,7 @@ Para una muestra obtenida de una población exponencial con parámetro $\beta$ (
 
 Como se puede verificar  $\widehat{\theta}_{3}$ es el mejor estimador de los tres, siendo insesgado y eficiente
 
-```{r}
+```{r, fig.align='center'}
 # Se simulan 4 variables de la misma población
 n=1000
 x1234 = data.frame(x1= rexp(n,1/5),
@@ -540,7 +540,7 @@ Nota: Esta función fue creada por Karl Pearson cientifico inglés (1857-1936) y
 $$f(x)=\frac{1}{2^{(v/2)}\Gamma(v/2)}x^{(v/2)-1}\exp\{-x/2\} ,\hspace{.3cm} x>0$$
 <br/><br/>
 
-```{r, echo=FALSE}
+```{r, fig.align='center'}
  curve(dchisq(x, df=7), lwd=3, las=1,xlim = c(0,30), ylim=c(0,.13), ylab='Densidad', col="red",axes = FALSE)
 curve(dchisq(x, df=9), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE, col="blue")
 curve(dchisq(x, df=11), lwd=3, las=1,xlim = c(0,30), ylab='Densidad',add = TRUE, col="green")
@@ -568,7 +568,7 @@ La función de probabilidad de distribución t-student y su represntación gráf
 
 $$f(x)=\frac{\Gamma[(v+1)/2]}{\Gamma[v/2]\sqrt{\pi v}}\Bigg(1+\frac{x^{2}}{v} \Bigg)^{-(v+1)/2}, \hspace{.3cm} -\infty< x<\infty $$
 
-```{r, echo=FALSE}
+```{r, fig.align='center'}
  curve(dt(x, df=1), lwd=3, las=1,xlim = c(-4,4), ylim=c(0,0.4), ylab='Densidad', col="red",axes = FALSE)
 curve(dt(x, df=5), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col="blue")
 curve(dt(x, df=20), lwd=3, las=1,xlim = c(-4,4), ylab='Densidad',add = TRUE, col="green")
@@ -609,7 +609,7 @@ $$f(x)=\displaystyle\frac{\Gamma \Bigg[\displaystyle\frac{v_{1}+v_{2}}{2}\Bigg]\
 \Bigg[\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)x+1\Bigg]^{\big(v_{1}+v_{2}\big)/2}}, \hspace{.3cm} x>0 $$
 
 
-```{r, echo=FALSE}
+```{r, fig.align='center'}
  curve(df(x, df1=5, df2=10), lwd=3, las=1,xlim = c(0,5), ylim=c(0,1), ylab='Densidad', col="red",axes = FALSE)
 curve(df(x, df1=10, df2=25), lwd=3, las=1,xlim = c(0,5), ylab='Densidad',add = TRUE, col="blue")
 curve(df(x, df=20, df2=20), lwd=3, las=1,xlim = c(0,5), ylab='Densidad',add = TRUE, col="green")
@@ -843,11 +843,11 @@ Revisar : Canavos(1988) pp.231
 <br/><br/><br/>
 
 
-## **Ejercicio M&M**
+<!-- ## **Ejercicio M&M** -->
 
-[Base M&M](https://javerianacaliedu-my.sharepoint.com/:x:/g/personal/dgonzalez_javerianacali_edu_co/ESEEyzhH7E1Ilm0D5tr3X1ABcah7El3-qIVuwW0lvWpAuA?e=FHfrbF)
+<!-- [Base M&M](https://javerianacaliedu-my.sharepoint.com/:x:/g/personal/dgonzalez_javerianacali_edu_co/ESEEyzhH7E1Ilm0D5tr3X1ABcah7El3-qIVuwW0lvWpAuA?e=FHfrbF) -->
 
-<br/><br/><br/>
+<!-- <br/><br/><br/> -->
 
 ## **Teorema central del límite**: 
 

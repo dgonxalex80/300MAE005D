@@ -30,6 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
@@ -227,6 +230,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -234,6 +300,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -1220,15 +1296,15 @@ T3 = apply(x1234, 1, f3)
 T123 =data.frame(T1,T2,T3)
 boxplot(T123, las=1)
 abline(h=5, col = &quot;red&quot;)</code></pre>
-<p><img src="recurso41_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="recurso41_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code># Se calulan las medias
 apply(T123,2, mean)</code></pre>
 <pre><code>      T1       T2       T3 
-5.231783 5.231094 5.233482 </code></pre>
+4.942571 4.928784 4.975786 </code></pre>
 <pre class="r"><code># Se calculan las varianzas
 apply(T123,2, var)</code></pre>
 <pre><code>      T1       T2       T3 
-7.837662 8.513362 7.012598 </code></pre>
+6.981919 7.370827 6.513060 </code></pre>
 <p><br/></p>
 <p>El mojor estimador de acuerdo a los resultados es <span
 class="math inline">\(T_3\)</span>, que tiene un promedio más cercano a
@@ -1298,7 +1374,12 @@ estan dadas por:</p>
 <p><span
 class="math display">\[f(x)=\frac{1}{2^{(v/2)}\Gamma(v/2)}x^{(v/2)-1}\exp\{-x/2\}
 ,\hspace{.3cm} x&gt;0\]</span> <br/><br/></p>
-<p><img src="recurso41_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code> curve(dchisq(x, df=7), lwd=3, las=1,xlim = c(0,30), ylim=c(0,.13), ylab=&#39;Densidad&#39;, col=&quot;red&quot;,axes = FALSE)
+curve(dchisq(x, df=9), lwd=3, las=1,xlim = c(0,30), ylab=&#39;Densidad&#39;,add = TRUE, col=&quot;blue&quot;)
+curve(dchisq(x, df=11), lwd=3, las=1,xlim = c(0,30), ylab=&#39;Densidad&#39;,add = TRUE, col=&quot;green&quot;)
+abline(h=0)
+grid()</code></pre>
+<p><img src="recurso41_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Esta distribución es un caso especial de la distribución Gamma con
 parámetros <span class="math inline">\(\alpha=\frac{v}{2}\)</span> y
 <span class="math inline">\(\beta=2\)</span></p>
@@ -1327,7 +1408,12 @@ represntación gráfica están dadas por:</p>
 class="math display">\[f(x)=\frac{\Gamma[(v+1)/2]}{\Gamma[v/2]\sqrt{\pi
 v}}\Bigg(1+\frac{x^{2}}{v} \Bigg)^{-(v+1)/2}, \hspace{.3cm} -\infty&lt;
 x&lt;\infty \]</span></p>
-<p><img src="recurso41_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<pre class="r"><code> curve(dt(x, df=1), lwd=3, las=1,xlim = c(-4,4), ylim=c(0,0.4), ylab=&#39;Densidad&#39;, col=&quot;red&quot;,axes = FALSE)
+curve(dt(x, df=5), lwd=3, las=1,xlim = c(-4,4), ylab=&#39;Densidad&#39;,add = TRUE, col=&quot;blue&quot;)
+curve(dt(x, df=20), lwd=3, las=1,xlim = c(-4,4), ylab=&#39;Densidad&#39;,add = TRUE, col=&quot;green&quot;)
+abline(h=0)
+grid()</code></pre>
+<p><img src="recurso41_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>La gráfica de la distribución t-student es similar a la de la
 distribución normal, salvo que sus colas son más pesadas.</p>
 <p>Si <span class="math inline">\(X_{1},X_{2},...,X_{n}\)</span> es una
@@ -1373,7 +1459,12 @@ x^{(v_{1}/2)-1}}{\Gamma \Bigg[\displaystyle\frac{v_{1}}{2}\Bigg] \Gamma
 \Bigg[\displaystyle\frac{v_{2}}{2}\Bigg]
 \Bigg[\Bigg(\displaystyle\frac{v_{1}}{v_{2}}\Bigg)x+1\Bigg]^{\big(v_{1}+v_{2}\big)/2}},
 \hspace{.3cm} x&gt;0 \]</span></p>
-<p><img src="recurso41_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<pre class="r"><code> curve(df(x, df1=5, df2=10), lwd=3, las=1,xlim = c(0,5), ylim=c(0,1), ylab=&#39;Densidad&#39;, col=&quot;red&quot;,axes = FALSE)
+curve(df(x, df1=10, df2=25), lwd=3, las=1,xlim = c(0,5), ylab=&#39;Densidad&#39;,add = TRUE, col=&quot;blue&quot;)
+curve(df(x, df=20, df2=20), lwd=3, las=1,xlim = c(0,5), ylab=&#39;Densidad&#39;,add = TRUE, col=&quot;green&quot;)
+abline(h=0)
+grid()</code></pre>
+<p><img src="recurso41_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 </div>
 </div>
@@ -1910,13 +2001,9 @@ class="math inline">\(\dfrac{p_{1}q_{1}}{n_{1}}+\dfrac{p_{2}q_{2}}{n_{2}}\)</spa
 </tbody>
 </table>
 <p><br/><br/><br/></p>
-</div>
-<div id="ejercicio-mm" class="section level2">
-<h2><strong>Ejercicio M&amp;M</strong></h2>
-<p><a
-href="https://javerianacaliedu-my.sharepoint.com/:x:/g/personal/dgonzalez_javerianacali_edu_co/ESEEyzhH7E1Ilm0D5tr3X1ABcah7El3-qIVuwW0lvWpAuA?e=FHfrbF">Base
-M&amp;M</a></p>
-<p><br/><br/><br/></p>
+<!-- ## **Ejercicio M&M** -->
+<!-- [Base M&M](https://javerianacaliedu-my.sharepoint.com/:x:/g/personal/dgonzalez_javerianacali_edu_co/ESEEyzhH7E1Ilm0D5tr3X1ABcah7El3-qIVuwW0lvWpAuA?e=FHfrbF) -->
+<!-- <br/><br/><br/> -->
 </div>
 <div id="teorema-central-del-límite" class="section level2">
 <h2><strong>Teorema central del límite</strong>:</h2>
@@ -2141,6 +2228,8 @@ style="width:100.0%" /></td>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -2178,6 +2267,35 @@ $(document).ready(function () {
 });
 </script>
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
