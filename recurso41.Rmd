@@ -504,10 +504,10 @@ El mojor estimador de acuerdo a los resultados es $T_3$, que tiene un promedio m
 
 #### Principales distribuciones muestrales: 
 
-+ normal
-+ Chi-cuadrado, 
-+ t-student, 
-+ F-Fisher
++ **normal**
++ **Chi-cuadrado**, 
++ **t-student**, 
++ **F-Fisher**
 
 
 Se denomina distribución muestral a la distribución que sigue los principales estimadores puntuales o funciones de ellos como son:
@@ -549,6 +549,39 @@ grid()
 ```
 
 Esta distribución es un caso especial de la distribución Gamma con parámetros $\alpha=\frac{v}{2}$ y $\beta=2$ 
+
+
+<br/><br/>
+
+### **Problemas**
+
+Para una distribución chi-cuadrado calcule :
+
+* $\chi^{2}_{0.025}$, cuando $v = 15$
+
+```{r}
+qchisq(0.025,15)
+```
+
+
+* $\chi^{2}_{0.01}$, cuando $v = 7$
+
+```{r}
+qchisq(0.01,7)
+```
+
+* $\chi^{2}_{0.05}$, cuando $v = 24$
+
+
+```{r}
+qchisq(0.05,24)
+```
+
+
+
+
+
+
 
 <br/><br/>
 
@@ -592,6 +625,32 @@ tiene una distribución t-student con $v=n-1$ grados de libertad
 
 <br/><br/>
 
+### Problemas
+
+* Calule $t_{0.025}$, cuando $v = 14$
+
+```{r}
+qt(0.025,10)
+```
+
+* Calule $t_{0.975}$, cuando $v = 10$
+
+```{r}
+qt(0.975, 10)
+```
+
+
+* Calcule $t_{0.10}$, cuando $v = 7$
+
+```{r}
+qt(0.10, 7)
+```
+
+
+
+<br/><br/>
+
+
 ### **Distribución F-Fisher**
 
 <br/>
@@ -615,6 +674,26 @@ curve(df(x, df1=10, df2=25), lwd=3, las=1,xlim = c(0,5), ylab='Densidad',add = T
 curve(df(x, df=20, df2=20), lwd=3, las=1,xlim = c(0,5), ylab='Densidad',add = TRUE, col="green")
 abline(h=0)
 grid()
+```
+
+
+<br/><br/>
+
+* Calcule $f_{0.025}$, con $v_{1} = 7$ y $v_{2} = 15$
+
+```{r}
+qf(0.025, 7,15)
+```
+
+
+* Calcule $f_{0.975}$, con $v_{1} = 7$ y $v_{2} = 15$
+
+```{r}
+qf(0.975, 7, 15)
+```
+
+```{r}
+1/qf(0.025, 15,7)
 ```
 
 
