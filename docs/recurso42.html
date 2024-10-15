@@ -594,7 +594,7 @@ parámetro.</p>
     \end{eqnarray*}\]</span></p>
 <p>el intervalo de confianza para la media poblacional queda determinado
 por:</p>
-<p><br/>&gt;<br/></p>
+<p><br/><br/></p>
 <div class="box1 with-label">
 <div class="label">
 Intervalo de confianza para una media, varianza conocida
@@ -661,9 +661,10 @@ Ejemplo 1
 <p>Se registró el tiempo transcurrido entre la facturación y la
 recepción del pago, para una muestra de 100 clientes en una empresa. La
 media y la desviación estándar son respectivamente: 39.1 días y 17.3
-días. Con el fin de establecer una medición de la calidad en el
-servicio, se requiere determinar una estimación del 95% para la
-media.</p>
+días.</p>
+<p>Con el fin de establecer una medición de la calidad en el servicio,
+se requiere determinar una estimación por intervalos con una confianza
+del 95% para la media.</p>
 </div>
 <p><br/><br/></p>
 <p>Este caso tambien se utiliza cuando se desconoce la distribución de
@@ -700,6 +701,7 @@ empresa está entre 35.7 dias y 42.5 dias con una confianza del 95%</p>
 <div id="tamaño-de-la-muestra-para-estimar-una-media"
 class="section level2">
 <h2><strong>Tamaño de la muestra para estimar una media</strong></h2>
+<p><br/></p>
 <p>Uno de los problemas más frecuentes a los que nos enfrentamos es la
 determinación del tamaño de la muestra para realizar una estimación de
 la media que garantice una confianza del <span
@@ -726,7 +728,7 @@ class="math inline">\((1-\alpha)\%\)</span> de que el error no exceda
 \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}\]</span></p>
 <p><span class="math display">\[n =
 \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}\]</span></p>
-<p><br/>&gt;<br/></p>
+<p><br/><br/></p>
 <div class="box1 with-label">
 <div class="label">
 Tamaño de muestra para la estimación de una media
@@ -747,10 +749,10 @@ variable en estudio</li>
 <div class="label">
 Ejemplo 2
 </div>
-<p>Se desea estimar la media de las personas que han fallecido por
-Covid19 en Colombia, con una confianza del 98% y un error de muestreo de
-1 persona . ¿Qué tamaño deberá tener la muestra para cumplir con estas
-condiciones?</p>
+<p>Se desea estimar la media del número de personas que han fallecido
+diariamente por Covid19 en Colombia, con una confianza del 98% y un
+error de muestreo de 1 persona . ¿Qué tamaño deberá tener la muestra
+para cumplir con estas condiciones?</p>
 </div>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
@@ -765,7 +767,9 @@ a un experto sobre el valor del mínimo y el máximo de la variable se
 puede estimar la desviación estándar <span
 class="math display">\[s=\frac{\max\{x\}-\min\{x\}}{2}\]</span></p>
 <p><span class="math display">\[n = \dfrac{2.3263482^{2} \times
-\hspace{.2cm} 352.2}{1^{2}} = 1906.07 \sim 1906\]</span></p>
+\hspace{.2cm} 352.2}{1^{2}} = 1906.07 \sim 1906\]</span> Se debe tomar
+una muestra de 1906 dias y recoger en cada uno de ellos el número de
+personas muertas</p>
 <pre class="r"><code># varianza
 # s2.nota=var(sample(Colombia$edad, 100))
 s2.nota =352.2395
@@ -836,7 +840,8 @@ attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>De acuerdo con el resultado anterior, se puede afirmar con una
 confianza del 95% que entre el 63.7% y el 72.0% de las familias tienen
-una suscripción a HBO</p>
+una suscripción a Plus-Video. Esto daría a pensar que una gran mayoria
+de los hogares en la ciudad tienen esta afiliación</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="tamaño-de-muestra-para-la-estimación-de-una-proporción"
@@ -851,8 +856,8 @@ percentil de la distribución normal relacionado con la
 confianza</p></li>
 <li><p><span class="math inline">\(p\)</span> : la proporción y p(1-p)
 la varianza. Para conocerla se puede hacer uso de una estimación a
-través de una prueba piloto, la varianza máxima que ocurre cuando <span
-class="math inline">\(p=0.5\)</span> (<span
+través de una prueba piloto, la <strong>varianza máxima</strong> que
+ocurre cuando <span class="math inline">\(p=0.5\)</span> (<span
 class="math inline">\(pq=0.25\)</span>)</p></li>
 <li><p><span class="math inline">\(e\)</span> : el error de muestreo que
 representa la tolerancia al erro que tiene el investigador (<span
@@ -866,14 +871,15 @@ Ejemplo 4
 <p>Una empresa requiere realizar un estudio para establecer las
 proporción de fallas diarias que presta la empresa al presentar un
 servicio . El gerente encargado del estudio decide que la tasa de error
-máximo tolerable debe ser del 5% y el nivel de confianza del 99% . Con
-esta información una firma de consultora presenta una propuesta a la
-empresa por valor de $ 110.2 millones para realizar el estudio y
+máximo tolerable debe ser del 5% y el nivel de confianza del 99% .</p>
+<p>Con esta información una firma de consultora presenta una propuesta a
+la empresa por valor de $ 110.2 millones para realizar el estudio y
 justifica su costo así: Por costos administrativos y de logística
 corresponde un valor de $ 55.4 millones y cada encuesta realizada tiene
-un valor de $50 mil pesos. El Director de la empresa le encarga a usted
-revisar la información darle un concepto sobre la propuesta realizada
-por la firma de auditores a la mayor brevedad</p>
+un valor de $50 mil pesos.</p>
+<p>El Director de la empresa le encarga a usted revisar la información
+darle un concepto sobre la propuesta realizada por la firma de auditores
+a la mayor brevedad</p>
 </div>
 <p><br/><br/></p>
 <p><strong>Solución</strong></p>
@@ -892,6 +898,8 @@ por la firma de auditores a la mayor brevedad</p>
 \times 0.5}{0.05^{2}} = \dfrac{1.658724}{0.0025} = 663.4897 \sim
 664\]</span></li>
 </ul>
+<p>El cálculo lo podemos realizar con la función: <code>sizemu</code>
+contenida en el paquete <code>paqueteDEG</code></p>
 <pre class="r"><code>library(paqueteDEG)
 paqueteDEG::sizep(qnorm(0.995),0.5,0.05)</code></pre>
 <pre><code>[1] 663.4897</code></pre>
@@ -941,16 +949,35 @@ Intervalo de confianza para una varianza
 Ejemplo 5
 </div>
 <p>Se quiere estimar un intervalo de confianza del 95% para la
-desviación estandar de los precios de los últimos 22 dias (sep.13.2024 a
-oct.11.2024, tomados de :Investing.com)</p>
+desviación estandar de los precios de un documento financiero. Para ello
+se ha recogido información de los últimos 202 dias (ene.01.2024 a
+oct.10.2024, tomados de :Investing.com)</p>
 </div>
 <p><br/><br/></p>
-<pre class="r"><code>ecopetrol=c(2810, 2810, 2825, 2769, 2734, 2706, 2699, 2671, 2550, 2590, 2570, 2529, 2520, 2566, 2615, 2620, 2550, 2572, 2553, 2570, 2593, 2606) 
+<p><strong>Solución</strong></p>
+<pre class="r"><code>ecopetrol=1:5
+  
+#  c(1.845, 1.845, 1.840, 1.825, 1.910, 1.890, 1.905, 1.875, 1.895, 1.880, 1.885, 1.900, 1.840, 1.940, 1.920, 1.890, 1.905, 1.905, 1.955, 1.960, 1.910, 1.930, 1.905, 1.885, 1.915, 1.930, 1.925, 1.920, 1.995, 2.55, 2.55, 2.45, 2.55, 2.60, 2.75, 2.55, 2.35, 2.40, 2.35, 2.85, 2.85, 2.40, 2.110, 2.155, 2.135, 2,85, 2,60, 2,40, 2,60, 2.120, 2.175, 2.130, 2.130, 2.145, 2.140, 2.135, 2.120, 2.165, 2.180, 2.180, 2.185, 2.180, 2.220, 2.190, 2.240, 2.210, 2.240, 2.260, 2.295, 2.280, 2.290, 2.295,2.320,2.325,2.315,2.300, 2.400, 2.295, 2.330, 2.430, 2.445, 2.430, 2.400, 2.405, 2.385, 2.360, 2.360, 2.365, 2.350, 2.370, 2.360, 2.350, 2.375,2.380, 2.300, 2.305, 2.295, 2.270, 2.340, 2.340, 2.320, 2.300, 2.285, 2.320, 2.265, 2.280, 2.280, 2.270, 2.250, 2.260, 2.255, 2.280, 2.310, 2.300, 2.305, 2.300, 2.275, 2.260, 2.240, 2.225,2.230, 2.240, 2.240, 2.240, 2.260, 2.245, 2.280, 2.255, 2.290, 2.320, 2.290, 2.245, 2.190, 2,75, 1.995, 2.115, 2.125, 2.125, 2.120, 2.100, 2.210, 2.120, 2,80, 2,75, 2,60, 2.55, 2,90, 2.85, 2.95, 2.120,2.240, 2.290, 2.300, 2.360, 2.345, 2.330, 2.340, 2.330, 2.280, 2.270, 2.305, 2.295, 2.275, 2.275, 2.310, 2.315, 2.340, 2.365, 2.355, 2.320, 2.320, 2.345, 2.335, 2.390, 2.395, 2.400, 2.355, 2.290, 2.295, 2.265, 2.280, 2.300, 2.315, 2.335, 2.375, 2.375, 2.355, 2.345, 2.395, 2.445, 2.405, 2.420, 2.355) 
 
-cat(&quot;IC_var :&quot;, paqueteDEG::intervalo.var(ecopetrol),&quot;\n&quot;)  # intervalo de confianza para la varianza</code></pre>
-<pre><code>IC_var : 9810.519 10202.94 </code></pre>
-<pre class="r"><code>cat(&quot;IC_sd :&quot;,sqrt(paqueteDEG::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estandar</code></pre>
-<pre><code>IC_sd : 99.04807 101.0096</code></pre>
+cat(&quot;s :&quot;,sum((ecopetrol- mean(ecopetrol))^2 )/ (length(ecopetrol)-1), &quot;\n&quot;)</code></pre>
+<pre><code>s : 2.5 </code></pre>
+<pre class="r"><code>cat(&quot;n :&quot;, length(ecopetrol), &quot;\n&quot;)</code></pre>
+<pre><code>n : 5 </code></pre>
+<pre class="r"><code>cat(&quot;P2.5  : &quot;, qchisq(0.025, 201) , &quot;\n&quot;)</code></pre>
+<pre><code>P2.5  :  163.63 </code></pre>
+<pre class="r"><code>cat(&quot;P97.5 : &quot;, qchisq(0.975, 201), &quot;\n&quot;)</code></pre>
+<pre><code>P97.5 :  242.1559 </code></pre>
+<pre class="r"><code>var(ecopetrol)</code></pre>
+<pre><code>[1] 2.5</code></pre>
+<p><span class="math display">\[IC_{\sigma^{2}}: \Bigg(
+\displaystyle\frac{(202-1) \times 203.0862}{242.1559}
+\hspace{.3cm}; \hspace{.3cm}
+\displaystyle\frac{(202-1) \times 203.0862 }{163.63} \Bigg)\]</span></p>
+<p><span class="math display">\[\dfrac{40820.33}{242.1559}
+\hspace{.3cm}; \hspace{.3cm}
+\dfrac{40820.33}{163.63}\]</span> <span class="math display">\[(168.5705
+\hspace{.3cm}; \hspace{.3cm}
+249.4673)\]</span></p>
 <p><br/><br/></p>
 <p>Se estima con una confianza del 95% que la desviación estándar del
 precio de las acciones de Ecopetrol está entre $ 75.7 y $ 140.0</p>
@@ -1002,10 +1029,29 @@ periodo de dos semanas.</p>
 <pre> 
 peso.ant= c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
 pes.des = c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
+
+peso.ant - peso.des = d
+-1.8  5.4  3.2  6.9  5.5  2.7  2.3
+
+mean(d)
+3.457143
+
+sd(d)
+ 2.869876
 </pre>
 <p>Pruebe la afirmación sobre la dieta calculando un intervalo de
 confianza del 95% para la diferencia de medias . Suponga que las
-diferencias de los pesos se distribuyen aproximadamente normal. |</p>
+diferencias de los pesos se distribuyen aproximadamente normal.</p>
+<p><span class="math display">\[\bar{d} - t_{\alpha/2}
+\frac{s_{d}}{\sqrt{n}} ; \bar{d} + t_{\alpha/2} \frac{s_{d}}{\sqrt{n}}
+\]</span></p>
+<p><span class="math display">\[\Bigg(3.457143 - 2.446912  \hspace{.3cm}
+\dfrac{2.869876}{\sqrt{7}}
+\hspace{.3cm}; \hspace{.3cm}
+3.457143 + 2.446912 \hspace{.3cm}
+\dfrac{2.869876}{\sqrt{7}}\Bigg)\]</span></p>
+<p><span class="math display">\[(0.8029502 \hspace{.3cm}; \hspace{.3cm}
+6.111336)\]</span></p>
 <pre class="r"><code>peso.ant=c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
 peso.des=c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
 
@@ -1084,8 +1130,8 @@ procedimiento.</p>
 <pre class="r"><code>inf.ing=c(4.2, 5.1, 3.9, 4.7, 4.8, 5.8)
 inf.fin=c(5.7, 6.1, 5.2, 4.9, 4.6, 4.5, 5.2, 5.5)
 par(mfrow = c(1, 2))
-boxplot(inf.ing, las=1, col=c2, ylim=c(3,6)); grid()
-boxplot(inf.fin, las=1, col=c3, ylim=c(3,6)); grid()</code></pre>
+boxplot(inf.ing, las=1, col=c2, ylim=c(3,7))
+boxplot(inf.fin, las=1, col=c4, ylim=c(3,7))</code></pre>
 <p><img src="recurso42_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <pre class="r"><code>var.test(inf.ing, inf.fin)$conf.int         # variables</code></pre>
 <pre><code>[1]  0.2859721 10.3579460
@@ -1141,7 +1187,7 @@ inf.fin=c(3.7, 2.1, 2.2, 3.9, 3.6, 3.5, 3.2, 3.5)
 par(mfrow = c(1, 2))
 boxplot(inf.ing, las=1, col=c2, ylim=c(1,6)); grid()
 boxplot(inf.fin, las=1, col=c3, ylim=c(1,6)); grid()</code></pre>
-<p><img src="recurso42_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="recurso42_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <pre class="r"><code>var.test(inf.ing, inf.fin)$conf.int</code></pre>
 <pre><code>[1]  1.324813 47.984900
 attr(,&quot;conf.level&quot;)
@@ -1404,12 +1450,12 @@ ic2</code></pre>
 <pre class="r"><code>hist(mx, las=1, main=&quot;Método 1&quot;, ylab = &quot; &quot;, xlab = &quot; &quot;, col=c3, 
      xlim = c(4.0, 7.0))
 abline(v=ic1, col=c1)</code></pre>
-<p><img src="recurso42_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="recurso42_files/figure-html/unnamed-chunk-16-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><br/><br/></p>
 <pre class="r"><code>hist(mx, las=1, main=&quot;Método 2&quot;, ylab = &quot; &quot;, xlab = &quot; &quot;, col=c3, 
      xlim = c(4.0, 7.0))
 abline(v=ic2, col=c6)</code></pre>
-<p><img src="recurso42_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="recurso42_files/figure-html/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Como se puede observar, el segundo estimador corrige el intervalo</p>
 <p><br/><br/><br/><br/></p>
 <div id="algunos-conceptos-importantes" class="section level2">

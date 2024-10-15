@@ -87,7 +87,7 @@ $$\begin{eqnarray*}
 	
 el intervalo de confianza para la media poblacional queda determinado por:
 
-<br/>><br/>
+<br/><br/>
 
 <div class="box1 with-label">
 <div class="label">Intervalo de confianza para una media, varianza conocida</div>
@@ -151,7 +151,9 @@ Supuestos:
 <div class="box2 with-label">
 <div class="label">Ejemplo 1</div>
 
- Se registró el tiempo transcurrido entre la facturación y la recepción del pago, para una muestra de 100 clientes en una empresa. La media y la desviación estándar son respectivamente: 39.1 días y 17.3 días. Con el fin de establecer una medición de la calidad en el servicio, se requiere determinar una estimación del 95% para la media.
+ Se registró el tiempo transcurrido entre la facturación y la recepción del pago, para una muestra de 100 clientes en una empresa. La media y la desviación estándar son respectivamente: 39.1 días y 17.3 días. 
+ 
+ Con el fin de establecer una medición de la calidad en el servicio, se requiere determinar una estimación por intervalos con una confianza  del 95% para la media.
  
  </div>
 
@@ -183,6 +185,8 @@ El tiempo promedio transcurrido entre la facturación y el pago en la empresa es
 
 ## **Tamaño de la muestra para estimar una media**
 
+<br/>
+
 Uno de los problemas más frecuentes a los que nos enfrentamos es la determinación del tamaño de la muestra para realizar una estimación de la media que garantice una confianza del $(1-\alpha)\%$
 
 $$P\Bigg(-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} \leq \bar{X}-\mu \leq z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\Bigg)=1-\alpha$$
@@ -202,7 +206,7 @@ $$n = \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}$$
 
 $$n = \displaystyle\frac{z_{\alpha/2}^{2}\sigma^{2}}{e^{2}}$$
 
-<br/>><br/>
+<br/><br/>
 
 <div class="box1 with-label">
 <div class="label">Tamaño de muestra para la estimación de una media</div>
@@ -221,7 +225,7 @@ Donde:
 <div class="box2 with-label">
 <div class="label">Ejemplo 2</div> 
 
-Se desea estimar la media de las personas que han fallecido por Covid19 en Colombia, con una confianza del 98% y un error de muestreo de 1 persona . ¿Qué tamaño deberá tener la muestra para cumplir con estas condiciones?
+Se desea estimar la media del número de personas que han fallecido diariamente  por Covid19 en Colombia, con una confianza del 98% y un error de muestreo de 1 persona . ¿Qué tamaño deberá tener la muestra para cumplir con estas condiciones?
 
 </div>
 
@@ -236,6 +240,7 @@ varianza : no tenemos la varianza y por tanto tenemos 3 alternativas :(1) median
 $$s=\frac{\max\{x\}-\min\{x\}}{2}$$   
 
 $$n = \dfrac{2.3263482^{2} \times \hspace{.2cm} 352.2}{1^{2}} = 1906.07 \sim 1906$$
+Se debe tomar una muestra de 1906 dias y recoger en cada uno de ellos el número de personas muertas
 
 
 
@@ -309,7 +314,7 @@ prop.test(340,500)$conf.int
 ```
 
 
-De acuerdo con el resultado anterior, se puede afirmar con una confianza del 95% que entre el 63.7% y el 72.0% de las familias tienen una suscripción a HBO
+De acuerdo con el resultado anterior, se puede afirmar con una confianza del 95% que entre el 63.7% y el 72.0% de las familias tienen una suscripción a Plus-Video.  Esto daría a pensar que una gran mayoria de los hogares en la ciudad tienen esta afiliación
 
 
 <br/><br/><br/>
@@ -322,7 +327,7 @@ Donde :
 
 + $z_{\alpha/2}$ : representa el percentil de la distribución normal relacionado con la confianza
 
-+ $p$ : la proporción y p(1-p) la varianza.  Para conocerla se puede hacer uso de una estimación a través de una prueba piloto, la varianza máxima que ocurre cuando $p=0.5$  ($pq=0.25$)
++ $p$ : la proporción y p(1-p) la varianza.  Para conocerla se puede hacer uso de una estimación a través de una prueba piloto, la **varianza máxima** que ocurre cuando $p=0.5$  ($pq=0.25$)
 
 + $e$ : el error de muestreo que representa la tolerancia al erro que tiene el investigador ($|\widehat{p}-p|<e$).
 
@@ -331,7 +336,11 @@ Donde :
 <div class="box2 with-label">
 <div class="label">Ejemplo 4</div>
 
-Una empresa requiere realizar un estudio para establecer las proporción de fallas diarias que presta la empresa al presentar un servicio . El gerente encargado del estudio decide que la tasa de error máximo tolerable debe ser del 5% y el nivel de confianza del 99% . Con esta información una firma de consultora presenta una propuesta a la empresa por valor de \$ 110.2 millones para realizar el estudio y justifica su costo así: Por costos administrativos y de logística corresponde un valor de \$ 55.4 millones y cada encuesta realizada tiene un valor de $50 mil pesos. El Director de la empresa le encarga a usted revisar la información darle un concepto sobre la propuesta realizada por la firma de auditores a la mayor brevedad
+Una empresa requiere realizar un estudio para establecer las proporción de fallas diarias que presta la empresa al presentar un servicio . El gerente encargado del estudio decide que la tasa de error máximo tolerable debe ser del 5% y el nivel de confianza del 99% . 
+
+Con esta información una firma de consultora presenta una propuesta a la empresa por valor de \$ 110.2 millones para realizar el estudio y justifica su costo así: Por costos administrativos y de logística corresponde un valor de \$ 55.4 millones y cada encuesta realizada tiene un valor de $50 mil pesos. 
+
+El Director de la empresa le encarga a usted revisar la información darle un concepto sobre la propuesta realizada por la firma de auditores a la mayor brevedad
 
 </div>
 
@@ -352,11 +361,14 @@ Información de la solicitud:
   
   $$ n = \dfrac{2.575829^{2} \hspace{.3cm} 0.5 \times 0.5}{0.05^{2}} = \dfrac{1.658724}{0.0025} = 663.4897 \sim 664$$
   
+El cálculo lo podemos realizar con la función: `sizemu`  contenida en el paquete  `paqueteDEG` 
   
 ```{r}
 library(paqueteDEG)
 paqueteDEG::sizep(qnorm(0.995),0.5,0.05)
 ```
+
+
 De acuerdo con la información sumunistrada por la empresa, el tamaño de muestra apropiado para la estimación de la proporción, suponiendo varianza máxima es de $n=664$, por tal razón la propuesta realiza por la empresa consultora excede en   432 encuesta que presentan un sobre costo de \$21.6 millones
   
 <br/><br/><br/>
@@ -398,21 +410,46 @@ Supuestos:
 <div class="box2 with-label">
 <div class="label">Ejemplo 5</div>
 
-Se quiere estimar un intervalo de confianza del 95% para la desviación estandar de los precios de los últimos 22 dias (sep.13.2024 a oct.11.2024, tomados de :Investing.com)
+Se quiere estimar un intervalo de confianza del 95% para la desviación estandar de los precios de un documento financiero. Para ello se ha recogido información de los últimos 202 dias (ene.01.2024 a oct.10.2024, tomados de :Investing.com)
 
 </div>
 
 <br/><br/>
 
-```{r}
-ecopetrol=c(2810, 2810,	2825, 2769, 2734, 2706,	2699, 2671, 2550, 2590,	2570, 2529,	2520, 2566,	2615, 2620, 2550, 2572,	2553, 2570,	2593, 2606)	
+**Solución**
 
-cat("IC_var :", paqueteDEG::intervalo.var(ecopetrol),"\n")  # intervalo de confianza para la varianza
-cat("IC_sd :",sqrt(paqueteDEG::intervalo.var(ecopetrol)))# intervalo de confianza para la desviación estandar
+```{r}
+ecopetrol=1:5
+  
+#  c(1.845, 1.845, 1.840, 1.825, 1.910, 1.890, 1.905, 1.875, 1.895, 1.880, 1.885, 1.900, 1.840, 1.940, 1.920, 1.890, 1.905, 1.905, 1.955, 1.960, 1.910, 1.930, 1.905, 1.885, 1.915, 1.930, 1.925, 1.920, 1.995, 2.55, 2.55, 2.45, 2.55, 2.60, 2.75, 2.55, 2.35, 2.40, 2.35, 2.85, 2.85, 2.40, 2.110, 2.155, 2.135, 2,85, 2,60, 2,40, 2,60, 2.120, 2.175, 2.130, 2.130, 2.145, 2.140, 2.135, 2.120, 2.165, 2.180, 2.180, 2.185, 2.180, 2.220, 2.190, 2.240, 2.210, 2.240, 2.260, 2.295, 2.280, 2.290, 2.295,2.320,2.325,2.315,2.300, 2.400, 2.295, 2.330, 2.430, 2.445, 2.430, 2.400, 2.405, 2.385, 2.360, 2.360, 2.365, 2.350, 2.370, 2.360, 2.350, 2.375,2.380, 2.300, 2.305, 2.295, 2.270, 2.340, 2.340, 2.320, 2.300, 2.285, 2.320, 2.265, 2.280, 2.280, 2.270, 2.250, 2.260, 2.255, 2.280, 2.310, 2.300, 2.305, 2.300, 2.275, 2.260, 2.240, 2.225,2.230, 2.240, 2.240, 2.240, 2.260, 2.245, 2.280, 2.255, 2.290, 2.320, 2.290, 2.245, 2.190, 2,75, 1.995, 2.115, 2.125, 2.125, 2.120, 2.100, 2.210, 2.120, 2,80, 2,75, 2,60, 2.55, 2,90, 2.85, 2.95, 2.120,2.240, 2.290, 2.300, 2.360, 2.345, 2.330, 2.340, 2.330, 2.280, 2.270, 2.305, 2.295, 2.275, 2.275, 2.310, 2.315, 2.340, 2.365, 2.355, 2.320, 2.320, 2.345, 2.335, 2.390, 2.395, 2.400, 2.355, 2.290, 2.295, 2.265, 2.280, 2.300, 2.315, 2.335, 2.375, 2.375, 2.355, 2.345, 2.395, 2.445, 2.405, 2.420, 2.355)	
+
+cat("s :",sum((ecopetrol- mean(ecopetrol))^2 )/ (length(ecopetrol)-1), "\n")
+cat("n :", length(ecopetrol), "\n")
+cat("P2.5  : ", qchisq(0.025, 201) , "\n")
+cat("P97.5 : ", qchisq(0.975, 201), "\n")
+
+var(ecopetrol)
 ```
+
+
+$$IC_{\sigma^{2}}: \Bigg( \displaystyle\frac{(202-1) \times 203.0862}{242.1559}
+\hspace{.3cm}; \hspace{.3cm}
+\displaystyle\frac{(202-1) \times 203.0862 }{163.63} \Bigg)$$
+
+$$\dfrac{40820.33}{242.1559}
+\hspace{.3cm}; \hspace{.3cm} 
+\dfrac{40820.33}{163.63}$$
+$$(168.5705 
+\hspace{.3cm}; \hspace{.3cm}
+249.4673)$$
+
 <br/><br/>
 
 Se estima con una confianza del 95% que la desviación estándar del precio de las acciones de Ecopetrol está entre \$ 75.7 y \$ 140.0 
+
+
+
+
 
 <br/><br/><br/>
 
@@ -453,9 +490,28 @@ Se afirma que una persona podrá reducir su peso en un periodo de dos semanas un
 <pre> 
 peso.ant= c(58.2, 60.3, 61.3, 69.0, 64.0, 62.6, 56.7)
 pes.des = c(60.0, 54.9, 58.1, 62.1, 58.5, 59.9, 54.4)
+
+peso.ant - peso.des = d
+-1.8  5.4  3.2  6.9  5.5  2.7  2.3
+
+mean(d)
+3.457143
+
+sd(d)
+ 2.869876
 </pre>
 
-Pruebe la afirmación sobre la dieta calculando un intervalo de confianza del 95% para la diferencia de medias . Suponga que las diferencias de los pesos se distribuyen aproximadamente normal. |
+Pruebe la afirmación sobre la dieta calculando un intervalo de confianza del 95% para la diferencia de medias . Suponga que las diferencias de los pesos se distribuyen aproximadamente normal.
+
+
+$$\bar{d} - t_{\alpha/2} \frac{s_{d}}{\sqrt{n}} ; \bar{d} + t_{\alpha/2} \frac{s_{d}}{\sqrt{n}} $$
+
+$$\Bigg(3.457143 - 2.446912  \hspace{.3cm} \dfrac{2.869876}{\sqrt{7}} 
+\hspace{.3cm}; \hspace{.3cm}
+3.457143 + 2.446912 \hspace{.3cm} \dfrac{2.869876}{\sqrt{7}}\Bigg)$$
+
+
+$$(0.8029502 \hspace{.3cm}; \hspace{.3cm} 6.111336)$$
 
 
 ```{r}
@@ -527,10 +583,17 @@ En este caso se trata de una diferencia de medias para grupos independientes, po
 inf.ing=c(4.2, 5.1, 3.9, 4.7, 4.8, 5.8)
 inf.fin=c(5.7, 6.1, 5.2, 4.9, 4.6, 4.5, 5.2, 5.5)
 par(mfrow = c(1, 2))
-boxplot(inf.ing, las=1, col=c2, ylim=c(3,6)); grid()
-boxplot(inf.fin, las=1, col=c3, ylim=c(3,6)); grid()
+boxplot(inf.ing, las=1, col=c2, ylim=c(3,7))
+boxplot(inf.fin, las=1, col=c4, ylim=c(3,7))
+```
 
+
+```{r}
 var.test(inf.ing, inf.fin)$conf.int         # variables
+```
+
+
+```{r}
 t.test(inf.ing, inf.fin,  paired = FALSE,   # grupos independientes 
        var.equal = TRUE,                    # varianzas iguales
        conf.level = 0.95)$conf.int 

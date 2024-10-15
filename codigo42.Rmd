@@ -147,7 +147,7 @@ ic.var(x1, 0.05)
 ```
 
 
-
+<br/><br/>
 
 ## **IC comparación varianzas**
 
