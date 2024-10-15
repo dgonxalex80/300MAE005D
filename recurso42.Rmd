@@ -1064,6 +1064,12 @@ El siguiente código permite la activación de tutoriales :
 
 <br/><br/>
 
+Al correr el código debe aparecer :
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+ knitr::include_graphics("img/tutorial421.png")
+```
+
 
 <br/><br/>
 
@@ -1075,6 +1081,11 @@ install_github("dgonxalex80/paqueteDEG", force = TRUE) # solo una vez
 
 learnr::run_tutorial("Taller-Intervalos2", "paqueteDEG")
 ```
+
+
+
+
+
 
 <br/><br/>
 
