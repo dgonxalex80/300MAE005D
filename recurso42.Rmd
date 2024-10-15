@@ -4,7 +4,7 @@ subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
 author: "dgonzalez "
 output:
   html_document:
-    toc: yes
+    toc: no
     toc_depth: 2
     toc_float: yes
     code_folding: hide
