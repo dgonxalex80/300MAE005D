@@ -119,7 +119,6 @@ navbar:
         - text: "Actividad 331"
           href: actividad332.html
           
-          
     - text: "Módulo 4"
       menu:
         - text: "Módulo 4"
@@ -127,12 +126,24 @@ navbar:
         - text: "---------"
         - text: "Guía 4.1"
           href: guia41.html
+        - text: "Guía 4.2"
+          href: guia42.html
+        - text: "Guía 4.3"
+          href: guia43.html
         - text: "---------"          
         - text: "Recurso 4.1"
           href: recurso41.html
+        - text: "Recurso 4.2"
+          href: recurso42.html         
+        - text: "Recurso 4.3"
+          href: recurso43.html     
         - text: "---------"          
         - text: "Código 4.1"
           href: codigo41.html  
+        - text: "Código 4.2"
+          href: codigo42.html  
+        - text: "Código 4.3"
+          href: codigo43.html            
         - text: "---------"          
         - text: "Monitoria 4"
           href: monitoria4.html  
