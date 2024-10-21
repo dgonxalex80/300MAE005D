@@ -150,7 +150,8 @@ navbar:
         - text: "---------"   
         - text: "Taller 421"
           href: taller421.html          
-          
+        - text: "Taller 431"
+          href: taller431.html             
           
 
     - text: "Módulo 5"
