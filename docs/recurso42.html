@@ -1005,7 +1005,7 @@ experimentos donde se observan individuos en dos momentos diferentes de
 tiempo, por ejemplo estudiantes a los que se les realiza un examen de
 entrada y un examen de salida. En este caso se compara la evolución de
 cada individuo consigo mismo conformando parejas de mediciones.</p>
-<p><br/>&gt;<br/></p>
+<p><br/><br/></p>
 <div class="box1 with-label">
 <div class="label">
 Intervalo de confianza para la diferencia de medias pareadas
@@ -1132,7 +1132,7 @@ inf.fin=c(5.7, 6.1, 5.2, 4.9, 4.6, 4.5, 5.2, 5.5)
 par(mfrow = c(1, 2))
 boxplot(inf.ing, las=1, col=c2, ylim=c(3,7))
 boxplot(inf.fin, las=1, col=c4, ylim=c(3,7))</code></pre>
-<p><img src="recurso42_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="recurso42_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>var.test(inf.ing, inf.fin)$conf.int         # variables</code></pre>
 <pre><code>[1]  0.2859721 10.3579460
 attr(,&quot;conf.level&quot;)
@@ -1187,7 +1187,7 @@ inf.fin=c(3.7, 2.1, 2.2, 3.9, 3.6, 3.5, 3.2, 3.5)
 par(mfrow = c(1, 2))
 boxplot(inf.ing, las=1, col=c2, ylim=c(1,6)); grid()
 boxplot(inf.fin, las=1, col=c3, ylim=c(1,6)); grid()</code></pre>
-<p><img src="recurso42_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="recurso42_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>var.test(inf.ing, inf.fin)$conf.int</code></pre>
 <pre><code>[1]  1.324813 47.984900
 attr(,&quot;conf.level&quot;)
@@ -1440,12 +1440,12 @@ mx=apply(b,1,mean)                 # se calculan m medias por fila</code></pre>
 <pre class="r"><code>ic1=quantile(mx, probs=c(0.025, 0.975)) # se calcula IC método 1
 ic1</code></pre>
 <pre><code>    2.5%    97.5% 
-4.690000 6.482929 </code></pre>
+4.704929 6.486036 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>ic2=c(2*mean(mx)-ic1[2], 2*mean(mx)-ic1[1]) # se calcula IC método 2
 ic2</code></pre>
 <pre><code>   97.5%     2.5% 
-4.617677 6.410606 </code></pre>
+4.620839 6.401946 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>hist(mx, las=1, main=&quot;Método 1&quot;, ylab = &quot; &quot;, xlab = &quot; &quot;, col=c3, 
      xlim = c(4.0, 7.0))

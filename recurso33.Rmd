@@ -668,6 +668,8 @@ ggplot(data=dat,aes(x=x, y=fx))+
 
  En la fabricación de portaobjetos, que son láminas rectangulares de vidrio muy delgada (76x26 mm y 1 mm de espesor), utilizados para  la observación de sustancias en el microscopio. Una de sus principales características está relacionada con su espesor ($X$), el cual tiene una distribución uniforme entre 0.95 mm y 1.05 mm. Determine la probabilidad de que un portaobjeto determinado tenga un espesor superior a 1.03 mm.|          
 
+</div>
+
 <br/><br/>
 
 ### **Solución** 

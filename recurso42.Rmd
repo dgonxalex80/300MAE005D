@@ -468,7 +468,7 @@ Cuando se compraran dos poblaciones se puede estar interesado en la diferencia d
 Se consideran muestras pareadas cuando existen una fuerte dependencia entre pares de observaciones de dos poblaciones. Es el caso de experimentos donde se observan individuos en dos momentos diferentes de tiempo, por ejemplo estudiantes a los que se les realiza un examen de entrada y un examen de salida. En este caso se compara la evolución de cada individuo consigo mismo conformando parejas de mediciones.
 
 
-<br/>><br/>
+<br/><br/>
 
 <div class="box1 with-label">
 <div class="label">Intervalo de confianza para la diferencia de medias pareadas</div>
@@ -579,7 +579,7 @@ especialistas en finanzas:  5.7%, 6.1%, 5.2%, 4.9%, 4.6%, 4.5%, 5.2%, 5.5%
 En este caso se trata de una diferencia de medias para grupos independientes, por lo cual es necesario conocer como es la relación entre sus varianzas (iguales o diferentes) y de este modo ajustar el procedimiento.
 
 
-```{r}
+```{r, fig.align='center'}
 inf.ing=c(4.2, 5.1, 3.9, 4.7, 4.8, 5.8)
 inf.fin=c(5.7, 6.1, 5.2, 4.9, 4.6, 4.5, 5.2, 5.5)
 par(mfrow = c(1, 2))
@@ -632,7 +632,7 @@ especialistas en finanzas:  3.7%, 2.1%, 2.2%, 3.9%, 3.6%, 3.5%, 3.2%, 3.5%
 </pre>
 <br/><br/>
 
-```{r}
+```{r, fig.align='center'}
 inf.ing=c(2.2, 1.1, 3.9, 5.9, 4.5, 5.1)
 inf.fin=c(3.7, 2.1, 2.2, 3.9, 3.6, 3.5, 3.2, 3.5)
 par(mfrow = c(1, 2))

@@ -543,6 +543,700 @@ $(document).ready(function () {
 
 <p><img src="img/codigo4.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><br/><br/><br/></p>
+<div id="pruebas-paramétricas" class="section level1">
+<h1><strong>Pruebas paramétricas</strong></h1>
+<p><br/><br/></p>
+<div id="problema-1" class="section level3">
+<h3><strong>Problema 1</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{W} = 1000\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_{W} \neq 1000\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+# Problema 1
+w=rnorm(100,1000,2) # simulación de los datos
+</pre>
+<pre class="r"><code># Problema 1
+w=rnorm(100,1000,2) # simulación de los datos
+w</code></pre>
+<pre><code>  [1]  998.5569  999.8784  994.8054 1001.4434 1000.8242  998.8006  996.5228
+  [8] 1004.2494 1004.3788  998.2547  992.5463  998.7706  999.3256 1000.9203
+ [15] 1001.6618  997.7669  999.6058 1001.5873 1001.9205 1000.2076 1002.9958
+ [22] 1001.6908  995.6249  996.7612  999.8250  999.6103 1000.5977 1000.4385
+ [29] 1001.8459  997.1140 1001.0541  997.5017  999.2658 1001.1820 1002.7075
+ [36]  999.9797  999.3311  999.6481 1000.2867 1001.1139  999.7602  998.4565
+ [43]  995.5289  997.8734  997.2029  997.6051 1002.9182  999.3774 1001.3310
+ [50] 1002.4337 1001.6725  999.0002  998.3096  999.6450  996.1919  996.9197
+ [57]  999.7873  996.2130 1000.2416  996.7340  997.0641 1002.5642 1001.2034
+ [64]  997.5191 1000.7153 1000.0058  997.7541  998.7040 1000.2288  995.1814
+ [71] 1001.2682  999.4505 1001.2900  998.5957 1000.2918  999.4913  998.1330
+ [78]  999.9888  998.9117 1002.4483 1000.6727  997.9204 1003.0923  998.5947
+ [85] 1001.4317  998.7113  995.7490 1003.7001 1002.0776 1002.3409 1001.4396
+ [92] 1002.5918 1002.1131 1000.7248  997.9487 1003.0688  995.9934 1000.5382
+ [99]  999.2885 1000.0543</code></pre>
+<p><br/><br/></p>
+<p>Se pueba la normalidad de los datos simulados</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(X \sim norm\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(X no \sim norm\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+shapiro.test(w)  # verificación de normalidad
+</pre>
+<pre class="r"><code>shapiro.test(w)  # verificación de normalidad</code></pre>
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  w
+W = 0.98824, p-value = 0.5259</code></pre>
+<p><br/><br/><br/></p>
+<p><strong>Prueba de hipótesis para una media</strong></p>
+<p><br/></p>
+<p>Supuestos:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">X normal</td>
+</tr>
+<tr class="even">
+<td align="left">Varianza conocida (<span
+class="math inline">\(\sigma^{2}=4\)</span>)</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<pre>
+BSDA::z.test(w, mu=1000, sigma.x = 2)
+</pre>
+<pre class="r"><code>BSDA::z.test(w, mu=1000, sigma.x = 2)</code></pre>
+<pre><code>
+    One-sample z-Test
+
+data:  w
+z = -1.6667, p-value = 0.09557
+alternative hypothesis: true mean is not equal to 1000
+95 percent confidence interval:
+  999.2747 1000.0586
+sample estimates:
+mean of x 
+ 999.6667 </code></pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="prueba-de-hipótesis-para-una-media" class="section level3">
+<h3><strong>Prueba de hipótesis para una media</strong></h3>
+<p><br/><br/></p>
+<table>
+<colgroup>
+<col width="34%" />
+<col width="30%" />
+<col width="35%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu = \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \leq \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \geq \mu_o\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu \neq \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &gt; \mu_o\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &lt; \mu_o\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<p>Supuestos:</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">X normal</td>
+</tr>
+<tr class="even">
+<td align="left">Varianza desconocida</td>
+</tr>
+</tbody>
+</table>
+<br/><br/>
+<pre>
+</div>
+<div id="problema2" class="section level3">
+<h3><strong>Problema2</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu \geq 5\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu &lt; 5\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+<pre>
+# Problema 2
+t=c(4.21,5.55,3.02,5.13,4.77,2.34,5.42,4.50,6.10,3.80,5.12,6.46,6.19,3.79,3.54)
+mean(t)
+sd(t)
+t.test(t,mu=5, alternative="less")
+</pre>
+<pre class="r"><code>#-------------------------------------------------------------------------------
+# Problema 2
+t=c(4.21,5.55,3.02,5.13,4.77,2.34,5.42,4.50,6.10,3.80,5.12,6.46,6.19,3.79,3.54)
+mean(t)</code></pre>
+<pre><code>[1] 4.662667</code></pre>
+<pre class="r"><code>sd(t)</code></pre>
+<pre><code>[1] 1.210658</code></pre>
+<pre class="r"><code>t.test(t,mu=5, alternative=&quot;less&quot;)</code></pre>
+<pre><code>
+    One Sample t-test
+
+data:  t
+t = -1.0792, df = 14, p-value = 0.1494
+alternative hypothesis: true mean is less than 5
+95 percent confidence interval:
+     -Inf 5.213235
+sample estimates:
+mean of x 
+ 4.662667 </code></pre>
+<p><br/><br/> <br/></p>
+</div>
+<div id="problema-3" class="section level3">
+<h3><strong>Problema 3</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(p \geq 5\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(p &lt; 5\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+#Problema 3
+z=(24/40-.76)/(sqrt(.76*(1-.76)/40))
+prop.test(24,40,0.76,alternative="less")
+</pre>
+<pre class="r"><code>#-------------------------------------------------------------------------------
+#Problema 3
+z=(24/40-.76)/(sqrt(.76*(1-.76)/40))
+
+prop.test(24,40,0.76,alternative=&quot;less&quot;)</code></pre>
+<pre><code>
+    1-sample proportions test with continuity correction
+
+data:  24 out of 40, null probability 0.76
+X-squared = 4.7711, df = 1, p-value = 0.01447
+alternative hypothesis: true p is less than 0.76
+95 percent confidence interval:
+ 0.0000000 0.7282033
+sample estimates:
+  p 
+0.6 </code></pre>
+<p><br/><br/> <br/></p>
+</div>
+<div id="problema-4" class="section level3">
+<h3><strong>Problema 4</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_1 \geq \mu_2\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_1 &lt; \mu_2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+# Problema 4
+n1=36 ; mx1=6 ; sx1=4
+n2=40 ; mx2=8.2; sx2=4.3
+
+F=sx1^2/sx2^2
+RdeRF=qf(c(0.025,0.975),35,39)
+
+#t.test(x1,x2,mu=0, alternative = "less")
+s2p=((n1-1)*sx1^2+(n2-1)*sx2^2)/(n1+n2-2)
+sp=sqrt(s2p)
+T4=(mx1-mx2)/(sp*sqrt(1/n1+1/n2))
+RdeRT4=qt(0.05,(n1+n2-2))
+
+</pre>
+<pre class="r"><code>#---------------------------------------------------------------------------------
+# Problema 4
+n1=36 ; mx1=6 ; sx1=4
+n2=40 ; mx2=8.2; sx2=4.3
+
+F=sx1^2/sx2^2
+RdeRF=qf(c(0.025,0.975),35,39)
+
+#t.test(x1,x2,mu=0, alternative = &quot;less&quot;)
+s2p=((n1-1)*sx1^2+(n2-1)*sx2^2)/(n1+n2-2)
+sp=sqrt(s2p)
+T4=(mx1-mx2)/(sp*sqrt(1/n1+1/n2))
+RdeRT4=qt(0.05,(n1+n2-2))</code></pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="problema-5" class="section level3">
+<h3><strong>Problema 5</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{g1} \geq \mu_{g2}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_{g1} &lt; \mu_{g2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+# Problema 5
+p5=3/40
+z5=(p5-0.05)/sqrt(0.05*0.95/40)
+</pre>
+<pre class="r"><code>#-----------------------------------------------------------------------------------
+# Problema 5
+p5=3/40
+z5=(p5-0.05)/sqrt(0.05*0.95/40)
+#----------------------------------------------------------------------------------</code></pre>
+<p><br/><br/><br/></p>
+<pre>
+# Problema 5
+p5=3/40
+z5=(p5-0.05)/sqrt(0.05*0.95/40)
+</pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="problema-6" class="section level3">
+<h3><strong>Problema 6</strong></h3>
+<pre>
+# Problema 6
+g1=c(75,76,74,80,72,798,76,73,72,75)
+g2=c(86,78,86,84,81,79,78,84,88,80)
+
+mean(g1);sd(g1)
+mean(g2);sd(g2)
+
+var.test(g1,g2)
+t.test(g1,g2)
+</pre>
+<pre class="r"><code># Problema 6
+g1=c(75,76,74,80,72,798,76,73,72,75)
+g2=c(86,78,86,84,81,79,78,84,88,80)
+
+mean(g1);sd(g1)</code></pre>
+<pre><code>[1] 147.1</code></pre>
+<pre><code>[1] 228.715</code></pre>
+<pre class="r"><code>mean(g2);sd(g2)</code></pre>
+<pre><code>[1] 82.4</code></pre>
+<pre><code>[1] 3.657564</code></pre>
+<pre class="r"><code>var.test(g1,g2)</code></pre>
+<pre><code>
+    F test to compare two variances
+
+data:  g1 and g2
+F = 3910.3, num df = 9, denom df = 9, p-value = 8.882e-15
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+   971.2524 15742.6704
+sample estimates:
+ratio of variances 
+          3910.257 </code></pre>
+<pre class="r"><code>t.test(g1,g2)</code></pre>
+<pre><code>
+    Welch Two Sample t-test
+
+data:  g1 and g2
+t = 0.89445, df = 9.0046, p-value = 0.3944
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -98.92101 228.32101
+sample estimates:
+mean of x mean of y 
+    147.1      82.4 </code></pre>
+<p><br/><br/><br/></p>
+</div>
+<div id="problema-7" class="section level3">
+<h3><strong>Problema 7</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(p_1 = p_2\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(p \neq p_2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+# Problema 7
+
+n1=400 ;x1=80
+n2=400 ; x2=88
+
+prop.test(c(80,88),c(400,400))
+</pre>
+<pre class="r"><code>#---------------------------------------------------------------------------------
+# Problema 7
+
+n1=400 ;x1=80
+n2=400 ; x2=88
+
+prop.test(c(80,88),c(400,400))</code></pre>
+<pre><code>
+    2-sample test for equality of proportions with continuity correction
+
+data:  c(80, 88) out of c(400, 400)
+X-squared = 0.3692, df = 1, p-value = 0.5434
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.07893199  0.03893199
+sample estimates:
+prop 1 prop 2 
+  0.20   0.22 </code></pre>
+<p><br/><br/></p>
+</div>
+<div id="problema-8" class="section level3">
+<h3><strong>Problema 8</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_1 \geq \mu_2\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_1 &lt; \mu_2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+# Problema 8
+x1=c(45,73,46,124,30,57,83,34,26,17)
+x2=c(36,60,44,119,35,51,77,29,24,11)
+d=x1-x2
+
+mean(d)
+sd(d)
+
+t.test(x1,x2,paired = TRUE)
+
+</pre>
+<pre class="r"><code>#-----------------------------------------------------------------------------------
+# Problema 8
+x1=c(45,73,46,124,30,57,83,34,26,17)
+x2=c(36,60,44,119,35,51,77,29,24,11)
+d=x1-x2
+
+mean(d)</code></pre>
+<pre><code>[1] 4.9</code></pre>
+<pre class="r"><code>sd(d)</code></pre>
+<pre><code>[1] 4.72464</code></pre>
+<pre class="r"><code>t.test(x1,x2,paired = TRUE)</code></pre>
+<pre><code>
+    Paired t-test
+
+data:  x1 and x2
+t = 3.2796, df = 9, p-value = 0.009535
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 1.520196 8.279804
+sample estimates:
+mean difference 
+            4.9 </code></pre>
+<p><br/><br/></p>
+</div>
+<div id="problema-9" class="section level3">
+<h3><strong>Problema 9</strong></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{pa} \geq \mu_{pd}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_{pa} &lt; \mu_{pd}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+#Problema 9
+
+pa=c(104.5,89,84.5,106,90,96,79,90,85,76.5,91.5,82.5,100.5,89.5,121.5,72)
+pd=c(98,85.5,85,103.5,88.5,95,79.5,90,82,76,89.5,81,99.5,86.5,115.5,70)
+d=pa-pd
+mean(d)
+sd(d)
+
+t.test(pa,pd,paired = TRUE)
+
+</pre>
+<pre class="r"><code>#------------------------------------------------------------------------------------
+#Problema 9
+
+pa=c(104.5,89,84.5,106,90,96,79,90,85,76.5,91.5,82.5,100.5,89.5,121.5,72)
+pd=c(98,85.5,85,103.5,88.5,95,79.5,90,82,76,89.5,81,99.5,86.5,115.5,70)
+d=pa-pd
+mean(d)</code></pre>
+<pre><code>[1] 2.0625</code></pre>
+<pre class="r"><code>sd(d)</code></pre>
+<pre><code>[1] 2.032035</code></pre>
+<pre class="r"><code>t.test(pa,pd,paired = TRUE)</code></pre>
+<pre><code>
+    Paired t-test
+
+data:  pa and pd
+t = 4.06, df = 15, p-value = 0.001026
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ 0.9797049 3.1452951
+sample estimates:
+mean difference 
+         2.0625 </code></pre>
+<p><br/><br/></p>
+</div>
+<div id="problema-10" class="section level3">
+<h3><strong>Problema 10</strong></h3>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="43%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Verificación de normalidad</th>
+<th align="left">Comparación de varianzas</th>
+<th align="left">Diferencia de medias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(X_{g1} \sim norm\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\sigma^{2}_{g1} = \sigma^{2}_{g2}\)</span></td>
+<td align="left"><span class="math inline">\(Ho\)</span> : <span
+class="math inline">\(\mu_{g1} \geq \mu_{g2}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(X_{g2} no \sim norm\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\sigma^{2}_{g1} \neq \sigma^{2}_{g2}\)</span></td>
+<td align="left"><span class="math inline">\(Ha\)</span> : <span
+class="math inline">\(\mu_{g1} &lt; \mu_{g2}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre>
+# Problema 10
+g1=c(37,19,21,35,16,4,0,12,63,25,12,15)
+g2=c(24,42,18,15,0,9,10,20,22,13)
+
+mean(g1);sd(g1)
+mean(g2);sd(g2)
+
+var.test(g1,g2)
+t.test(g1,g2)
+</pre>
+<pre class="r"><code>#-----------------------------------------------------------------------
+# Problema 10
+g1=c(37,19,21,35,16,4,0,12,63,25,12,15)
+g2=c(24,42,18,15,0,9,10,20,22,13)
+
+mean(g1);sd(g1)</code></pre>
+<pre><code>[1] 21.58333</code></pre>
+<pre><code>[1] 17.01581</code></pre>
+<pre class="r"><code>mean(g2);sd(g2)</code></pre>
+<pre><code>[1] 17.3</code></pre>
+<pre><code>[1] 11.20565</code></pre>
+<pre class="r"><code>var.test(g1,g2)</code></pre>
+<pre><code>
+    F test to compare two variances
+
+data:  g1 and g2
+F = 2.3058, num df = 11, denom df = 9, p-value = 0.22
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.5894187 8.2731556
+sample estimates:
+ratio of variances 
+           2.30585 </code></pre>
+<pre class="r"><code>t.test(g1,g2)</code></pre>
+<pre><code>
+    Welch Two Sample t-test
+
+data:  g1 and g2
+t = 0.70719, df = 19.104, p-value = 0.488
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -8.389007 16.955673
+sample estimates:
+mean of x mean of y 
+ 21.58333  17.30000 </code></pre>
+<p><br/><br/><br/><br/></p>
+</div>
+</div>
+<div id="pruebas-no-paramétricas" class="section level1">
+<h1><strong>Pruebas no paramétricas</strong></h1>
+<p><br/><br/></p>
+<p><strong>Prueba de rachas</strong></p>
+<pre class="r"><code>library(randtests)
+x=c(&quot;N&quot;,&quot;D&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;D&quot;,&quot;D&quot;,&quot;D&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;D&quot;,&quot;N&quot;,&quot;N&quot;,&quot;D&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;D&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;N&quot;,&quot;D&quot;,&quot;D&quot;,&quot;D&quot;,&quot;D&quot;)
+rachas&lt;-as.numeric(x==&quot;N&quot;)
+runs.test(rachas,alternative = &quot;left.sided&quot;,threshold = 0.5,pvalue = &quot;exact&quot;,plot=F)</code></pre>
+<p><img src="codigo43_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<pre><code>
+    Runs Test
+
+data:  rachas
+statistic = -1.465, runs = 12, n1 = 22, n2 = 11, n = 33, p-value =
+0.1032
+alternative hypothesis: trend</code></pre>
+<p><br/><br/><br/></p>
+<p><strong>Pruebas de normalidad</strong></p>
+<p>Existen varias pruebas de hipótesis para verificar si una variable
+tiene un comportamiento aproximadamente normal.En todos los casos las
+hipótesis planteadas son:</p>
+<p><br/></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span class="math inline">\(Ho\)</span>: <span
+class="math inline">\(X\)</span> tiene distribución Normal</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(Ha\)</span>: <span
+class="math inline">\(X\)</span> no tiene distribución Normal</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<pre class="r"><code># se genera una variable aleatoria normal
+x=rnorm(200,1000,50)
+plot(density(x), las=1)</code></pre>
+<p><img src="codigo43_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><br/><br/></p>
+<p><strong>Shapiro Wilk</strong></p>
+<pre class="r"><code>shapiro.test(x)</code></pre>
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  x
+W = 0.97894, p-value = 0.004223</code></pre>
+<p>Esta prueba no requiere la instalación de paquetes adicionales, está
+disponible en la configuración básica de R</p>
+<p><br/><br/></p>
+<p><strong>Paquete normtest</strong></p>
+<p>Las siguientes pruebas requieren instalar y cargar el paquete:
+<code>normtest</code></p>
+<pre class="r"><code> install.packages(&quot;normtets&quot;)
+library(normtest)</code></pre>
+<p><br/><br/></p>
+<p><strong>Jarque-Bera ajustado</strong></p>
+<pre class="r"><code>ajb.norm.test(x)    </code></pre>
+<p><br/><br/></p>
+<p><strong>Frosini</strong></p>
+<pre class="r"><code>frosini.norm.test(x)    </code></pre>
+<p><br/><br/></p>
+<p><strong>Geary</strong></p>
+<pre class="r"><code>geary.norm.test(x)  </code></pre>
+<p><br/><br/></p>
+<p><strong>Hagazy-Green 1</strong></p>
+<pre class="r"><code>hegazy1.norm.test(x)    </code></pre>
+<p><br/></p>
+<p><strong>Hagazy-Green 2</strong></p>
+<pre class="r"><code>hegazy2.norm.test(x)</code></pre>
+<p><br/><br/></p>
+<p><strong>Jarque-Bera</strong></p>
+<pre class="r"><code>jb.norm.test(x) </code></pre>
+<p><br/><br/></p>
+<p><strong>de kurtosis</strong></p>
+<pre class="r"><code>kurtosis.norm.test(x)</code></pre>
+<p><br/><br/></p>
+<p><strong>de sesgo</strong></p>
+<pre class="r"><code>skewness.norm.test(x)   </code></pre>
+<p><br/><br/></p>
+<p><strong>Spiegelhalter</strong></p>
+<pre class="r"><code>spiegelhalter.norm.test(x)  </code></pre>
+<p><br/><br/></p>
+<p><strong>Weisberg-Bingham</strong></p>
+<pre class="r"><code>wb.norm.test(x) </code></pre>
+<p><br/><br/><br/></p>
+<div id="paquete-nortest" class="section level3">
+<h3><strong>Paquete nortest</strong></h3>
+<p>Las siguientes pruebas requieren instalar y cargar el paquete:
+<code>nortest</code></p>
+<pre class="r"><code># install.packages(&quot;nortets&quot;)
+ library(nortest)</code></pre>
+<p><br/></p>
+<p><strong>Anderson-Darling</strong></p>
+<pre class="r"><code>ad.test(x)</code></pre>
+<p><br/></p>
+<p><strong>Cramer-von Mises</strong></p>
+<pre class="r"><code>cvm.test(x)</code></pre>
+<p><br/></p>
+<p><strong>Lilliefors (Kolmogorov-Smirnov)</strong></p>
+<pre class="r"><code>lillie.test(x)</code></pre>
+<p><br/></p>
+<p><strong>chi-cuadrado de Pearson</strong></p>
+<pre class="r"><code>pearson.test(x)</code></pre>
+<p><br/></p>
+<p><strong>Shapiro-Francia</strong></p>
+<pre class="r"><code>sf.test(x)</code></pre>
+<p>En todos los casos se presenta un valor-p grande por lo cual no se
+rechaza <span class="math inline">\(Ho\)</span>, asumimos que <span
+class="math inline">\(Ho\)</span> es verdad. Asumimos que la
+distribución de la variable <span class="math inline">\(X\)</span> es
+normal</p>
+<p>Referencias :</p>
+<p><a href="https://rpubs.com/CJRR/PUJ_DECB_NP"
+class="uri">https://rpubs.com/CJRR/PUJ_DECB_NP</a></p>
+</div>
+</div>
 
 
 
