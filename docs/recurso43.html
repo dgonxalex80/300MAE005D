@@ -2423,7 +2423,7 @@ shapiro.test(x)</code></pre>
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.98824, p-value = 0.09806</code></pre>
+W = 0.98976, p-value = 0.1646</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el <code>valor-p</code> es superior al nivel de significancia
@@ -2444,19 +2444,19 @@ jb.norm.test(x)  # Test de normalidad de Jarque-Bera</code></pre>
     Jarque-Bera test for normality
 
 data:  x
-JB = 3.1356, p-value = 0.164</code></pre>
+JB = 1.8737, p-value = 0.3625</code></pre>
 <pre class="r"><code>kurtosis.norm.test(x)</code></pre>
 <pre><code>
     Kurtosis test for normality
 
 data:  x
-T = 2.5654, p-value = 0.169</code></pre>
+T = 2.5692, p-value = 0.161</code></pre>
 <pre class="r"><code>skewness.norm.test(x)   </code></pre>
 <pre><code>
     Skewness test for normality
 
 data:  x
-T = 0.21642, p-value = 0.1995</code></pre>
+T = -0.099059, p-value = 0.5275</code></pre>
 <pre class="r"><code># install.packages(&quot;nortets&quot;)
 library(nortest)
 
@@ -2465,13 +2465,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.041123, p-value = 0.5622</code></pre>
+D = 0.053602, p-value = 0.1734</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 17.09, p-value = 0.2514</code></pre>
+P = 23.72, p-value = 0.04952</code></pre>
 <p>En todos los casos el valor-p es inferior al valor de <span
 class="math inline">\(\alpha = 0.05\)</span>, por tal razón se asume que
 los datos siguen una distribución normal.</p>
