@@ -587,6 +587,11 @@ De acuerdo con los resultados podría decirse que la campaña realizada es efect
 
 <br/><br/>
 
+<div class="box3 with-label">
+<div class="label">Intervalos de confianza</div>  
+
+<br/><br/>
+
 | parámetro         |  intervalo de confianza                                                        |       |
 |:------------------|:------------------------------------------------------------------------------:|:------| 
 | media             | $$IC_{\mu}: \bar{x} \pm z_{\alpha/2} \hspace{.1cm}\frac{\sigma}{\sqrt{n}}$$    | (1)   | 
@@ -619,9 +624,16 @@ De acuerdo con los resultados podría decirse que la campaña realizada es efect
 |                   |                                                                                |       |
 |razón de varianzas | $$\Bigg(\dfrac{s_{1}^{2}}{s_{2}^{2}} \dfrac{1}{f_{1-\alpha/2}(v_{1},v_{2})}; \dfrac{s_{1}^{2}}{s_{2}^{2}}\dfrac{1}{f_{\alpha/2}(v_{2},v_{1})}\Bigg)$$ | (15)|
 
+
+</div>
 <br/><br/><br/>
 
+<div class="box3 with-label">
+<div class="label">Pruebas de hipótesis</div>  
+
+<br/><br/>
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("img/DiagramaPdeH.png")
 ```
+</div>
