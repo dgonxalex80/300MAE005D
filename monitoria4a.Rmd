@@ -92,7 +92,7 @@ g2=c(8.2,  6.7,  7.6,  8.3,  9.4,  7.3,  6.7,  7.2,  9.8,  9.6,  8.9,  7.3,  9.7
 
 cat("grupos :   n     media     varianza \n")
 cat("grupo 1 : ",length(g1), "  ", mean(g1), "   ", var(g1), "\n")
-cat("grupo 1 : ",length(g2), "  ", mean(g2), "   ", var(g2), "\n")
+cat("grupo 2 : ",length(g2), "  ", mean(g2), "   ", var(g2), "\n")
 
 par(mfrow = c(1, 2))
 boxplot(g1, las=1, col = c2, ylim=c(0,10))
