@@ -1433,6 +1433,23 @@ learnr::run_tutorial("Taller_pruebas1", "paqueteDEG")
 learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
 ```
 
+<pre>
+install.packages("learnr") # solo una vez
+install.packages("devtools") # solo una vez
+devtools::install_github("dgonxalex80/paqueteDEG")
+learnr::run_tutorial("Taller_pruebas1", "paqueteDEG")
+
+learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
+</pre>
+
+
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/tutorial401.png")
+```
+
+
+
 <br/><br/>
 
 Nota: para la instalacion del paquete *distributions* se requiere la instalcion del paquete *ctv* : https://cran.r-project.org/web/views/Distributions.html

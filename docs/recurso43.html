@@ -14,13 +14,13 @@
 
 <title> </title>
 
-<script src="site_libs/header-attrs/header-attrs.js"></script>
-<script src="site_libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap/shim/respond.min.js"></script>
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -30,12 +30,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation/tabsets.js"></script>
-<script src="site_libs/navigation/codefolding.js"></script>
-<link href="site_libs/highlightjs/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs/highlight.js"></script>
-<link href="site_libs/font-awesome/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -2423,7 +2423,7 @@ shapiro.test(x)</code></pre>
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.98976, p-value = 0.1646</code></pre>
+W = 0.99441, p-value = 0.6625</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el <code>valor-p</code> es superior al nivel de significancia
@@ -2444,19 +2444,19 @@ jb.norm.test(x)  # Test de normalidad de Jarque-Bera</code></pre>
     Jarque-Bera test for normality
 
 data:  x
-JB = 1.8737, p-value = 0.3625</code></pre>
+JB = 1.0462, p-value = 0.56</code></pre>
 <pre class="r"><code>kurtosis.norm.test(x)</code></pre>
 <pre><code>
     Kurtosis test for normality
 
 data:  x
-T = 2.5692, p-value = 0.161</code></pre>
+T = 2.6963, p-value = 0.358</code></pre>
 <pre class="r"><code>skewness.norm.test(x)   </code></pre>
 <pre><code>
     Skewness test for normality
 
 data:  x
-T = -0.099059, p-value = 0.5275</code></pre>
+T = -0.091294, p-value = 0.5725</code></pre>
 <pre class="r"><code># install.packages(&quot;nortets&quot;)
 library(nortest)
 
@@ -2465,13 +2465,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.053602, p-value = 0.1734</code></pre>
+D = 0.046189, p-value = 0.3739</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 23.72, p-value = 0.04952</code></pre>
+P = 18.45, p-value = 0.187</code></pre>
 <p>En todos los casos el valor-p es inferior al valor de <span
 class="math inline">\(\alpha = 0.05\)</span>, por tal razón se asume que
 los datos siguen una distribución normal.</p>
@@ -2945,6 +2945,15 @@ install.packages(&quot;devtools&quot;) # solo una vez
 devtools::install_github(&quot;dgonxalex80/paqueteDEG&quot;)
 learnr::run_tutorial(&quot;Taller_pruebas1&quot;, &quot;paqueteDEG&quot;)</code></pre>
 <pre class="r"><code>learnr::run_tutorial(&quot;Taller_pruebas2&quot;, &quot;paqueteDEG&quot;)</code></pre>
+<pre>
+install.packages("learnr") # solo una vez
+install.packages("devtools") # solo una vez
+devtools::install_github("dgonxalex80/paqueteDEG")
+learnr::run_tutorial("Taller_pruebas1", "paqueteDEG")
+
+learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
+</pre>
+<p><img src="img/tutorial401.png" width="100%" /></p>
 <p><br/><br/></p>
 <p>Nota: para la instalacion del paquete <em>distributions</em> se
 requiere la instalcion del paquete <em>ctv</em> : <a
