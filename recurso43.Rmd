@@ -1428,18 +1428,13 @@ devtools::install_github("dgonxalex80/paqueteDEG")
 learnr::run_tutorial("Taller_pruebas1", "paqueteDEG")
 ```
 
-
-```{r eval=FALSE}
-learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
-```
+<br/><br/>
 
 <pre>
 install.packages("learnr") # solo una vez
 install.packages("devtools") # solo una vez
 devtools::install_github("dgonxalex80/paqueteDEG")
 learnr::run_tutorial("Taller_pruebas1", "paqueteDEG")
-
-learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
 </pre>
 
 
@@ -1448,7 +1443,21 @@ learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
 knitr::include_graphics("img/tutorial401.png")
 ```
 
+<br/><br/>
 
+<pre>
+learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
+</pre>
+
+
+```{r eval=FALSE}
+learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
+```
+
+
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("img/tutorial402.png")
+```
 
 <br/><br/>
 

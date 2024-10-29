@@ -2380,8 +2380,7 @@ runs.test(y)</code></pre>
     Runs Test
 
 data:  y
-statistic = 0.80407, runs = 55, n1 = 50, n2 = 50, n = 100, p-value =
-0.4214
+statistic = 0, runs = 51, n1 = 50, n2 = 50, n = 100, p-value = 1
 alternative hypothesis: nonrandomness</code></pre>
 </div>
 <div id="conclusión-12" class="section level3">
@@ -2423,7 +2422,7 @@ shapiro.test(x)</code></pre>
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.99441, p-value = 0.6625</code></pre>
+W = 0.99229, p-value = 0.3741</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el <code>valor-p</code> es superior al nivel de significancia
@@ -2444,19 +2443,19 @@ jb.norm.test(x)  # Test de normalidad de Jarque-Bera</code></pre>
     Jarque-Bera test for normality
 
 data:  x
-JB = 1.0462, p-value = 0.56</code></pre>
+JB = 1.7617, p-value = 0.36</code></pre>
 <pre class="r"><code>kurtosis.norm.test(x)</code></pre>
 <pre><code>
     Kurtosis test for normality
 
 data:  x
-T = 2.6963, p-value = 0.358</code></pre>
+T = 2.9957, p-value = 0.9875</code></pre>
 <pre class="r"><code>skewness.norm.test(x)   </code></pre>
 <pre><code>
     Skewness test for normality
 
 data:  x
-T = -0.091294, p-value = 0.5725</code></pre>
+T = 0.22988, p-value = 0.188</code></pre>
 <pre class="r"><code># install.packages(&quot;nortets&quot;)
 library(nortest)
 
@@ -2465,13 +2464,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.046189, p-value = 0.3739</code></pre>
+D = 0.064362, p-value = 0.04278</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 18.45, p-value = 0.187</code></pre>
+P = 15.39, p-value = 0.352</code></pre>
 <p>En todos los casos el valor-p es inferior al valor de <span
 class="math inline">\(\alpha = 0.05\)</span>, por tal razón se asume que
 los datos siguen una distribución normal.</p>
@@ -2944,16 +2943,20 @@ con el fin de incorporar nuevas actualizaciones</p>
 install.packages(&quot;devtools&quot;) # solo una vez
 devtools::install_github(&quot;dgonxalex80/paqueteDEG&quot;)
 learnr::run_tutorial(&quot;Taller_pruebas1&quot;, &quot;paqueteDEG&quot;)</code></pre>
-<pre class="r"><code>learnr::run_tutorial(&quot;Taller_pruebas2&quot;, &quot;paqueteDEG&quot;)</code></pre>
+<p><br/><br/></p>
 <pre>
 install.packages("learnr") # solo una vez
 install.packages("devtools") # solo una vez
 devtools::install_github("dgonxalex80/paqueteDEG")
 learnr::run_tutorial("Taller_pruebas1", "paqueteDEG")
-
-learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
 </pre>
 <p><img src="img/tutorial401.png" width="100%" /></p>
+<p><br/><br/></p>
+<pre>
+learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
+</pre>
+<pre class="r"><code>learnr::run_tutorial(&quot;Taller_pruebas2&quot;, &quot;paqueteDEG&quot;)</code></pre>
+<p><img src="img/tutorial402.png" width="100%" /></p>
 <p><br/><br/></p>
 <p>Nota: para la instalacion del paquete <em>distributions</em> se
 requiere la instalcion del paquete <em>ctv</em> : <a
