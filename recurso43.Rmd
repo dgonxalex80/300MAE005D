@@ -44,7 +44,7 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/decision1.png")
+knitr::include_graphics("img/decisones.png")
 ```
 
 <center>
@@ -1449,10 +1449,6 @@ knitr::include_graphics("img/tutorial401.png")
 learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
 </pre>
 
-
-```{r eval=FALSE}
-learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
-```
 
 
 ```{r, echo=FALSE, out.width="100%"}

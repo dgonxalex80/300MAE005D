@@ -546,7 +546,7 @@ Estadística</strong></span></h3>
 
 <p><img src="img/recursos4.png" width="100%" style="display: block; margin: auto;" /></p>
 <p><br/><br/><br/></p>
-<p><img src="img/decision1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><img src="img/decisones.png" width="100%" style="display: block; margin: auto;" /></p>
 <center>
 Tomada de : <a href="https://pixabay.com/es/"
 class="uri">https://pixabay.com/es/</a>
@@ -2380,7 +2380,8 @@ runs.test(y)</code></pre>
     Runs Test
 
 data:  y
-statistic = 0, runs = 51, n1 = 50, n2 = 50, n = 100, p-value = 1
+statistic = 0.20102, runs = 52, n1 = 50, n2 = 50, n = 100, p-value =
+0.8407
 alternative hypothesis: nonrandomness</code></pre>
 </div>
 <div id="conclusión-12" class="section level3">
@@ -2422,7 +2423,7 @@ shapiro.test(x)</code></pre>
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.99229, p-value = 0.3741</code></pre>
+W = 0.99174, p-value = 0.3152</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el <code>valor-p</code> es superior al nivel de significancia
@@ -2443,19 +2444,19 @@ jb.norm.test(x)  # Test de normalidad de Jarque-Bera</code></pre>
     Jarque-Bera test for normality
 
 data:  x
-JB = 1.7617, p-value = 0.36</code></pre>
+JB = 3.7028, p-value = 0.122</code></pre>
 <pre class="r"><code>kurtosis.norm.test(x)</code></pre>
 <pre><code>
     Kurtosis test for normality
 
 data:  x
-T = 2.9957, p-value = 0.9875</code></pre>
+T = 2.9582, p-value = 0.902</code></pre>
 <pre class="r"><code>skewness.norm.test(x)   </code></pre>
 <pre><code>
     Skewness test for normality
 
 data:  x
-T = 0.22988, p-value = 0.188</code></pre>
+T = -0.33264, p-value = 0.0545</code></pre>
 <pre class="r"><code># install.packages(&quot;nortets&quot;)
 library(nortest)
 
@@ -2464,13 +2465,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.064362, p-value = 0.04278</code></pre>
+D = 0.061138, p-value = 0.06628</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 15.39, p-value = 0.352</code></pre>
+P = 14.2, p-value = 0.4349</code></pre>
 <p>En todos los casos el valor-p es inferior al valor de <span
 class="math inline">\(\alpha = 0.05\)</span>, por tal razón se asume que
 los datos siguen una distribución normal.</p>
@@ -2955,7 +2956,6 @@ learnr::run_tutorial("Taller_pruebas1", "paqueteDEG")
 <pre>
 learnr::run_tutorial("Taller_pruebas2", "paqueteDEG")
 </pre>
-<pre class="r"><code>learnr::run_tutorial(&quot;Taller_pruebas2&quot;, &quot;paqueteDEG&quot;)</code></pre>
 <p><img src="img/tutorial402.png" width="100%" /></p>
 <p><br/><br/></p>
 <p>Nota: para la instalacion del paquete <em>distributions</em> se
