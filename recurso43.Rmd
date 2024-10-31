@@ -1461,7 +1461,7 @@ Nota: para la instalacion del paquete *distributions* se requiere la instalcion 
 
 <br/><br/>
 
-# **Presentación**
+# **Presentaciones**
 
 ```{r, echo=FALSE}
 library(htmltools)
@@ -1472,6 +1472,20 @@ tags$iframe(
   height = "500"  
 )
 ```
+
+
+
+```{r, echo=FALSE}
+library(htmltools)
+
+tags$iframe(
+  src = "pdf/NoParametricas2.pdf",
+  width = "100%",  
+  height = "500"  
+)
+```
+
+
 
 
 
