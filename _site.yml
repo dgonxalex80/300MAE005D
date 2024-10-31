@@ -147,6 +147,8 @@ navbar:
         - text: "---------"          
         - text: "Monitoria 4"
           href: monitoria4a.html 
+        - text: "Problemas resueltos"
+          href: pruebaAudio.html           
         - text: "---------"   
         - text: "Taller 421"
           href: taller421.html          
